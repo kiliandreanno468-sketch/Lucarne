@@ -102,6 +102,7 @@ h1,h2,h3,p{margin:0}
 /* Filtres */
 .days{display:grid;grid-template-columns:repeat(var(--n,3),1fr);gap:3px;background:color-mix(in srgb,var(--ink) 7%,transparent);border-radius:12px;padding:3px;margin-top:16px}
 .days button{border:0;background:transparent;border-radius:9px;padding:8px 4px;font-size:15px;font-weight:500;color:var(--muted)}
+.days.many button{font-size:13.5px;padding:8px 2px}
 .days button[aria-pressed="true"]{background:var(--surface);color:var(--ink);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
 .comps{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:10px -16px 0;padding:0 16px 2px}
 .comps::-webkit-scrollbar{display:none}
@@ -376,7 +377,7 @@ h1,h2,h3,p{margin:0}
   }
   function signed(v){return v>0 ? '<span class="pos">+'+v+NB+'%</span>' : v<0 ? '<span class="neg">\u2212'+Math.abs(v)+NB+'%</span>' : '<span>0'+NB+'%</span>';}
   function keyOf(d){return new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d);}
-  var todayKey = keyOf(new Date()), tomorrowKey = keyOf(new Date(Date.now()+864e5));
+  var todayKey = keyOf(new Date()), tomorrowKey = keyOf(new Date(Date.now()+864e5)), yesterdayKey = keyOf(new Date(Date.now()-864e5));
 
   var data = null, hist = {picks:[]};
   var state = {tier:'safe',day:'all',comp:'Toutes',stakes:{},varSel:{}};
@@ -388,13 +389,17 @@ h1,h2,h3,p{margin:0}
   var $ = function(id){return document.getElementById(id);};
 
   function matchOf(id){return data.matches[String(id)];}
-  function inFilter(m){return (state.day==='all' || m.day===state.day) && (state.comp==='Toutes' || m.group===state.comp);}
+  function upcomingKeys(){return (data.days||[]).filter(function(d){return !d.past;}).map(function(d){return d.key;});}
+  function inFilter(m){
+    var dayOk = state.day==='all' ? upcomingKeys().indexOf(m.day)>-1 : m.day===state.day;
+    return dayOk && (state.comp==='Toutes' || m.group===state.comp);
+  }
   function byTime(a,b){return Date.parse(a.m.kickoff)-Date.parse(b.m.kickoff);}
   function dayLabel(key){
     var d = (data.days||[]).filter(function(x){return x.key===key;})[0];
     return d ? d.label : key;
   }
-  function dayName(d){return d.key===todayKey ? 'Aujourd’hui' : d.key===tomorrowKey ? 'Demain' : d.label.split(' ').slice(0,2).join(' ');}
+  function dayName(d){return d.key===todayKey ? 'Aujourd’hui' : d.key===tomorrowKey ? 'Demain' : d.key===yesterdayKey ? 'Hier' : d.label.split(' ').slice(0,2).join(' ');}
 
   /* Chargement des données */
   function load(quiet){
@@ -415,12 +420,15 @@ h1,h2,h3,p{margin:0}
 
   function setupFilters(){
     var days = data.days;
+    var upcoming = upcomingKeys();
     var btns = days.map(function(d){return '<button type="button" data-day="'+esc(d.key)+'">'+esc(dayName(d))+'</button>';});
-    if(days.length>1) btns.push('<button type="button" data-day="all">Les '+days.length+' jours</button>');
+    var hasPast = days.some(function(d){return d.past;});
+    if(upcoming.length>1) btns.push('<button type="button" data-day="all">'+(hasPast ? 'À venir' : 'Les '+upcoming.length+' jours')+'</button>');
     $('days').innerHTML = btns.join('');
+    $('days').classList.toggle('many', btns.length>3);
     $('days').style.setProperty('--n', Math.max(1,btns.length));
-    $('days').hidden = !btns.length;
-    if(days.length<2) state.day = 'all';
+    $('days').hidden = btns.length<2;
+    if(state.day!=='all' && days.every(function(d){return d.key!==state.day;})) state.day = 'all';
 
     var all = Object.keys(data.matches).map(function(k){return data.matches[k];});
     var groups = GROUPS.filter(function(g){return all.some(function(m){return m.group===g;});});
@@ -467,7 +475,7 @@ h1,h2,h3,p{margin:0}
     return '<section class="record">'+
       '<div><p class="rate"><b>'+pct(r.won/r.total)+'</b> de pronos gagnés</p>'+
       '<p class="rate-sub">'+r.won+' sur '+r.total+' en 30 jours, bilan '+signed(r.roi)+'</p></div>'+
-      '<div class="dots" role="img" aria-label="'+r.last.length+' derniers pronos : '+wins+' gagnés"><div class="dots-row">'+dots+'</div><small>'+r.last.length+' derniers</small></div>'+
+      '<div class="dots" role="img" aria-label="'+r.last.length+' derniers pronos : '+wins+' gagnés"><div class="dots-row">'+dots+'</div><small>'+r.last.length+(r.last.length>1?' derniers':' dernier')+'</small></div>'+
     '</section>';
   }
 
