@@ -255,6 +255,22 @@ h1,h2,h3,p{margin:0}
   .fx{display:none}
 }
 
+/* Résultats des matchs */
+.res{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:8px;font-size:14px;font-weight:700}
+.res-ico{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;font-size:13px;line-height:1;color:#fff}
+.res-ok{color:var(--pos)} .res-ok .res-ico{background:var(--pos)}
+.res-ko{color:var(--neg)} .res-ko .res-ico{background:var(--neg)}
+.res-near{color:var(--tier-ink)} .res-near .res-ico{background:var(--tier)}
+.res-wait,.res-void{color:var(--muted);font-weight:600}
+.res-score{font-weight:500;color:var(--muted)}
+.pick.is-won{box-shadow:inset 4px 0 0 var(--pos)}
+.pick.is-lost{box-shadow:inset 4px 0 0 var(--neg)}
+.leg-res{font-weight:800;margin-left:6px}
+.leg-res.ok{color:var(--pos)} .leg-res.ko{color:var(--neg)}
+.score.hit{outline:3px solid var(--pos);outline-offset:-3px}
+.score-hit{font-size:12px;font-weight:800;color:var(--pos)}
+.score[aria-pressed="true"] .score-hit{color:inherit}
+
 /* Version en ligne */
 .team{white-space:nowrap}
 .team img{width:18px;height:18px;object-fit:contain;vertical-align:-3px;margin-right:5px}
@@ -326,6 +342,38 @@ h1,h2,h3,p{margin:0}
   function cote(v){return f2.format(v);}
   function chance(p){return p>=.01 ? pct(p) : '1 sur '+f0.format(Math.max(10,Math.round(1/p/10)*10));}
   function valueOf(p){return p.ia-1/p.cote;}
+  function timeOf(iso){return new Intl.DateTimeFormat('fr-FR',{timeZone:TZ,hour:'2-digit',minute:'2-digit'}).format(new Date(iso)).replace(':','h');}
+
+  /* Résultats : même règle que le script pour savoir si un pari passe */
+  function settle(key,h,a){
+    var k = key.split(':'), t = k[0], x = k[1], y = k[2];
+    if(t==='1X2') return x==='H' ? h>a : x==='D' ? h===a : a>h;
+    if(t==='DC') return x==='HD' ? h>=a : x==='AD' ? a>=h : h!==a;
+    if(t==='OU') return x==='O' ? h+a>Number(y) : h+a<Number(y);
+    if(t==='BTTS') return x==='Y' ? (h>0&&a>0) : !(h>0&&a>0);
+    if(t==='CS'){ var s = x.split('-').map(Number); return s[0]===h && s[1]===a; }
+    return false;
+  }
+  function resultOf(mid){return (data.results||{})[String(mid)] || null;}
+  function scoreOf(r){var s = r.score.split('-').map(Number); return {h:s[0],a:s[1]};}
+  // 'won' | 'lost' | 'void' | 'live' | 'wait' | null (pas encore commencé)
+  function outcome(key,mid,m){
+    var r = resultOf(mid);
+    if(!r) return Date.parse(m.kickoff)<=Date.now() ? 'wait' : null;
+    if(r.status==='void') return 'void';
+    if(r.status==='live') return 'live';
+    var s = scoreOf(r);
+    return settle(key,s.h,s.a) ? 'won' : 'lost';
+  }
+  function resultHTML(o,r){
+    if(!o) return '';
+    if(o==='wait') return '<p class="res res-wait">⏱ Match en cours, résultat bientôt</p>';
+    if(o==='live') return '<p class="res res-wait">⏱ En cours : '+esc(r.score)+' à '+timeOf(r.at)+'</p>';
+    if(o==='void') return '<p class="res res-void">Match reporté ou annulé</p>';
+    var ok = o==='won';
+    return '<p class="res '+(ok?'res-ok':'res-ko')+'"><span class="res-ico">'+(ok?'✓':'✕')+'</span>'+(ok?'Validé':'Pas validé')+
+      '<span class="res-score">Score final '+esc(r.score)+'</span></p>';
+  }
   function signed(v){return v>0 ? '<span class="pos">+'+v+NB+'%</span>' : v<0 ? '<span class="neg">\u2212'+Math.abs(v)+NB+'%</span>' : '<span>0'+NB+'%</span>';}
   function keyOf(d){return new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d);}
   var todayKey = keyOf(new Date()), tomorrowKey = keyOf(new Date(Date.now()+864e5));
@@ -349,8 +397,8 @@ h1,h2,h3,p{margin:0}
   function dayName(d){return d.key===todayKey ? 'Aujourd’hui' : d.key===tomorrowKey ? 'Demain' : d.label.split(' ').slice(0,2).join(' ');}
 
   /* Chargement des données */
-  function load(){
-    $('content').innerHTML = '<p class="status">Chargement des pronos…</p>';
+  function load(quiet){
+    if(!quiet) $('content').innerHTML = '<p class="status">Chargement des pronos…</p>';
     var v = '?v='+Date.now();
     Promise.all([
       fetch('data/pronos.json'+v).then(function(r){if(!r.ok) throw new Error(r.status); return r.json();}),
@@ -360,6 +408,7 @@ h1,h2,h3,p{margin:0}
       data.matches = data.matches || {}; data.picks = data.picks || []; data.var = data.var || []; data.days = data.days || [];
       setupFilters(); render();
     }).catch(function(){
+      if(quiet) return;
       $('content').innerHTML = '<div class="panel status-panel"><p class="empty">Impossible de charger les pronos. Vérifie ta connexion et réessaie.</p><button type="button" class="reset" data-retry>Réessayer</button></div>';
     });
   }
@@ -383,7 +432,7 @@ h1,h2,h3,p{margin:0}
       var g = new Date(data.generatedAt);
       var day = new Intl.DateTimeFormat('fr-FR',{timeZone:TZ,weekday:'long',day:'numeric',month:'long'}).format(g);
       var time = new Intl.DateTimeFormat('fr-FR',{timeZone:TZ,hour:'2-digit',minute:'2-digit'}).format(g).replace(':','h');
-      $('updated').textContent = 'Analyse du '+day+' à '+time;
+      $('updated').textContent = 'Analyse du '+day+' à '+time+(data.resultsAt ? ', résultats mis à jour à '+timeOf(data.resultsAt) : '');
     }else{
       $('updated').textContent = 'Première analyse à venir';
     }
@@ -446,7 +495,7 @@ h1,h2,h3,p{margin:0}
   /* Blocs */
   function legsFor(t,list){
     var pool = state.tier==='var'
-      ? list.map(function(v){var s=v.scores[0];return {m:v.m,pari:'Score exact '+s[0],ia:s[1],cote:s[2]};})
+      ? list.map(function(v){var s=v.scores[0];return {m:v.m,mid:v.mid,key:'CS:'+s[0],pari:'Score exact '+s[0],ia:s[1],cote:s[2]};})
       : list;
     return pool.slice().sort(function(a,b){return t.rank(b)-t.rank(a);}).slice(0,t.size).sort(byTime);
   }
@@ -458,16 +507,23 @@ h1,h2,h3,p{margin:0}
     }
     var total = Math.round(legs.reduce(function(a,p){return a*p.cote;},1)*100)/100;
     var prob = legs.reduce(function(a,p){return a*p.ia;},1);
+    var outs = legs.map(function(p){return outcome(p.key,p.mid,p.m);});
+    var status = '';
+    if(outs.indexOf('lost')>-1) status = '<p class="res res-ko"><span class="res-ico">✕</span>Combiné perdu</p>';
+    else if(outs.every(function(o){return o==='won'||o==='void';}) && outs.indexOf('won')>-1) status = '<p class="res res-ok"><span class="res-ico">✓</span>Combiné gagné</p>';
+    else if(outs.some(function(o){return o;})) status = '<p class="res res-wait">⏱ Combiné en cours</p>';
     return '<section class="ticket">'+head+'<span>'+legs.length+' sélections</span></div>'+
-      '<ul class="legs">'+legs.map(function(p){
+      '<ul class="legs">'+legs.map(function(p,i){
+        var o = outs[i];
+        var mark = o==='won' ? '<span class="leg-res ok">✓</span>' : o==='lost' ? '<span class="leg-res ko">✕</span>' : '';
         return '<li><span class="leg-match">'+esc(p.m.home)+' – '+esc(p.m.away)+'</span>'+
-          '<span class="leg-pari">'+esc(p.pari)+'</span>'+
+          '<span class="leg-pari">'+esc(p.pari)+mark+'</span>'+
           '<span class="leg-cote">'+cote(p.cote)+'</span></li>';
       }).join('')+'</ul>'+
       '<div class="perf"></div>'+
       '<div class="ticket-foot">'+
         '<div class="total"><span>Cote totale</span><strong>'+cote(total)+'</strong></div>'+
-        '<p class="chance"><span>Chance de passer</span><b>'+chance(prob)+'</b></p>'+
+        '<p class="chance"><span>Chance de passer</span><b>'+chance(prob)+'</b></p>'+status+
         simHTML('ticket-'+state.tier,total)+
       '</div></section>';
   }
@@ -481,8 +537,11 @@ h1,h2,h3,p{margin:0}
   function pickHTML(p){
     var book = 1/p.cote, v = valueOf(p);
     var pill = v>=.02 ? '<span class="vpill">Value +'+Math.round(v*100)+'</span>' : '';
-    return '<article class="pick">'+metaHTML(p.m)+
+    var o = outcome(p.key,p.mid,p.m);
+    var cls = o==='won' ? ' is-won' : o==='lost' ? ' is-lost' : '';
+    return '<article class="pick'+cls+'">'+metaHTML(p.m)+
       '<div class="pick-main"><span class="pari">'+esc(p.pari)+'</span><span class="cote">'+cote(p.cote)+'</span></div>'+
+      resultHTML(o,resultOf(p.mid))+
       '<div class="bar" aria-hidden="true"><span class="fill" style="width:'+(p.ia*100).toFixed(1)+'%"></span><span class="tick" style="left:'+(book*100).toFixed(1)+'%"></span></div>'+
       '<div class="probs"><span>IA <b>'+pct(p.ia)+'</b></span><span>Bookmaker '+pct(book)+'</span>'+pill+'</div>'+
       '<p class="why">'+esc(p.why)+'</p>'+
@@ -494,12 +553,22 @@ h1,h2,h3,p{margin:0}
     var sel = state.varSel[v.mid] || 0;
     if(!v.scores[sel]) sel = 0;
     var s = v.scores[sel];
+    var r = resultOf(v.mid);
+    var final = r && r.status==='FT' ? r.score : null;
+    var hitIndex = -1;
+    v.scores.forEach(function(sc,i){ if(final && sc[0]===final) hitIndex = i; });
     var chips = v.scores.map(function(sc,i){
-      return '<button type="button" class="score" data-i="'+i+'" data-cote="'+sc[2]+'" data-label="le '+esc(sc[0])+'" aria-pressed="'+(i===sel)+'">'+
-        '<span class="score-val">'+esc(sc[0])+'</span><span class="score-p">'+pct(sc[1])+'</span><span class="score-c">cote '+cote(sc[2])+'</span></button>';
+      return '<button type="button" class="score'+(i===hitIndex?' hit':'')+'" data-i="'+i+'" data-cote="'+sc[2]+'" data-label="le '+esc(sc[0])+'" aria-pressed="'+(i===sel)+'">'+
+        '<span class="score-val">'+esc(sc[0])+'</span><span class="score-p">'+pct(sc[1])+'</span><span class="score-c">cote '+cote(sc[2])+'</span>'+
+        (i===hitIndex ? '<span class="score-hit">✓ Bon score</span>' : '')+'</button>';
     }).join('');
-    return '<article class="pick var-card" data-m="'+esc(v.mid)+'">'+metaHTML(v.m)+
-      '<div class="scores" aria-label="Scores les plus probables">'+chips+'</div>'+
+    var o = outcome('CS:'+v.scores[0][0],v.mid,v.m);
+    var res;
+    if(final && hitIndex>0) res = '<p class="res res-near"><span class="res-ico">✓</span>Trouvé parmi les 3 scores<span class="res-score">Score final '+esc(final)+'</span></p>';
+    else res = resultHTML(o,r);
+    var cls = o==='won' ? ' is-won' : (o==='lost' && hitIndex<0) ? ' is-lost' : '';
+    return '<article class="pick var-card'+cls+'" data-m="'+esc(v.mid)+'">'+metaHTML(v.m)+
+      '<div class="scores" aria-label="Scores les plus probables">'+chips+'</div>'+res+
       '<p class="why">'+esc(v.why)+'</p>'+
       simHTML(v.id,s[2],'le '+s[0])+
     '</article>';
@@ -607,6 +676,9 @@ h1,h2,h3,p{margin:0}
   render();
   load();
   setTimeout(playBrand,80);
+  // Les scores arrivent pendant la journée : on recharge discrètement les données.
+  setInterval(function(){ if(!document.hidden) load(true); }, 10*60*1000);
+  document.addEventListener('visibilitychange',function(){ if(!document.hidden && data) load(true); });
 })();
 </script>
 </body>
