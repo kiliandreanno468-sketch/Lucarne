@@ -307,21 +307,26 @@ const MATCH_MS = 100 * 60e3;   // un match dure environ 1 h 45 avec la mi-temps
 async function refreshResults(pronos, history) {
   const now = Date.now();
   pronos.results ||= {};
-  const ids = new Set();
+  // Le plan gratuit ne permet pas de demander des matchs par identifiant :
+  // on récupère tous les matchs d’une date (1 requête par jour concerné).
+  const byDay = new Map();
+  const want = (day, id) => {
+    if (!byDay.has(day)) byDay.set(day, new Set());
+    byDay.get(day).add(Number(id));
+  };
   for (const [id, m] of Object.entries(pronos.matches ?? {})) {
-    if (!pronos.results[id]?.final && Date.parse(m.kickoff) <= now) ids.add(Number(id));
+    if (!pronos.results[id]?.final && Date.parse(m.kickoff) <= now) want(m.day, id);
   }
   for (const p of history.picks) {
-    if (p.status === 'pending' && Date.parse(p.kickoff) < now - MATCH_MS) ids.add(p.fixture);
+    if (p.status === 'pending' && Date.parse(p.kickoff) < now - MATCH_MS) want(p.day || dayKey(new Date(p.kickoff)), p.fixture);
   }
-  if (!ids.size) { console.log('Aucun match commencé à vérifier.'); return; }
+  if (!byDay.size) { console.log('Aucun match commencé à vérifier.'); return; }
 
   const byId = new Map();
-  const list = [...ids];
-  for (let i = 0; i < list.length; i += 20) {
+  for (const [day, ids] of byDay) {
     try {
-      const response = await football('/fixtures', { ids: list.slice(i, i + 20).join('-') });
-      for (const f of response) byId.set(f.fixture.id, f);
+      const response = await football('/fixtures', { date: day, timezone: TIMEZONE });
+      for (const f of response) if (ids.has(f.fixture.id)) byId.set(f.fixture.id, f);
     } catch (e) { console.warn('Résultats indisponibles :', e.message); }
   }
 
@@ -497,14 +502,20 @@ async function main() {
   picks.forEach(p => record(p.t, p.m, p.key, p.pari, p.cote, p.ia));
   varList.forEach(v => record('var', v.m, 'CS:' + v.scores[0][0], 'Score exact ' + v.scores[0][0], v.scores[0][2], v.scores[0][1]));
 
-  // Si l’analyse est relancée dans la journée, on garde les pronos des matchs
-  // du jour déjà commencés (ils ne sont plus analysables) pour afficher leur résultat.
+  // On garde les pronos d’hier (onglet « Hier », avec leurs résultats) et, si
+  // l’analyse est relancée dans la journée, ceux des matchs du jour déjà commencés.
+  const yesterday = dayKey(new Date(now.getTime() - DAY_MS));
   for (const [id, m] of Object.entries(previous?.matches ?? {})) {
-    if (matches[id] || m.day !== today || Date.parse(m.kickoff) > Date.now()) continue;
+    const keep = m.day === yesterday || (m.day === today && Date.parse(m.kickoff) <= Date.now());
+    if (matches[id] || !keep) continue;
     matches[id] = m;
     for (const p of previous.picks ?? []) if (String(p.m) === id) picks.push(p);
     for (const v of previous.var ?? []) if (String(v.m) === id) varList.push(v);
     if (previous.results?.[id]) pronos.results[id] = previous.results[id];
+  }
+
+  if (Object.values(matches).some(m => m.day === yesterday)) {
+    pronos.days.unshift({ key: yesterday, label: dayLabel(yesterday), past: true });
   }
 
   await refreshResults(pronos, history);
