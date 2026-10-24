@@ -8,6 +8,7 @@ const API = 'https://v3.football.api-sports.io';
 const FOOT_KEY = process.env.APIFOOTBALL_KEY;
 const CLAUDE_KEY = process.env.ANTHROPIC_API_KEY;
 const DELAY = Number(process.env.REQUEST_DELAY_MS ?? REQUEST_DELAY_MS);
+const MODE = String(process.env.MODE || 'complet').toLowerCase();   // complet | resultats
 const DATA_DIR = new URL('../data/', import.meta.url);
 const DAY_MS = 864e5;
 
@@ -295,44 +296,91 @@ async function askClaude(payload) {
   }
 }
 
-/* ---------- Bilan ---------- */
+/* ---------- Résultats et bilan ---------- */
 const VOID = new Set(['PST', 'CANC', 'ABD', 'AWD', 'WO']);
 const DONE = new Set(['FT', 'AET', 'PEN']);
-async function settleHistory(history) {
+const LIVE = new Set(['1H', 'HT', '2H', 'ET', 'BT', 'P', 'INT', 'LIVE', 'SUSP']);
+const MATCH_MS = 100 * 60e3;   // un match dure environ 1 h 45 avec la mi-temps
+
+// Récupère le score des matchs commencés, l’écrit dans pronos.json (pour les
+// coches « Validé / Pas validé » du site) et règle les pronos du bilan.
+async function refreshResults(pronos, history) {
   const now = Date.now();
-  const pending = history.picks.filter(p => p.status === 'pending' && Date.parse(p.kickoff) < now - 2.5 * 3600e3);
-  const ids = [...new Set(pending.map(p => p.fixture))];
-  for (let i = 0; i < ids.length; i += 20) {
-    const chunk = ids.slice(i, i + 20);
-    let response;
-    try { response = await football('/fixtures', { ids: chunk.join('-') }); }
-    catch (e) { console.warn('Résultats indisponibles :', e.message); continue; }
-    const byId = new Map(response.map(f => [f.fixture.id, f]));
-    for (const p of pending.filter(x => chunk.includes(x.fixture))) {
-      const f = byId.get(p.fixture);
-      if (!f) continue;
-      const st = f.fixture.status.short;
-      if (VOID.has(st)) { p.status = 'void'; continue; }
-      if (!DONE.has(st)) { if (now - Date.parse(p.kickoff) > 3 * DAY_MS) p.status = 'void'; continue; }
-      const h = f.score?.fulltime?.home ?? f.goals?.home;
-      const a = f.score?.fulltime?.away ?? f.goals?.away;
-      if (h == null || a == null) continue;
-      p.score = `${h}-${a}`;
-      p.status = settle(p.key, h, a) ? 'won' : 'lost';
-    }
+  pronos.results ||= {};
+  const ids = new Set();
+  for (const [id, m] of Object.entries(pronos.matches ?? {})) {
+    if (!pronos.results[id]?.final && Date.parse(m.kickoff) <= now) ids.add(Number(id));
   }
-  const settled = history.picks.filter(p => p.status === 'won' || p.status === 'lost').length;
-  console.log(`Bilan : ${settled} pronos réglés au total.`);
+  for (const p of history.picks) {
+    if (p.status === 'pending' && Date.parse(p.kickoff) < now - MATCH_MS) ids.add(p.fixture);
+  }
+  if (!ids.size) { console.log('Aucun match commencé à vérifier.'); return; }
+
+  const byId = new Map();
+  const list = [...ids];
+  for (let i = 0; i < list.length; i += 20) {
+    try {
+      const response = await football('/fixtures', { ids: list.slice(i, i + 20).join('-') });
+      for (const f of response) byId.set(f.fixture.id, f);
+    } catch (e) { console.warn('Résultats indisponibles :', e.message); }
+  }
+
+  let finished = 0;
+  for (const [id, f] of byId) {
+    const m = pronos.matches?.[id];
+    if (!m || Date.parse(m.kickoff) > now) continue;
+    const st = f.fixture.status.short;
+    const h = f.score?.fulltime?.home ?? f.goals?.home;
+    const a = f.score?.fulltime?.away ?? f.goals?.away;
+    if (VOID.has(st)) pronos.results[id] = { status: 'void', final: true };
+    else if (DONE.has(st) && h != null && a != null) { pronos.results[id] = { status: 'FT', score: `${h}-${a}`, final: true }; finished++; }
+    else if (LIVE.has(st) && f.goals?.home != null) pronos.results[id] = { status: 'live', score: `${f.goals.home}-${f.goals.away}`, at: new Date().toISOString(), final: false };
+  }
+  if (byId.size) pronos.resultsAt = new Date().toISOString();
+
+  for (const p of history.picks) {
+    if (p.status !== 'pending') continue;
+    const f = byId.get(p.fixture);
+    if (!f) { if (now - Date.parse(p.kickoff) > 3 * DAY_MS) p.status = 'void'; continue; }
+    const st = f.fixture.status.short;
+    if (VOID.has(st)) { p.status = 'void'; continue; }
+    if (!DONE.has(st)) continue;
+    const h = f.score?.fulltime?.home ?? f.goals?.home;
+    const a = f.score?.fulltime?.away ?? f.goals?.away;
+    if (h == null || a == null) continue;
+    p.score = `${h}-${a}`;
+    p.status = settle(p.key, h, a) ? 'won' : 'lost';
+  }
+  console.log(`Résultats : ${finished} match(s) terminé(s) mis à jour.`);
+}
+
+function pruneHistory(history) {
+  const limit = Date.now() - 60 * DAY_MS;
+  history.picks = history.picks.filter(p => Date.parse(p.kickoff) >= limit);
+}
+
+// Passage rapide toutes les heures : seulement les scores, sans nouvelle analyse.
+async function resultsOnly() {
+  const pronos = await readJson('pronos.json', null);
+  const history = await readJson('history.json', { picks: [] });
+  history.picks ||= [];
+  if (!pronos?.generatedAt) { console.log('Pas encore de pronos : rien à vérifier.'); return; }
+  await refreshResults(pronos, history);
+  pruneHistory(history);
+  await writeJson('pronos.json', pronos);
+  await writeJson('history.json', history);
+  console.log(`Terminé : ${calls} requête(s) API-Football.`);
 }
 
 /* ---------- Programme principal ---------- */
 async function main() {
   if (!FOOT_KEY) throw new Error('Le secret APIFOOTBALL_KEY est manquant.');
   await mkdir(DATA_DIR, { recursive: true });
+  if (MODE === 'resultats') return resultsOnly();
 
   const history = await readJson('history.json', { picks: [] });
   history.picks ||= [];
-  await settleHistory(history);
+  const previous = await readJson('pronos.json', null);
 
   const now = new Date();
   const days = [dayKey(now), dayKey(new Date(now.getTime() + DAY_MS))];
@@ -426,14 +474,15 @@ async function main() {
     matches[id] = { day: fx.day, time: fx.time, kickoff: fx.kickoff, comp: fx.comp, group: fx.group, home: fx.home, away: fx.away, homeLogo: fx.homeLogo, awayLogo: fx.awayLogo };
   }
 
-  await writeJson('pronos.json', {
+  const pronos = {
     generatedAt: now.toISOString(),
     days: days.map(key => ({ key, label: dayLabel(key) })),
     matches,
     picks,
     var: varList,
+    results: {},
     source: answer ? 'claude' : 'modele',
-  });
+  };
 
   // Bilan : on enregistre les pronos des matchs du jour (ceux de demain seront
   // recalculés demain matin avec des cotes plus fraîches).
@@ -441,13 +490,26 @@ async function main() {
   history.picks = history.picks.filter(p => !(p.status === 'pending' && p.day === today && Date.parse(p.kickoff) > Date.now()));
   const record = (tier, fixture, key, pari, cote, ia) => {
     const fx = byId.get(fixture);
-    if (!fx || fx.day !== today) return;
-    history.picks.push({ id: `${today}-${tier}-${fixture}`, fixture, tier, key, pari, match: `${fx.home} – ${fx.away}`, cote, ia, kickoff: fx.kickoff, day: today, status: 'pending' });
+    const id = `${today}-${tier}-${fixture}`;
+    if (!fx || fx.day !== today || history.picks.some(h => h.id === id)) return;
+    history.picks.push({ id, fixture, tier, key, pari, match: `${fx.home} – ${fx.away}`, cote, ia, kickoff: fx.kickoff, day: today, status: 'pending' });
   };
   picks.forEach(p => record(p.t, p.m, p.key, p.pari, p.cote, p.ia));
   varList.forEach(v => record('var', v.m, 'CS:' + v.scores[0][0], 'Score exact ' + v.scores[0][0], v.scores[0][2], v.scores[0][1]));
-  const limit = Date.now() - 60 * DAY_MS;
-  history.picks = history.picks.filter(p => Date.parse(p.kickoff) >= limit);
+
+  // Si l’analyse est relancée dans la journée, on garde les pronos des matchs
+  // du jour déjà commencés (ils ne sont plus analysables) pour afficher leur résultat.
+  for (const [id, m] of Object.entries(previous?.matches ?? {})) {
+    if (matches[id] || m.day !== today || Date.parse(m.kickoff) > Date.now()) continue;
+    matches[id] = m;
+    for (const p of previous.picks ?? []) if (String(p.m) === id) picks.push(p);
+    for (const v of previous.var ?? []) if (String(v.m) === id) varList.push(v);
+    if (previous.results?.[id]) pronos.results[id] = previous.results[id];
+  }
+
+  await refreshResults(pronos, history);
+  pruneHistory(history);
+  await writeJson('pronos.json', pronos);
   await writeJson('history.json', history);
 
   console.log(`Terminé : ${picks.length} pronos, ${varList.length} matchs en VAR, ${calls} requêtes API-Football, source ${answer ? 'Claude' : 'modèle seul'}.`);
