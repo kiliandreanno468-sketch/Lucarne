@@ -1,0 +1,12 @@
+{
+  "name": "lucarne",
+  "private": true,
+  "type": "module",
+  "description": "Pronostics foot SAFE / CRAZY / RICH / VAR analysés par IA",
+  "scripts": {
+    "generate": "node scripts/generate.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
