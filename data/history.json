@@ -1,19 +1,6 @@
 {
  "picks": [
   {
-   "id": "2026-10-24-safe-1557439",
-   "fixture": 1557439,
-   "tier": "safe",
-   "key": "DC:HD",
-   "pari": "Chelsea ou match nul",
-   "match": "Chelsea – Tottenham",
-   "cote": 1.25,
-   "ia": 0.8,
-   "kickoff": "2026-10-24T16:30:00.000Z",
-   "day": "2026-10-24",
-   "status": "pending"
-  },
-  {
    "id": "2026-10-24-safe-1557438",
    "fixture": 1557438,
    "tier": "safe",
@@ -27,19 +14,6 @@
    "status": "pending"
   },
   {
-   "id": "2026-10-24-safe-1570432",
-   "fixture": 1570432,
-   "tier": "safe",
-   "key": "DC:AD",
-   "pari": "Villarreal ou match nul",
-   "match": "Valencia – Villarreal",
-   "cote": 1.35,
-   "ia": 0.75,
-   "kickoff": "2026-10-24T16:30:00.000Z",
-   "day": "2026-10-24",
-   "status": "pending"
-  },
-  {
    "id": "2026-10-24-crazy-1570429",
    "fixture": 1570429,
    "tier": "crazy",
@@ -49,32 +23,6 @@
    "cote": 2.07,
    "ia": 0.56,
    "kickoff": "2026-10-24T12:00:00.000Z",
-   "day": "2026-10-24",
-   "status": "pending"
-  },
-  {
-   "id": "2026-10-24-crazy-1552795",
-   "fixture": 1552795,
-   "tier": "crazy",
-   "key": "1X2:H",
-   "pari": "Lens gagne",
-   "match": "Lens – Paris FC",
-   "cote": 2.5,
-   "ia": 0.41,
-   "kickoff": "2026-10-24T18:45:00.000Z",
-   "day": "2026-10-24",
-   "status": "pending"
-  },
-  {
-   "id": "2026-10-24-rich-1570425",
-   "fixture": 1570425,
-   "tier": "rich",
-   "key": "1X2:D",
-   "pari": "Match nul",
-   "match": "Atletico Madrid – Deportivo La Coruna",
-   "cote": 6,
-   "ia": 0.22,
-   "kickoff": "2026-10-24T19:00:00.000Z",
    "day": "2026-10-24",
    "status": "pending"
   },
@@ -127,6 +75,71 @@
    "cote": 6.5,
    "ia": 0.093,
    "kickoff": "2026-10-24T14:00:00.000Z",
+   "day": "2026-10-24",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-24-safe-1557439",
+   "fixture": 1557439,
+   "tier": "safe",
+   "key": "DC:HD",
+   "pari": "Chelsea ou match nul",
+   "match": "Chelsea – Tottenham",
+   "cote": 1.29,
+   "ia": 0.8,
+   "kickoff": "2026-10-24T16:30:00.000Z",
+   "day": "2026-10-24",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-24-safe-1570432",
+   "fixture": 1570432,
+   "tier": "safe",
+   "key": "DC:AD",
+   "pari": "Villarreal ou match nul",
+   "match": "Valencia – Villarreal",
+   "cote": 1.33,
+   "ia": 0.763,
+   "kickoff": "2026-10-24T16:30:00.000Z",
+   "day": "2026-10-24",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-24-rich-1570425",
+   "fixture": 1570425,
+   "tier": "rich",
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "match": "Atletico Madrid – Deportivo La Coruna",
+   "cote": 6,
+   "ia": 0.23,
+   "kickoff": "2026-10-24T19:00:00.000Z",
+   "day": "2026-10-24",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-24-var-1550164",
+   "fixture": 1550164,
+   "tier": "var",
+   "key": "CS:1-1",
+   "pari": "Score exact 1-1",
+   "match": "Napoli – AS Roma",
+   "cote": 6,
+   "ia": 0.1,
+   "kickoff": "2026-10-24T16:00:00.000Z",
+   "day": "2026-10-24",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-24-var-1550162",
+   "fixture": 1550162,
+   "tier": "var",
+   "key": "CS:1-0",
+   "pari": "Score exact 1-0",
+   "match": "Lazio – Parma",
+   "cote": 6,
+   "ia": 0.096,
+   "kickoff": "2026-10-24T18:45:00.000Z",
    "day": "2026-10-24",
    "status": "pending"
   }

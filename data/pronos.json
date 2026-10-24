@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-24T09:34:57.908Z",
+ "generatedAt": "2026-10-24T14:34:58.726Z",
  "days": [
   {
    "key": "2026-10-24",
@@ -11,6 +11,61 @@
   }
  ],
  "matches": {
+  "1550157": {
+   "day": "2026-10-25",
+   "time": "15h00",
+   "kickoff": "2026-10-25T14:00:00.000Z",
+   "comp": "Serie A",
+   "group": "Serie A",
+   "home": "Atalanta",
+   "away": "Frosinone",
+   "homeLogo": "https://media.api-sports.io/football/teams/499.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/512.png"
+  },
+  "1550160": {
+   "day": "2026-10-25",
+   "time": "15h00",
+   "kickoff": "2026-10-25T14:00:00.000Z",
+   "comp": "Serie A",
+   "group": "Serie A",
+   "home": "Genoa",
+   "away": "Venezia",
+   "homeLogo": "https://media.api-sports.io/football/teams/495.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/517.png"
+  },
+  "1550161": {
+   "day": "2026-10-25",
+   "time": "12h30",
+   "kickoff": "2026-10-25T11:30:00.000Z",
+   "comp": "Serie A",
+   "group": "Serie A",
+   "home": "Inter",
+   "away": "Fiorentina",
+   "homeLogo": "https://media.api-sports.io/football/teams/505.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/502.png"
+  },
+  "1550162": {
+   "day": "2026-10-24",
+   "time": "20h45",
+   "kickoff": "2026-10-24T18:45:00.000Z",
+   "comp": "Serie A",
+   "group": "Serie A",
+   "home": "Lazio",
+   "away": "Parma",
+   "homeLogo": "https://media.api-sports.io/football/teams/487.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/523.png"
+  },
+  "1550164": {
+   "day": "2026-10-24",
+   "time": "18h00",
+   "kickoff": "2026-10-24T16:00:00.000Z",
+   "comp": "Serie A",
+   "group": "Serie A",
+   "home": "Napoli",
+   "away": "AS Roma",
+   "homeLogo": "https://media.api-sports.io/football/teams/492.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/497.png"
+  },
   "1552792": {
    "day": "2026-10-25",
    "time": "17h15",
@@ -21,28 +76,6 @@
    "away": "Lorient",
    "homeLogo": "https://media.api-sports.io/football/teams/77.png",
    "awayLogo": "https://media.api-sports.io/football/teams/97.png"
-  },
-  "1552793": {
-   "day": "2026-10-25",
-   "time": "17h15",
-   "kickoff": "2026-10-25T16:15:00.000Z",
-   "comp": "Ligue 1",
-   "group": "Ligue 1",
-   "home": "Auxerre",
-   "away": "Le Mans",
-   "homeLogo": "https://media.api-sports.io/football/teams/108.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/1298.png"
-  },
-  "1552795": {
-   "day": "2026-10-24",
-   "time": "20h45",
-   "kickoff": "2026-10-24T18:45:00.000Z",
-   "comp": "Ligue 1",
-   "group": "Ligue 1",
-   "home": "Lens",
-   "away": "Paris FC",
-   "homeLogo": "https://media.api-sports.io/football/teams/116.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/114.png"
   },
   "1552797": {
    "day": "2026-10-25",
@@ -55,16 +88,16 @@
    "homeLogo": "https://media.api-sports.io/football/teams/91.png",
    "awayLogo": "https://media.api-sports.io/football/teams/79.png"
   },
-  "1552800": {
+  "1552799": {
    "day": "2026-10-25",
-   "time": "20h45",
-   "kickoff": "2026-10-25T19:45:00.000Z",
+   "time": "17h15",
+   "kickoff": "2026-10-25T16:15:00.000Z",
    "comp": "Ligue 1",
    "group": "Ligue 1",
-   "home": "Paris Saint Germain",
-   "away": "Lyon",
-   "homeLogo": "https://media.api-sports.io/football/teams/85.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/80.png"
+   "home": "Toulouse",
+   "away": "Estac Troyes",
+   "homeLogo": "https://media.api-sports.io/football/teams/96.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/110.png"
   },
   "1557437": {
    "day": "2026-10-24",
@@ -109,6 +142,17 @@
    "away": "Fulham",
    "homeLogo": "https://media.api-sports.io/football/teams/1346.png",
    "awayLogo": "https://media.api-sports.io/football/teams/36.png"
+  },
+  "1557441": {
+   "day": "2026-10-25",
+   "time": "15h00",
+   "kickoff": "2026-10-25T14:00:00.000Z",
+   "comp": "Premier League",
+   "group": "Premier League",
+   "home": "Crystal Palace",
+   "away": "Newcastle",
+   "homeLogo": "https://media.api-sports.io/football/teams/52.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/34.png"
   },
   "1557442": {
    "day": "2026-10-25",
@@ -176,6 +220,17 @@
    "homeLogo": "https://media.api-sports.io/football/teams/530.png",
    "awayLogo": "https://media.api-sports.io/football/teams/544.png"
   },
+  "1570426": {
+   "day": "2026-10-25",
+   "time": "21h00",
+   "kickoff": "2026-10-25T20:00:00.000Z",
+   "comp": "Liga",
+   "group": "Liga",
+   "home": "Barcelona",
+   "away": "Real Madrid",
+   "homeLogo": "https://media.api-sports.io/football/teams/529.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/541.png"
+  },
   "1570429": {
    "day": "2026-10-24",
    "time": "14h00",
@@ -186,6 +241,17 @@
    "away": "Elche",
    "homeLogo": "https://media.api-sports.io/football/teams/728.png",
    "awayLogo": "https://media.api-sports.io/football/teams/797.png"
+  },
+  "1570430": {
+   "day": "2026-10-25",
+   "time": "18h30",
+   "kickoff": "2026-10-25T17:30:00.000Z",
+   "comp": "Liga",
+   "group": "Liga",
+   "home": "Real Sociedad",
+   "away": "Levante",
+   "homeLogo": "https://media.api-sports.io/football/teams/548.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/539.png"
   },
   "1570432": {
    "day": "2026-10-24",
@@ -206,29 +272,29 @@
    "m": 1557439,
    "key": "DC:HD",
    "pari": "Chelsea ou match nul",
-   "cote": 1.25,
+   "cote": 1.29,
    "ia": 0.8,
-   "why": "Chelsea marque 3,7 buts/match, Tottenham 0,3 en déplacement. Modèle (0,804) légèrement au-dessus du bookmaker (0,800), xG 2,24 contre 1,15."
+   "why": "Chelsea marque 3,7 buts/match, Tottenham 0,3. Modèle à 80 % contre 77,5 % pour le bookmaker : bon appui pour une double chance."
   },
   {
-   "id": "safe-1557438",
+   "id": "safe-1570426",
    "t": "safe",
-   "m": 1557438,
-   "key": "OU:U:4.5",
-   "pari": "Moins de 4,5 buts",
-   "cote": 1.28,
-   "ia": 0.78,
-   "why": "Buts attendus 0,85 + 1,94, loin de 5 buts. Le modèle (0,784) est un cheveu au-dessus du bookmaker (0,781). Cote basse mais solide."
+   "m": 1570426,
+   "key": "DC:HD",
+   "pari": "Barcelona ou match nul",
+   "cote": 1.22,
+   "ia": 0.81,
+   "why": "Barcelona en VVVVV avec 4,3 buts marqués/match, xG 2,54 contre 1,23. Double chance solide, même si la cote est basse."
   },
   {
-   "id": "safe-1552800",
+   "id": "safe-1550157",
    "t": "safe",
-   "m": 1552800,
+   "m": 1550157,
    "key": "OU:U:4.5",
    "pari": "Moins de 4,5 buts",
-   "cote": 1.36,
+   "cote": 1.33,
    "ia": 0.77,
-   "why": "PSG-Lyon : xG 1,38 + 1,23, Lyon n'encaisse que 0,7/match. Modèle 0,768 contre 0,735 pour le bookmaker, un vrai écart pour une cote de 1,36."
+   "why": "xG cumulés de 2,68 seulement. Modèle à 77,1 % contre 75,2 % au bookmaker : un festival de buts paraît peu probable."
   },
   {
    "id": "safe-1557445",
@@ -237,8 +303,8 @@
    "key": "DC:HD",
    "pari": "Manchester United ou match nul",
    "cote": 1.36,
-   "ia": 0.76,
-   "why": "Man United attendu à 2,24 buts contre 1,26. Modèle 0,764 contre 0,735 au bookmaker, et Bournemouth encaisse 3 buts/match."
+   "ia": 0.764,
+   "why": "xG 2,24 contre 1,26 pour Manchester United. Modèle à 76,4 % contre 73,5 % au bookmaker : la double chance a un léger avantage."
   },
   {
    "id": "safe-1570432",
@@ -246,19 +312,19 @@
    "m": 1570432,
    "key": "DC:AD",
    "pari": "Villarreal ou match nul",
-   "cote": 1.35,
-   "ia": 0.75,
-   "why": "Villarreal sans défaite sur les 5 derniers duels, xG 1,49 contre 1,04. Valencia ne marque que 0,4/match. Modèle 0,757 contre 0,741."
+   "cote": 1.33,
+   "ia": 0.763,
+   "why": "Villarreal a un xG de 1,49 contre 1,04 à Valence, qui ne marque que 0,4 but/match. Modèle à 76,3 % contre 75,2 % au bookmaker."
   },
   {
-   "id": "safe-1552793",
+   "id": "safe-1570430",
    "t": "safe",
-   "m": 1552793,
-   "key": "DC:HD",
-   "pari": "Auxerre ou match nul",
-   "cote": 1.33,
-   "ia": 0.75,
-   "why": "Auxerre a un xG de 1,71 contre 1,26 et reste sur 4 duels sans défaite face au Mans. Modèle 0,755 pour 0,752 au bookmaker."
+   "m": 1570430,
+   "key": "OU:U:4.5",
+   "pari": "Moins de 4,5 buts",
+   "cote": 1.2,
+   "ia": 0.83,
+   "why": "xG cumulés de 2,38 et Levante ne marque que 0,4 but/match. Moins de 4,5 buts est très probable (modèle 83,2 %)."
   },
   {
    "id": "crazy-1557444",
@@ -267,38 +333,28 @@
    "key": "1X2:A",
    "pari": "Brighton gagne",
    "cote": 3.2,
-   "ia": 0.4,
-   "why": "Brighton : forme NVVVV, 3,3 buts marqués/match, xG 2,16 contre 1,11. Modèle 0,423 contre 0,313 pour le bookmaker, une cote de 3,2 qui a de la valeur."
+   "ia": 0.42,
+   "why": "Brighton en NVVVV, 3,3 buts/match, xG 2,16 contre 1,11. Modèle à 42,3 % contre 31,3 % pour le bookmaker : belle valeur à 3,20."
   },
   {
-   "id": "crazy-1552800",
+   "id": "crazy-1550161",
    "t": "crazy",
-   "m": 1552800,
-   "key": "DC:AD",
-   "pari": "Lyon ou match nul",
-   "cote": 2.87,
-   "ia": 0.44,
-   "why": "Lyon ou nul à 2,87 : Lyon encaisse 0,7/match et a gagné 2 des 5 derniers duels. Modèle 0,455 contre 0,348 au bookmaker."
-  },
-  {
-   "id": "crazy-1570429",
-   "t": "crazy",
-   "m": 1570429,
-   "key": "DC:AD",
-   "pari": "Elche ou match nul",
-   "cote": 2.07,
-   "ia": 0.56,
-   "why": "Elche ou nul : xG proches (1,56 contre 1,30), Elche a gagné 3 des 5 derniers duels. Modèle 0,577 contre 0,483, cote 2,07."
-  },
-  {
-   "id": "crazy-1557442",
-   "t": "crazy",
-   "m": 1557442,
-   "key": "DC:HD",
-   "pari": "Hull City ou match nul",
-   "cote": 2.1,
+   "m": 1550161,
+   "key": "OU:O:3.5",
+   "pari": "Plus de 3,5 buts",
+   "cote": 2.06,
    "ia": 0.52,
-   "why": "Hull n'encaisse que 0,7/match et xG 1,49 contre 1,19. Modèle 0,539 contre 0,476 pour le bookmaker, à une cote de 2,1."
+   "why": "Inter xG 2,8 et 3,8 buts/match, Fiorentina en encaisse 2,7. Modèle à 52,3 % contre 48,5 % : plus de 3,5 buts à 2,06 se défend."
+  },
+  {
+   "id": "crazy-1557441",
+   "t": "crazy",
+   "m": 1557441,
+   "key": "OU:O:3.5",
+   "pari": "Plus de 3,5 buts",
+   "cote": 2.31,
+   "ia": 0.46,
+   "why": "xG cumulés de 3,92 et les deux équipes encaissent 2,7 buts/match. Modèle à 46,3 % contre 43,3 % pour le bookmaker, cote de 2,31."
   },
   {
    "id": "crazy-1557445",
@@ -307,28 +363,28 @@
    "key": "1X2:H",
    "pari": "Manchester United gagne",
    "cote": 2.2,
-   "ia": 0.47,
-   "why": "Man United : xG 2,24 contre 1,26, Bournemouth encaisse 3 buts/match. Modèle 0,484 contre 0,455, cote de 2,2."
+   "ia": 0.48,
+   "why": "Manchester United a un xG de 2,24 contre 1,26. Modèle à 48,4 % contre 45,5 % pour le bookmaker, victoire à 2,20 plausible."
   },
   {
-   "id": "crazy-1552795",
+   "id": "crazy-1557442",
    "t": "crazy",
-   "m": 1552795,
-   "key": "1X2:H",
-   "pari": "Lens gagne",
-   "cote": 2.5,
-   "ia": 0.41,
-   "why": "Lens marque 2,3 buts/match, xG 1,6 contre 1,15, et a gagné 3 des 5 derniers duels. Modèle 0,424 contre 0,400, cote de 2,5."
+   "m": 1557442,
+   "key": "DC:HD",
+   "pari": "Hull City ou match nul",
+   "cote": 2.1,
+   "ia": 0.54,
+   "why": "Hull encaisse 0,7 but/match, xG 1,49 contre 1,19. Modèle à 53,9 % contre 47,6 % : la double chance à 2,10 offre de la valeur."
   },
   {
-   "id": "rich-1552800",
-   "t": "rich",
-   "m": 1552800,
-   "key": "1X2:D",
-   "pari": "Match nul",
-   "cote": 5.25,
-   "ia": 0.24,
-   "why": "Nul à 5,25 : xG serrés (1,38 contre 1,23) et 1-1 est le score le plus probable. Modèle 0,26 contre 0,19 pour le bookmaker."
+   "id": "crazy-1550157",
+   "t": "crazy",
+   "m": 1550157,
+   "key": "OU:U:3.5",
+   "pari": "Moins de 3,5 buts",
+   "cote": 1.81,
+   "ia": 0.6,
+   "why": "xG cumulés de 2,68. Modèle à 60,4 % contre 55,2 % pour le bookmaker : moins de 3,5 buts à 1,81 est un bon rapport risque/cote."
   },
   {
    "id": "rich-1570425",
@@ -337,8 +393,58 @@
    "key": "1X2:D",
    "pari": "Match nul",
    "cote": 6,
+   "ia": 0.23,
+   "why": "Modèle à 24,6 % contre 16,7 % pour le bookmaker. Deportivo marque 1,8 but/match, xG 1,26 : un nul à 6,00 est jouable."
+  },
+  {
+   "id": "rich-1570426",
+   "t": "rich",
+   "m": 1570426,
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "cote": 5.65,
    "ia": 0.22,
-   "why": "Nul à 6 : Deportivo marque 1,8/match et a fait 1-1 lors d'un des derniers duels. Modèle 0,246 contre 0,167. Pari risqué face à un Atletico en forme."
+   "why": "Modèle à 22,7 % contre 17,7 %. Real Madrid marque 1,5 but/match et les 5 derniers duels ont été serrés : nul à 5,65 intéressant."
+  },
+  {
+   "id": "rich-1550161",
+   "t": "rich",
+   "m": 1550161,
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "cote": 5.5,
+   "ia": 0.22,
+   "why": "Modèle à 22,7 % contre 18,2 % pour le bookmaker. Fiorentina marque 1,7 but/match et a fait 1-1 à Inter lors d'un récent duel : nul à 5,50."
+  },
+  {
+   "id": "rich-1550160",
+   "t": "rich",
+   "m": 1550160,
+   "key": "OU:O:4.5",
+   "pari": "Plus de 4,5 buts",
+   "cote": 6.35,
+   "ia": 0.17,
+   "why": "xG cumulés de 3,16, Genoa encaisse 2 buts/match et Venezia 2,7. Modèle à 17,4 % contre 15,7 % : plus de 4,5 buts à 6,35."
+  },
+  {
+   "id": "rich-1550157",
+   "t": "rich",
+   "m": 1550157,
+   "key": "OU:U:1.5",
+   "pari": "Moins de 1,5 buts",
+   "cote": 6.37,
+   "ia": 0.18,
+   "why": "Modèle à 19 % contre 15,7 % pour le bookmaker. Frosinone a fait 0-0 chez Atalanta lors d'un récent duel : moins de 1,5 buts à 6,37."
+  },
+  {
+   "id": "rich-1552799",
+   "t": "rich",
+   "m": 1552799,
+   "key": "1X2:A",
+   "pari": "Estac Troyes gagne",
+   "cote": 5.2,
+   "ia": 0.2,
+   "why": "Modèle à 20,9 % contre 19,2 %. Toulouse n'a marqué que 1 but/match et Troyes a fait 1-1 chez lui lors d'un duel récent : cote de 5,20."
   },
   {
    "id": "rich-1557437",
@@ -351,14 +457,14 @@
    "why": "Everton à 7,3 : xG de 0,93 seulement, mais forme sans grosse défaite récente. Modèle 0,151 contre 0,137, léger avantage."
   },
   {
-   "id": "rich-1557442",
-   "t": "rich",
-   "m": 1557442,
-   "key": "CS:2-0",
-   "pari": "Score exact 2-0",
-   "cote": 26,
-   "ia": 0.04,
-   "why": "Hull-Brentford, 2-0 à 26 : Hull n'encaisse que 0,7/match et xG 1,49. Modèle 0,041 contre 0,038. Gros pari, pas une valeur sûre."
+   "id": "safe-1557438",
+   "t": "safe",
+   "m": 1557438,
+   "key": "OU:U:4.5",
+   "pari": "Moins de 4,5 buts",
+   "cote": 1.28,
+   "ia": 0.78,
+   "why": "Buts attendus 0,85 + 1,94, loin de 5 buts. Le modèle (0,784) est un cheveu au-dessus du bookmaker (0,781). Cote basse mais solide."
   },
   {
    "id": "rich-1557438",
@@ -369,12 +475,22 @@
    "cote": 5.45,
    "ia": 0.18,
    "why": "Moins de 1,5 buts à 5,45 : Aston Villa marque 1/match, City n'encaisse que 0,3. Modèle 0,197 contre 0,183. Pari de valeur mais très risqué."
+  },
+  {
+   "id": "crazy-1570429",
+   "t": "crazy",
+   "m": 1570429,
+   "key": "DC:AD",
+   "pari": "Elche ou match nul",
+   "cote": 2.07,
+   "ia": 0.56,
+   "why": "Elche ou nul : xG proches (1,56 contre 1,30), Elche a gagné 3 des 5 derniers duels. Modèle 0,577 contre 0,483, cote 2,07."
   }
  ],
  "var": [
   {
    "m": 1570424,
-   "why": "Getafe marque 0 but/match en déplacement, xG 1,6 contre 0,66 : 1-0 est le score le plus probable (0,12).",
+   "why": "Score 1-0 : Athletic xG 1,6 contre 0,66 pour Getafe, qui n'a marqué aucun but/match. Score le plus lisible (12 % pour le modèle).",
    "scores": [
     [
      "1-0",
@@ -395,7 +511,7 @@
   },
   {
    "m": 1557446,
-   "why": "Sunderland ne marque que 0,3/match, xG 0,85 contre 1,15 : 1-1 domine (0,10), 0-1 juste derrière.",
+   "why": "Score 1-1 : xG de 0,85 contre 1,15, Sunderland ne marque que 0,3 but/match. Match fermé, 1-1 est à 10 % pour le modèle.",
    "scores": [
     [
      "1-1",
@@ -411,6 +527,90 @@
      "0-0",
      0.088,
      8
+    ]
+   ]
+  },
+  {
+   "m": 1550164,
+   "why": "Score 1-1 : xG de 1 contre 1,3, avec deux 2-2 et un 1-1 dans les confrontations récentes. 1-1 est à 10 % pour le modèle.",
+   "scores": [
+    [
+     "1-1",
+     0.1,
+     6
+    ],
+    [
+     "0-1",
+     0.082,
+     9.5
+    ],
+    [
+     "1-0",
+     0.072,
+     9
+    ]
+   ]
+  },
+  {
+   "m": 1550162,
+   "why": "Score 1-0 : Lazio xG 1,98 contre 0,78 pour Parma, qui marque 0,3 but/match. 1-0 est à 9,6 % pour le modèle, juste devant 2-0.",
+   "scores": [
+    [
+     "1-0",
+     0.096,
+     6
+    ],
+    [
+     "2-0",
+     0.092,
+     6.5
+    ],
+    [
+     "2-1",
+     0.074,
+     7.7
+    ]
+   ]
+  },
+  {
+   "m": 1552797,
+   "why": "Score 1-1 : xG de 1,38 contre 1,15 et deux 1-0 récents. 1-1 est le score le plus probable pour le modèle (9,6 %).",
+   "scores": [
+    [
+     "1-1",
+     0.096,
+     6
+    ],
+    [
+     "1-0",
+     0.077,
+     8.3
+    ],
+    [
+     "2-1",
+     0.069,
+     8
+    ]
+   ]
+  },
+  {
+   "m": 1552792,
+   "why": "Score 1-1 : xG de 1,11 contre 1,41 et une défense de Lorient qui n'encaisse que 0,7 but/match. 1-1 est à 9,5 % pour le modèle.",
+   "scores": [
+    [
+     "1-1",
+     0.095,
+     6
+    ],
+    [
+     "0-1",
+     0.081,
+     7.5
+    ],
+    [
+     "1-0",
+     0.066,
+     9
     ]
    ]
   },
@@ -436,48 +636,6 @@
    ]
   },
   {
-   "m": 1552797,
-   "why": "Xg proches (1,38 contre 1,15), duels très serrés (nombreux 1-0, un 0-0) : 1-1 ressort à 0,096.",
-   "scores": [
-    [
-     "1-1",
-     0.096,
-     6
-    ],
-    [
-     "1-0",
-     0.077,
-     8.3
-    ],
-    [
-     "2-1",
-     0.069,
-     8
-    ]
-   ]
-  },
-  {
-   "m": 1552792,
-   "why": "xG de 1,11 contre 1,41, Lorient n'encaisse que 0,7/match : 1-1 en tête (0,095), 0-1 en second.",
-   "scores": [
-    [
-     "1-1",
-     0.095,
-     6
-    ],
-    [
-     "0-1",
-     0.081,
-     7.5
-    ],
-    [
-     "1-0",
-     0.066,
-     9
-    ]
-   ]
-  },
-  {
    "m": 1557440,
    "why": "xG quasi égaux (1,22 contre 1,26), Fulham ne marque que 0,3/match : 1-1 est le score le plus lisible (0,093).",
    "scores": [
@@ -499,5 +657,6 @@
    ]
   }
  ],
+ "results": {},
  "source": "claude"
 }
