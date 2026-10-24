@@ -2,8 +2,15 @@ name: Pronos du jour
 
 on:
   schedule:
-    - cron: '0 6 * * *'   # tous les jours à 6 h UTC (8 h en été, 7 h en hiver à Paris)
-  workflow_dispatch:       # bouton « Run workflow » pour lancer à la main
+    - cron: '0 6 * * *'       # analyse complète chaque matin (8 h en été, 7 h en hiver à Paris)
+    - cron: '20 12-23 * * *'  # scores des matchs toutes les heures, de l’après-midi jusqu’à minuit passé
+  workflow_dispatch:          # bouton « Run workflow » pour lancer à la main
+    inputs:
+      mode:
+        description: 'complet = nouvelle analyse, resultats = scores seulement'
+        type: choice
+        options: [complet, resultats]
+        default: complet
   push:
     branches: [main]
     paths-ignore: ['data/**']
@@ -22,6 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
@@ -32,6 +41,7 @@ jobs:
         env:
           APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MODE: ${{ (github.event_name == 'schedule' && github.event.schedule != '0 6 * * *') && 'resultats' || inputs.mode || 'complet' }}
         run: node scripts/generate.mjs
 
       - name: Sauvegarde des pronos et du bilan
@@ -40,8 +50,9 @@ jobs:
           git config user.name "lucarne-bot"
           git config user.email "lucarne-bot@users.noreply.github.com"
           git add data
-          git diff --staged --quiet || git commit -m "Pronos du $(date +'%d/%m/%Y')"
-          git push
+          if git diff --staged --quiet; then exit 0; fi
+          git commit -m "Mise à jour du $(date +'%d/%m/%Y %H:%M')"
+          git push || (git pull --rebase origin main && git push)
 
       - uses: actions/configure-pages@v5
 
