@@ -1,0 +1,60 @@
+name: Pronos du jour
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # tous les jours à 6 h UTC (8 h en été, 7 h en hiver à Paris)
+  workflow_dispatch:       # bouton « Run workflow » pour lancer à la main
+  push:
+    branches: [main]
+    paths-ignore: ['data/**']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pronos
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Analyse des matchs
+        if: github.event_name != 'push'
+        env:
+          APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate.mjs
+
+      - name: Sauvegarde des pronos et du bilan
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "lucarne-bot"
+          git config user.email "lucarne-bot@users.noreply.github.com"
+          git add data
+          git diff --staged --quiet || git commit -m "Pronos du $(date +'%d/%m/%Y')"
+          git push
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
