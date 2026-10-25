@@ -747,10 +747,9 @@
  ],
  "results": {
   "1550160": {
-   "status": "live",
+   "status": "FT",
    "score": "1-0",
-   "at": "2026-10-25T15:44:15.915Z",
-   "final": false
+   "final": true
   },
   "1550162": {
    "status": "FT",
@@ -762,11 +761,16 @@
    "score": "3-3",
    "final": true
   },
-  "1552797": {
+  "1552792": {
    "status": "live",
-   "score": "1-1",
-   "at": "2026-10-25T15:44:15.915Z",
+   "score": "0-0",
+   "at": "2026-10-25T16:44:58.824Z",
    "final": false
+  },
+  "1552797": {
+   "status": "FT",
+   "score": "1-1",
+   "final": true
   },
   "1557437": {
    "status": "FT",
@@ -789,21 +793,24 @@
    "final": true
   },
   "1557442": {
-   "status": "live",
+   "status": "FT",
    "score": "1-1",
-   "at": "2026-10-25T15:44:15.915Z",
-   "final": false
+   "final": true
   },
   "1557444": {
-   "status": "live",
+   "status": "FT",
    "score": "2-0",
-   "at": "2026-10-25T15:44:15.915Z",
-   "final": false
+   "final": true
   },
   "1557445": {
-   "status": "live",
+   "status": "FT",
    "score": "0-3",
-   "at": "2026-10-25T15:44:15.915Z",
+   "final": true
+  },
+  "1557446": {
+   "status": "live",
+   "score": "0-0",
+   "at": "2026-10-25T16:44:58.824Z",
    "final": false
   },
   "1570424": {
@@ -825,8 +832,14 @@
    "status": "FT",
    "score": "1-2",
    "final": true
+  },
+  "1575198": {
+   "status": "live",
+   "score": "0-0",
+   "at": "2026-10-25T16:44:58.824Z",
+   "final": false
   }
  },
  "source": "claude",
- "resultsAt": "2026-10-25T15:44:15.915Z"
+ "resultsAt": "2026-10-25T16:44:58.824Z"
 }
