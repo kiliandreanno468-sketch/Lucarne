@@ -757,10 +757,9 @@
    "final": true
   },
   "1550163": {
-   "status": "live",
+   "status": "FT",
    "score": "0-2",
-   "at": "2026-10-25T18:47:24.833Z",
-   "final": false
+   "final": true
   },
   "1550164": {
    "status": "FT",
@@ -833,10 +832,9 @@
    "final": true
   },
   "1570430": {
-   "status": "live",
+   "status": "FT",
    "score": "2-1",
-   "at": "2026-10-25T18:47:24.833Z",
-   "final": false
+   "final": true
   },
   "1570432": {
    "status": "FT",
@@ -850,5 +848,5 @@
   }
  },
  "source": "claude",
- "resultsAt": "2026-10-25T18:47:24.833Z"
+ "resultsAt": "2026-10-25T19:39:18.713Z"
 }
