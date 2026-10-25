@@ -11,7 +11,8 @@
    "ia": 0.78,
    "kickoff": "2026-10-24T11:30:00.000Z",
    "day": "2026-10-24",
-   "status": "pending"
+   "status": "won",
+   "score": "2-1"
   },
   {
    "id": "2026-10-24-crazy-1570429",
@@ -24,7 +25,8 @@
    "ia": 0.56,
    "kickoff": "2026-10-24T12:00:00.000Z",
    "day": "2026-10-24",
-   "status": "pending"
+   "status": "won",
+   "score": "0-3"
   },
   {
    "id": "2026-10-24-rich-1557437",
@@ -37,7 +39,8 @@
    "ia": 0.14,
    "kickoff": "2026-10-24T14:00:00.000Z",
    "day": "2026-10-24",
-   "status": "pending"
+   "status": "lost",
+   "score": "2-0"
   },
   {
    "id": "2026-10-24-rich-1557438",
@@ -50,7 +53,8 @@
    "ia": 0.18,
    "kickoff": "2026-10-24T11:30:00.000Z",
    "day": "2026-10-24",
-   "status": "pending"
+   "status": "lost",
+   "score": "2-1"
   },
   {
    "id": "2026-10-24-var-1557437",
@@ -63,7 +67,8 @@
    "ia": 0.096,
    "kickoff": "2026-10-24T14:00:00.000Z",
    "day": "2026-10-24",
-   "status": "pending"
+   "status": "lost",
+   "score": "2-0"
   },
   {
    "id": "2026-10-24-var-1557440",
@@ -76,7 +81,8 @@
    "ia": 0.093,
    "kickoff": "2026-10-24T14:00:00.000Z",
    "day": "2026-10-24",
-   "status": "pending"
+   "status": "lost",
+   "score": "0-1"
   },
   {
    "id": "2026-10-24-safe-1557439",
@@ -89,7 +95,8 @@
    "ia": 0.8,
    "kickoff": "2026-10-24T16:30:00.000Z",
    "day": "2026-10-24",
-   "status": "pending"
+   "status": "lost",
+   "score": "0-2"
   },
   {
    "id": "2026-10-24-safe-1570432",
@@ -102,7 +109,8 @@
    "ia": 0.763,
    "kickoff": "2026-10-24T16:30:00.000Z",
    "day": "2026-10-24",
-   "status": "pending"
+   "status": "won",
+   "score": "1-2"
   },
   {
    "id": "2026-10-24-rich-1570425",
@@ -115,7 +123,8 @@
    "ia": 0.23,
    "kickoff": "2026-10-24T19:00:00.000Z",
    "day": "2026-10-24",
-   "status": "pending"
+   "status": "lost",
+   "score": "1-0"
   },
   {
    "id": "2026-10-24-var-1550164",
@@ -128,7 +137,8 @@
    "ia": 0.1,
    "kickoff": "2026-10-24T16:00:00.000Z",
    "day": "2026-10-24",
-   "status": "pending"
+   "status": "lost",
+   "score": "3-3"
   },
   {
    "id": "2026-10-24-var-1550162",
@@ -141,6 +151,241 @@
    "ia": 0.096,
    "kickoff": "2026-10-24T18:45:00.000Z",
    "day": "2026-10-24",
+   "status": "lost",
+   "score": "2-1"
+  },
+  {
+   "id": "2026-10-25-safe-1570430",
+   "fixture": 1570430,
+   "tier": "safe",
+   "key": "OU:U:4.5",
+   "pari": "Moins de 4,5 buts",
+   "match": "Real Sociedad – Levante",
+   "cote": 1.21,
+   "ia": 0.83,
+   "kickoff": "2026-10-25T17:30:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-safe-1570426",
+   "fixture": 1570426,
+   "tier": "safe",
+   "key": "DC:HD",
+   "pari": "Barcelona ou match nul",
+   "match": "Barcelona – Real Madrid",
+   "cote": 1.26,
+   "ia": 0.8,
+   "kickoff": "2026-10-25T20:00:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-safe-1557445",
+   "fixture": 1557445,
+   "tier": "safe",
+   "key": "DC:HD",
+   "pari": "Manchester United ou match nul",
+   "match": "Manchester United – Bournemouth",
+   "cote": 1.36,
+   "ia": 0.76,
+   "kickoff": "2026-10-25T14:00:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-safe-1557446",
+   "fixture": 1557446,
+   "tier": "safe",
+   "key": "DC:AD",
+   "pari": "Leeds ou match nul",
+   "match": "Sunderland – Leeds",
+   "cote": 1.4,
+   "ia": 0.74,
+   "kickoff": "2026-10-25T16:30:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-crazy-1575198",
+   "fixture": 1575198,
+   "tier": "crazy",
+   "key": "DC:HD",
+   "pari": "SC Freiburg ou match nul",
+   "match": "SC Freiburg – Bayern München",
+   "cote": 2.88,
+   "ia": 0.5,
+   "kickoff": "2026-10-25T16:30:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-crazy-1557444",
+   "fixture": 1557444,
+   "tier": "crazy",
+   "key": "1X2:A",
+   "pari": "Brighton gagne",
+   "match": "Liverpool – Brighton",
+   "cote": 3.2,
+   "ia": 0.41,
+   "kickoff": "2026-10-25T14:00:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-crazy-1557442",
+   "fixture": 1557442,
+   "tier": "crazy",
+   "key": "DC:HD",
+   "pari": "Hull City ou match nul",
+   "match": "Hull City – Brentford",
+   "cote": 2.2,
+   "ia": 0.52,
+   "kickoff": "2026-10-25T14:00:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-crazy-1552797",
+   "fixture": 1552797,
+   "tier": "crazy",
+   "key": "DC:AD",
+   "pari": "Lille ou match nul",
+   "match": "Monaco – Lille",
+   "cote": 1.8,
+   "ia": 0.6,
+   "kickoff": "2026-10-25T14:00:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-rich-1575198",
+   "fixture": 1575198,
+   "tier": "rich",
+   "key": "1X2:H",
+   "pari": "SC Freiburg gagne",
+   "match": "SC Freiburg – Bayern München",
+   "cote": 6.5,
+   "ia": 0.27,
+   "kickoff": "2026-10-25T16:30:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-rich-1570426",
+   "fixture": 1570426,
+   "tier": "rich",
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "match": "Barcelona – Real Madrid",
+   "cote": 5.55,
+   "ia": 0.22,
+   "kickoff": "2026-10-25T20:00:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-rich-1550163",
+   "fixture": 1550163,
+   "tier": "rich",
+   "key": "1X2:H",
+   "pari": "Lecce gagne",
+   "match": "Lecce – Juventus",
+   "cote": 6.73,
+   "ia": 0.17,
+   "kickoff": "2026-10-25T17:00:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-rich-1550160",
+   "fixture": 1550160,
+   "tier": "rich",
+   "key": "OU:O:4.5",
+   "pari": "Plus de 4,5 buts",
+   "match": "Genoa – Venezia",
+   "cote": 6.4,
+   "ia": 0.17,
+   "kickoff": "2026-10-25T14:00:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-var-1570424",
+   "fixture": 1570424,
+   "tier": "var",
+   "key": "CS:1-0",
+   "pari": "Score exact 1-0",
+   "match": "Athletic Club – Getafe",
+   "cote": 5,
+   "ia": 0.12,
+   "kickoff": "2026-10-25T13:00:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-var-1557446",
+   "fixture": 1557446,
+   "tier": "var",
+   "key": "CS:1-1",
+   "pari": "Score exact 1-1",
+   "match": "Sunderland – Leeds",
+   "cote": 5.8,
+   "ia": 0.099,
+   "kickoff": "2026-10-25T16:30:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-var-1552797",
+   "fixture": 1552797,
+   "tier": "var",
+   "key": "CS:1-1",
+   "pari": "Score exact 1-1",
+   "match": "Monaco – Lille",
+   "cote": 6.1,
+   "ia": 0.095,
+   "kickoff": "2026-10-25T14:00:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-var-1552792",
+   "fixture": 1552792,
+   "tier": "var",
+   "key": "CS:1-1",
+   "pari": "Score exact 1-1",
+   "match": "Angers – Lorient",
+   "cote": 6,
+   "ia": 0.095,
+   "kickoff": "2026-10-25T16:15:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-var-1550166",
+   "fixture": 1550166,
+   "tier": "var",
+   "key": "CS:1-1",
+   "pari": "Score exact 1-1",
+   "match": "Udinese – AC Milan",
+   "cote": 6.65,
+   "ia": 0.09,
+   "kickoff": "2026-10-25T19:45:00.000Z",
+   "day": "2026-10-25",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-25-var-1550160",
+   "fixture": 1550160,
+   "tier": "var",
+   "key": "CS:1-1",
+   "pari": "Score exact 1-1",
+   "match": "Genoa – Venezia",
+   "cote": 6,
+   "ia": 0.088,
+   "kickoff": "2026-10-25T14:00:00.000Z",
+   "day": "2026-10-25",
    "status": "pending"
   }
  ]
