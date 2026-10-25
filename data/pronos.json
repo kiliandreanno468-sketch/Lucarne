@@ -766,6 +766,12 @@
    "score": "3-3",
    "final": true
   },
+  "1550166": {
+   "status": "live",
+   "score": "0-1",
+   "at": "2026-10-25T20:41:43.609Z",
+   "final": false
+  },
   "1552792": {
    "status": "FT",
    "score": "0-0",
@@ -826,6 +832,12 @@
    "score": "1-0",
    "final": true
   },
+  "1570426": {
+   "status": "live",
+   "score": "0-0",
+   "at": "2026-10-25T20:41:43.609Z",
+   "final": false
+  },
   "1570429": {
    "status": "FT",
    "score": "0-3",
@@ -848,5 +860,5 @@
   }
  },
  "source": "claude",
- "resultsAt": "2026-10-25T19:39:18.713Z"
+ "resultsAt": "2026-10-25T20:41:43.609Z"
 }
