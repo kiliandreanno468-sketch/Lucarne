@@ -776,6 +776,12 @@
    "score": "0-1",
    "final": true
   },
+  "1570424": {
+   "status": "live",
+   "score": "2-0",
+   "at": "2026-10-25T13:43:24.600Z",
+   "final": false
+  },
   "1570425": {
    "status": "FT",
    "score": "1-0",
@@ -793,5 +799,5 @@
   }
  },
  "source": "claude",
- "resultsAt": "2026-10-25T06:24:17.216Z"
+ "resultsAt": "2026-10-25T13:43:24.600Z"
 }
