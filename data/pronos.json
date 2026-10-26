@@ -869,7 +869,14 @@
    "status": "FT",
    "score": "1-3",
    "final": true
+  },
+  "1575524": {
+   "status": "live",
+   "score": "0-0",
+   "at": "2026-10-26T19:00:43.611Z",
+   "final": false
   }
  },
- "source": "claude"
+ "source": "claude",
+ "resultsAt": "2026-10-26T19:00:43.611Z"
 }
