@@ -821,16 +821,14 @@
    "final": true
   },
   "1552504": {
-   "status": "live",
-   "score": "1-0",
-   "at": "2026-10-26T20:48:37.774Z",
-   "final": false
+   "status": "FT",
+   "score": "1-1",
+   "final": true
   },
   "1552508": {
-   "status": "live",
-   "score": "0-0",
-   "at": "2026-10-26T20:48:37.774Z",
-   "final": false
+   "status": "FT",
+   "score": "2-1",
+   "final": true
   },
   "1552792": {
    "status": "FT",
@@ -843,10 +841,9 @@
    "final": true
   },
   "1552800": {
-   "status": "live",
-   "score": "0-0",
-   "at": "2026-10-26T20:48:37.774Z",
-   "final": false
+   "status": "FT",
+   "score": "2-0",
+   "final": true
   },
   "1557442": {
    "status": "FT",
@@ -885,8 +882,8 @@
   },
   "1570431": {
    "status": "live",
-   "score": "1-0",
-   "at": "2026-10-26T20:48:37.774Z",
+   "score": "2-0",
+   "at": "2026-10-26T21:45:08.362Z",
    "final": false
   },
   "1575198": {
@@ -901,5 +898,5 @@
   }
  },
  "source": "claude",
- "resultsAt": "2026-10-26T20:48:37.774Z"
+ "resultsAt": "2026-10-26T21:45:08.362Z"
 }
