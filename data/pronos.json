@@ -881,10 +881,9 @@
    "final": true
   },
   "1570431": {
-   "status": "live",
+   "status": "FT",
    "score": "2-0",
-   "at": "2026-10-26T21:45:08.362Z",
-   "final": false
+   "final": true
   },
   "1575198": {
    "status": "FT",
@@ -898,5 +897,5 @@
   }
  },
  "source": "claude",
- "resultsAt": "2026-10-26T21:45:08.362Z"
+ "resultsAt": "2026-10-26T22:47:35.060Z"
 }
