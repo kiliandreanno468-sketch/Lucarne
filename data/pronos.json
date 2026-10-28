@@ -541,10 +541,22 @@
   }
  ],
  "results": {
+  "1550167": {
+   "status": "live",
+   "score": "1-1",
+   "at": "2026-10-28T17:56:19.602Z",
+   "final": false
+  },
   "1550168": {
    "status": "FT",
    "score": "4-2",
    "final": true
+  },
+  "1550173": {
+   "status": "live",
+   "score": "0-0",
+   "at": "2026-10-28T17:56:19.602Z",
+   "final": false
   },
   "1550174": {
    "status": "FT",
@@ -555,7 +567,14 @@
    "status": "FT",
    "score": "1-3",
    "final": true
+  },
+  "1550176": {
+   "status": "live",
+   "score": "0-0",
+   "at": "2026-10-28T17:56:19.602Z",
+   "final": false
   }
  },
- "source": "claude"
+ "source": "claude",
+ "resultsAt": "2026-10-28T17:56:19.602Z"
 }
