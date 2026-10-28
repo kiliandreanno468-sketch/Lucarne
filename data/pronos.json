@@ -542,21 +542,31 @@
  ],
  "results": {
   "1550167": {
-   "status": "live",
-   "score": "2-3",
-   "at": "2026-10-28T19:01:26.193Z",
-   "final": false
+   "status": "FT",
+   "score": "2-4",
+   "final": true
   },
   "1550168": {
    "status": "FT",
    "score": "4-2",
    "final": true
   },
-  "1550173": {
+  "1550171": {
    "status": "live",
    "score": "0-0",
-   "at": "2026-10-28T19:01:26.193Z",
+   "at": "2026-10-28T19:56:17.004Z",
    "final": false
+  },
+  "1550172": {
+   "status": "live",
+   "score": "0-0",
+   "at": "2026-10-28T19:56:17.005Z",
+   "final": false
+  },
+  "1550173": {
+   "status": "FT",
+   "score": "0-0",
+   "final": true
   },
   "1550174": {
    "status": "FT",
@@ -569,12 +579,11 @@
    "final": true
   },
   "1550176": {
-   "status": "live",
-   "score": "0-0",
-   "at": "2026-10-28T19:01:26.193Z",
-   "final": false
+   "status": "FT",
+   "score": "0-2",
+   "final": true
   }
  },
  "source": "claude",
- "resultsAt": "2026-10-28T19:01:26.193Z"
+ "resultsAt": "2026-10-28T19:56:17.005Z"
 }
