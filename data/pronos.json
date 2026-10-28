@@ -1,18 +1,18 @@
 {
- "generatedAt": "2026-10-27T06:24:27.052Z",
+ "generatedAt": "2026-10-28T06:28:28.658Z",
  "days": [
   {
-   "key": "2026-10-26",
-   "label": "Lundi 26 octobre",
-   "past": true
-  },
-  {
    "key": "2026-10-27",
-   "label": "Mardi 27 octobre"
+   "label": "Mardi 27 octobre",
+   "past": true
   },
   {
    "key": "2026-10-28",
    "label": "Mercredi 28 octobre"
+  },
+  {
+   "key": "2026-10-29",
+   "label": "Jeudi 29 octobre"
   }
  ],
  "matches": {
@@ -37,6 +37,28 @@
    "away": "Cagliari",
    "homeLogo": "https://media.api-sports.io/football/teams/497.png",
    "awayLogo": "https://media.api-sports.io/football/teams/490.png"
+  },
+  "1550169": {
+   "day": "2026-10-29",
+   "time": "20h45",
+   "kickoff": "2026-10-29T19:45:00.000Z",
+   "comp": "Serie A",
+   "group": "Serie A",
+   "home": "Fiorentina",
+   "away": "Atalanta",
+   "homeLogo": "https://media.api-sports.io/football/teams/502.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/499.png"
+  },
+  "1550170": {
+   "day": "2026-10-29",
+   "time": "18h30",
+   "kickoff": "2026-10-29T17:30:00.000Z",
+   "comp": "Serie A",
+   "group": "Serie A",
+   "home": "Frosinone",
+   "away": "Lecce",
+   "homeLogo": "https://media.api-sports.io/football/teams/512.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/867.png"
   },
   "1550171": {
    "day": "2026-10-28",
@@ -103,83 +125,18 @@
    "away": "Inter",
    "homeLogo": "https://media.api-sports.io/football/teams/517.png",
    "awayLogo": "https://media.api-sports.io/football/teams/505.png"
-  },
-  "1552504": {
-   "day": "2026-10-26",
-   "time": "20h45",
-   "kickoff": "2026-10-26T19:45:00.000Z",
-   "comp": "Ligue 2",
-   "group": "Autres",
-   "home": "Boulogne",
-   "away": "Reims",
-   "homeLogo": "https://media.api-sports.io/football/teams/1299.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/93.png"
-  },
-  "1552508": {
-   "day": "2026-10-26",
-   "time": "20h45",
-   "kickoff": "2026-10-26T19:45:00.000Z",
-   "comp": "Ligue 2",
-   "group": "Autres",
-   "home": "Montpellier",
-   "away": "RED Star FC 93",
-   "homeLogo": "https://media.api-sports.io/football/teams/82.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/104.png"
-  },
-  "1552800": {
-   "day": "2026-10-26",
-   "time": "20h30",
-   "kickoff": "2026-10-26T19:30:00.000Z",
-   "comp": "Ligue 1",
-   "group": "Ligue 1",
-   "home": "Paris Saint Germain",
-   "away": "Lyon",
-   "homeLogo": "https://media.api-sports.io/football/teams/85.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/80.png"
-  },
-  "1570431": {
-   "day": "2026-10-26",
-   "time": "21h00",
-   "kickoff": "2026-10-26T20:00:00.000Z",
-   "comp": "Liga",
-   "group": "Liga",
-   "home": "Sevilla",
-   "away": "Osasuna",
-   "homeLogo": "https://media.api-sports.io/football/teams/536.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/727.png"
-  },
-  "1575524": {
-   "day": "2026-10-26",
-   "time": "19h45",
-   "kickoff": "2026-10-26T18:45:00.000Z",
-   "comp": "Liga Portugal",
-   "group": "Autres",
-   "home": "Santa Clara",
-   "away": "Benfica",
-   "homeLogo": "https://media.api-sports.io/football/teams/227.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/211.png"
   }
  },
  "picks": [
-  {
-   "id": "safe-1550174",
-   "t": "safe",
-   "m": 1550174,
-   "key": "DC:AD",
-   "pari": "Lazio ou match nul",
-   "cote": 1.34,
-   "ia": 0.76,
-   "why": "Lazio ou nul : modèle 76 % contre 74,6 % pour le bookmaker. La Lazio n'encaisse que 0,3 but par match et reste sur 4 victoires de suite."
-  },
   {
    "id": "safe-1550173",
    "t": "safe",
    "m": 1550173,
    "key": "OU:O:1.5",
    "pari": "Plus de 1,5 buts",
-   "cote": 1.38,
+   "cote": 1.39,
    "ia": 0.76,
-   "why": "Plus de 1,5 but : le modèle voit 3,5 buts attendus. Udinese encaisse 3 buts par match, et les 5 derniers duels ont tous eu au moins 1 but."
+   "why": "Modèle 75,8 % contre 71,9 % au book. Buts attendus 1,79 + 1,71, Udinese marque 2,3 et encaisse 3 par match : au moins 2 buts est très plausible."
   },
   {
    "id": "safe-1550176",
@@ -189,7 +146,17 @@
    "pari": "Moins de 4,5 buts",
    "cote": 1.4,
    "ia": 0.74,
-   "why": "Moins de 4,5 buts : modèle au-dessus du bookmaker (74,4 % contre 71,4 %), pour 2,83 buts attendus. Cote correcte pour du safe."
+   "why": "Modèle 74,4 % contre 71,4 % au book. Venezia marque 0,8 par match, Inter 2 : un match à 5 buts ou plus reste peu probable."
+  },
+  {
+   "id": "safe-1550170",
+   "t": "safe",
+   "m": 1550170,
+   "key": "OU:U:4.5",
+   "pari": "Moins de 4,5 buts",
+   "cote": 1.3,
+   "ia": 0.77,
+   "why": "Probabilité modèle et book alignées (77 %). Buts attendus 1,6 + 1,26 et aucun duel récent à plus de 3 buts : cote basse mais solide."
   },
   {
    "id": "safe-1550167",
@@ -197,9 +164,9 @@
    "m": 1550167,
    "key": "DC:HD",
    "pari": "AC Milan ou match nul",
-   "cote": 1.15,
-   "ia": 0.82,
-   "why": "Milan ou nul : Milan encaisse 0,7 but par match et n'a pas perdu sur ses 5 derniers matchs. Modèle un peu sous le bookmaker, mais le risque est faible."
+   "cote": 1.18,
+   "ia": 0.81,
+   "why": "Milan marque 2,7 et n'encaisse que 0,7 par match, forme NVNVV. Modèle 82 %, un peu sous le book mais le choix le plus sûr du match."
   },
   {
    "id": "safe-1550172",
@@ -207,19 +174,39 @@
    "m": 1550172,
    "key": "OU:O:1.5",
    "pari": "Plus de 1,5 buts",
-   "cote": 1.22,
-   "ia": 0.78,
-   "why": "Plus de 1,5 but : Monza marque 2,7 buts par match et le modèle attend 3,12 buts au total. Écart avec le bookmaker de 3 points seulement."
-  },
-  {
-   "id": "safe-1550175",
-   "t": "safe",
-   "m": 1550175,
-   "key": "OU:O:1.5",
-   "pari": "Plus de 1,5 buts",
    "cote": 1.2,
    "ia": 0.79,
-   "why": "Plus de 1,5 but : Torino encaisse 1,8 but par match, Como en marque 2, et le modèle attend 3,09 buts. Cote basse mais solide."
+   "why": "Monza marque 2,7 par match, buts attendus 1,86 + 1,26. Modèle à 80 % : deux buts ou plus sont très probables malgré un book un peu plus haut."
+  },
+  {
+   "id": "safe-1550169",
+   "t": "safe",
+   "m": 1550169,
+   "key": "OU:U:4.5",
+   "pari": "Moins de 4,5 buts",
+   "cote": 1.19,
+   "ia": 0.79,
+   "why": "Fiorentina et Atalanta encaissent 2,3 par match mais marquent peu (0,8 et 1). Buts attendus 1,53 chacun : moins de 5 buts à 79,6 %."
+  },
+  {
+   "id": "crazy-1550170",
+   "t": "crazy",
+   "m": 1550170,
+   "key": "DC:AD",
+   "pari": "Lecce ou match nul",
+   "cote": 2.17,
+   "ia": 0.56,
+   "why": "Modèle 56 % contre 46 % au book, cote 2,17. Lecce a gagné 3 des 5 derniers duels, a encaissé 1 but par match et ne perd pas souvent."
+  },
+  {
+   "id": "crazy-1550173",
+   "t": "crazy",
+   "m": 1550173,
+   "key": "OU:O:2.5",
+   "pari": "Plus de 2,5 buts",
+   "cote": 2.22,
+   "ia": 0.53,
+   "why": "Modèle 53 % contre 45 % au book. Buts attendus 3,5 au total, Udinese encaisse 3 par match, et les derniers duels ont donné 2-3 et 2-2."
   },
   {
    "id": "crazy-1550172",
@@ -229,17 +216,7 @@
    "pari": "Monza ou match nul",
    "cote": 2.06,
    "ia": 0.56,
-   "why": "Monza ou nul : modèle 56,2 % contre 48,5 % pour le bookmaker. Monza marque 2,7 buts par match et a l'avantage des buts attendus (1,86 contre 1,26)."
-  },
-  {
-   "id": "crazy-1550173",
-   "t": "crazy",
-   "m": 1550173,
-   "key": "OU:O:2.5",
-   "pari": "Plus de 2,5 buts",
-   "cote": 2.21,
-   "ia": 0.53,
-   "why": "Plus de 2,5 buts : 3,5 buts attendus par le modèle, Udinese encaisse 3 buts par match. Modèle 53 % contre 45,2 % pour le bookmaker, à la cote de 2,21."
+   "why": "Modèle 55,9 % contre 48,5 % au book, cote 2,06. Monza marque 2,7 par match et a un xG supérieur (1,86 contre 1,26) : le nul suffit."
   },
   {
    "id": "crazy-1550176",
@@ -249,7 +226,7 @@
    "pari": "Moins de 3,5 buts",
    "cote": 1.92,
    "ia": 0.57,
-   "why": "Moins de 3,5 buts : 2,83 buts attendus, Venezia ne marque que 0,8 but par match. Modèle au-dessus du bookmaker (57,3 % contre 51,9 %), cote 1,92."
+   "why": "Modèle 57 % contre 52 % au book. Venezia marque 0,8 par match, buts attendus de 2,83 au total : moins de 4 buts reste le scénario central."
   },
   {
    "id": "crazy-1550171",
@@ -257,29 +234,19 @@
    "m": 1550171,
    "key": "DC:HD",
    "pari": "Genoa ou match nul",
-   "cote": 2.17,
-   "ia": 0.5,
-   "why": "Genoa ou nul : équipes proches (1,11 contre 1,45 but attendu), Juventus qui ne gagne pas toujours. Petit avantage du modèle à la cote de 2,17."
-  },
-  {
-   "id": "crazy-1550175",
-   "t": "crazy",
-   "m": 1550175,
-   "key": "DC:HD",
-   "pari": "Torino ou match nul",
    "cote": 2.14,
    "ia": 0.49,
-   "why": "Torino ou nul : le modèle voit 49,4 % contre 46,7 %. Match ouvert (1,38 contre 1,71 but attendu) et Torino encaisse 1,8 but par match, à la cote de 2,14."
+   "why": "Modèle 49 % contre 46,7 % au book, cote 2,14. Match serré (xG 1,11 contre 1,45), la Juve ne l'emporte que de peu dans les derniers duels."
   },
   {
-   "id": "crazy-1550174",
+   "id": "crazy-1550167",
    "t": "crazy",
-   "m": 1550174,
-   "key": "1X2:D",
-   "pari": "Match nul",
-   "cote": 3.55,
-   "ia": 0.31,
-   "why": "Match nul : écart minime sur les buts attendus (1,22 contre 1,53), 2 nuls en 5 duels. Modèle 31 % contre 28,2 % pour le bookmaker, cote 3,55."
+   "m": 1550167,
+   "key": "DC:AD",
+   "pari": "Bologna ou match nul",
+   "cote": 2.15,
+   "ia": 0.47,
+   "why": "Modèle et book à 46,5 %, cote 2,15. Bologna a gagné 2 des 5 derniers duels et n'encaisse que 0,8 par match, mais le Milan est favori."
   },
   {
    "id": "rich-1550173",
@@ -287,9 +254,9 @@
    "m": 1550173,
    "key": "OU:O:4.5",
    "pari": "Plus de 4,5 buts",
-   "cote": 7.8,
+   "cote": 7.95,
    "ia": 0.18,
-   "why": "Plus de 4,5 buts : 3,5 buts attendus, Udinese encaisse 3 buts par match et Parma 1,5. Modèle 18,2 % contre 12,8 % pour le bookmaker, cote 7,8."
+   "why": "Modèle 18 % contre 12,6 % au book, cote 7,95. Buts attendus 3,5, Udinese encaisse 3 par match : pari à gros risque mais cohérent."
   },
   {
    "id": "rich-1550176",
@@ -297,9 +264,39 @@
    "m": 1550176,
    "key": "1X2:D",
    "pari": "Match nul",
-   "cote": 5.5,
-   "ia": 0.256,
-   "why": "Match nul : le modèle voit 25,6 % contre 18,2 % pour le bookmaker. Inter favori, mais Venezia reste dans le coup, pour une cote de 5,5."
+   "cote": 5.65,
+   "ia": 0.25,
+   "why": "Modèle 25,4 % contre 17,7 % au book, cote 5,65. Venezia résiste à domicile selon xG (1,04), l'Inter est en forme mais marque moins de 2 buts attendus."
+  },
+  {
+   "id": "rich-1550170",
+   "t": "rich",
+   "m": 1550170,
+   "key": "OU:U:1.5",
+   "pari": "Moins de 1,5 buts",
+   "cote": 5.8,
+   "ia": 0.19,
+   "why": "Modèle 18,5 % contre 17,2 % au book, cote 5,8. Deux derniers duels à 0-0 et 1-1 ; reste un pari risqué malgré des xG de 1,6 et 1,26."
+  },
+  {
+   "id": "rich-1550171",
+   "t": "rich",
+   "m": 1550171,
+   "key": "1X2:H",
+   "pari": "Genoa gagne",
+   "cote": 5.4,
+   "ia": 0.2,
+   "why": "Modèle 19,6 % contre 18,5 % au book, cote 5,4. Genoa marque 1 par match et la Juve n'a pas trop de marge (xG 1,45 contre 1,11) : outsider plausible."
+  },
+  {
+   "id": "rich-1550172",
+   "t": "rich",
+   "m": 1550172,
+   "key": "CS:2-0",
+   "pari": "Score exact 2-0",
+   "cote": 23,
+   "ia": 0.04,
+   "why": "Modèle et book alignés autour de 4,2 %, cote 23. Monza marque 2,7 par match et son xG est de 1,86, mais Napoli encaisse 1,3."
   },
   {
    "id": "rich-1550168",
@@ -312,191 +309,113 @@
    "why": "Match nul : modèle 25,2 % contre 19,3 % pour le bookmaker. Cagliari est invaincu sur 5 matchs et a déjà tenu Roma 0-0, cote 5,18."
   },
   {
-   "id": "rich-1550171",
-   "t": "rich",
-   "m": 1550171,
-   "key": "1X2:H",
-   "pari": "Genoa gagne",
-   "cote": 5.25,
-   "ia": 0.2,
-   "why": "Genoa gagne : modèle 19,8 % contre 19 % pour le bookmaker. Genoa à domicile, Juventus peu dominante (1,45 but attendu), cote 5,25."
-  },
-  {
-   "id": "rich-1550172",
-   "t": "rich",
-   "m": 1550172,
-   "key": "OU:O:4.5",
-   "pari": "Plus de 4,5 buts",
-   "cote": 5,
-   "ia": 0.19,
-   "why": "Plus de 4,5 buts : Monza marque 2,7 buts par match et encaisse 1,3. Le modèle voit 19,4 %, proche du bookmaker (20 %), à la cote de 5."
-  },
-  {
-   "id": "rich-1550167",
-   "t": "rich",
-   "m": 1550167,
-   "key": "1X2:A",
-   "pari": "Bologna gagne",
-   "cote": 5.5,
-   "ia": 0.17,
-   "why": "Bologna gagne : Bologna a gagné 2 de ses 5 derniers duels contre Milan. Modèle 16,8 % contre 18,2 % pour le bookmaker, pour une cote de 5,5."
-  },
-  {
-   "id": "safe-1552504",
+   "id": "safe-1550174",
    "t": "safe",
-   "m": 1552504,
+   "m": 1550174,
    "key": "DC:AD",
-   "pari": "Reims ou match nul",
-   "cote": 1.33,
-   "ia": 0.75,
-   "why": "Reims sur NVNNV, sans défaite récente. Boulogne ne marque que 0,8 par match, xG 1,23 contre 0,85. Modèle 75,3 %, aligné sur le book."
-  },
-  {
-   "id": "rich-1552504",
-   "t": "rich",
-   "m": 1552504,
-   "key": "CS:0-1",
-   "pari": "Score exact 0-1",
-   "cote": 7,
-   "ia": 0.1,
-   "why": "Score le plus probable du modèle (10 %). Reims marque 1,5 et encaisse 0,5, Boulogne ne marque que 0,8 par match. Cote de 7."
-  },
-  {
-   "id": "safe-1552508",
-   "t": "safe",
-   "m": 1552508,
-   "key": "OU:U:3.5",
-   "pari": "Moins de 3,5 buts",
+   "pari": "Lazio ou match nul",
    "cote": 1.34,
-   "ia": 0.74,
-   "why": "Montpellier n'encaisse que 0,3 but par match, xG cumulés de 2,26. Modèle 74,2 %, quasi aligné sur le book (74,6 %)."
+   "ia": 0.76,
+   "why": "Lazio ou nul : modèle 76 % contre 74,6 % pour le bookmaker. La Lazio n'encaisse que 0,3 but par match et reste sur 4 victoires de suite."
   },
   {
-   "id": "crazy-1552508",
+   "id": "crazy-1550174",
    "t": "crazy",
-   "m": 1552508,
-   "key": "OU:U:2.5",
-   "pari": "Moins de 2,5 buts",
-   "cote": 1.94,
-   "ia": 0.54,
-   "why": "Modèle 53,6 % contre 51,7 %. Montpellier encaisse 0,3 par match, xG cumulés de 2,26 et deux 1-1 dans les confrontations."
-  },
-  {
-   "id": "safe-1552800",
-   "t": "safe",
-   "m": 1552800,
-   "key": "OU:U:4.5",
-   "pari": "Moins de 4,5 buts",
-   "cote": 1.36,
-   "ia": 0.77,
-   "why": "Modèle 76,8 % contre 73,5 % pour le book. xG cumulés de 2,61 seulement : plus de 4 buts serait surprenant."
-  },
-  {
-   "id": "crazy-1552800",
-   "t": "crazy",
-   "m": 1552800,
-   "key": "DC:AD",
-   "pari": "Lyon ou match nul",
-   "cote": 3.1,
-   "ia": 0.44,
-   "why": "Modèle 43,8 % contre 32,3 % pour le book. Lyon sur VNVDV, encaisse 0,7 par match, xG proches (1,23 contre 1,38)."
-  },
-  {
-   "id": "rich-1552800",
-   "t": "rich",
-   "m": 1552800,
+   "m": 1550174,
    "key": "1X2:D",
    "pari": "Match nul",
-   "cote": 5.69,
-   "ia": 0.25,
-   "why": "Modèle 25,3 % contre 17,6 %. xG proches (1,38 contre 1,23) et le 1-1 est le score le plus probable : nul à 5,69."
+   "cote": 3.55,
+   "ia": 0.31,
+   "why": "Match nul : écart minime sur les buts attendus (1,22 contre 1,53), 2 nuls en 5 duels. Modèle 31 % contre 28,2 % pour le bookmaker, cote 3,55."
   },
   {
-   "id": "safe-1570431",
+   "id": "safe-1550175",
    "t": "safe",
-   "m": 1570431,
+   "m": 1550175,
    "key": "OU:O:1.5",
    "pari": "Plus de 1,5 buts",
-   "cote": 1.38,
-   "ia": 0.77,
-   "why": "Modèle 77,2 % contre 72,5 % pour le book. xG cumulés de 3,81 et Osasuna encaisse 3,8 buts par match."
+   "cote": 1.2,
+   "ia": 0.79,
+   "why": "Plus de 1,5 but : Torino encaisse 1,8 but par match, Como en marque 2, et le modèle attend 3,09 buts. Cote basse mais solide."
   },
   {
-   "id": "crazy-1570431",
+   "id": "crazy-1550175",
    "t": "crazy",
-   "m": 1570431,
-   "key": "OU:O:2.5",
-   "pari": "Plus de 2,5 buts",
-   "cote": 2.19,
-   "ia": 0.55,
-   "why": "Modèle 55,4 % contre 45,7 %. xG cumulés de 3,81 et Osasuna encaisse 3,8 buts par match : de la valeur à 2,19."
-  },
-  {
-   "id": "rich-1570431",
-   "t": "rich",
-   "m": 1570431,
-   "key": "OU:O:4.5",
-   "pari": "Plus de 4,5 buts",
-   "cote": 7.88,
-   "ia": 0.2,
-   "why": "Modèle 20,4 % contre 12,7 %. xG cumulés de 3,81 et Osasuna encaisse 3,8 buts par match : ambitieux mais plausible à 7,88."
-  },
-  {
-   "id": "safe-1575524",
-   "t": "safe",
-   "m": 1575524,
-   "key": "OU:O:1.5",
-   "pari": "Plus de 1,5 buts",
-   "cote": 1.25,
-   "ia": 0.78,
-   "why": "Benfica marque 3,8 buts par match, xG cumulés de 3,24. Modèle 77,9 % : pari solide à 1,25, même si le book est un peu plus haut."
-  },
-  {
-   "id": "crazy-1575524",
-   "t": "crazy",
-   "m": 1575524,
+   "m": 1550175,
    "key": "DC:HD",
-   "pari": "Santa Clara ou match nul",
-   "cote": 3,
-   "ia": 0.42,
-   "why": "Modèle 41,6 % contre 33,3 %. Santa Clara n'encaisse que 0,5 par match, mais Benfica est très offensif : risque assumé à 3,00."
-  },
-  {
-   "id": "rich-1575524",
-   "t": "rich",
-   "m": 1575524,
-   "key": "1X2:H",
-   "pari": "Santa Clara gagne",
-   "cote": 8.5,
-   "ia": 0.16,
-   "why": "Modèle 15,6 % contre 11,8 %. Santa Clara marque 1,8 et n'encaisse que 0,5 par match. Gros risque face à Benfica, mais cote de 8,50."
+   "pari": "Torino ou match nul",
+   "cote": 2.14,
+   "ia": 0.49,
+   "why": "Torino ou nul : le modèle voit 49,4 % contre 46,7 %. Match ouvert (1,38 contre 1,71 but attendu) et Torino encaisse 1,8 but par match, à la cote de 2,14."
   }
  ],
  "var": [
   {
    "m": 1550167,
-   "why": "Milan – Bologna : 1-0 est le score le plus probable du modèle (9,2 %). Milan encaisse 0,7 but par match, Bologna marque peu (1).",
+   "why": "1-0 est le score le plus probable (9 %). Milan marque 2,7 et encaisse 0,7, xG 1,68 contre 0,93, avec 3 victoires sur les 5 derniers duels.",
    "scores": [
     [
      "1-0",
-     0.092,
-     6.5
+     0.09,
+     7
     ],
     [
      "1-1",
-     0.085,
+     0.086,
      7
     ],
     [
      "2-0",
-     0.078,
-     7.5
+     0.076,
+     8
+    ]
+   ]
+  },
+  {
+   "m": 1550176,
+   "why": "Inter favorite (xG 1,79 contre 1,04), 5 victoires sur 5 face à Venezia. 1-2 (7,4 %) et 0-2 (6,9 %) sont les scores les plus lisibles.",
+   "scores": [
+    [
+     "1-2",
+     0.074,
+     8.2
+    ],
+    [
+     "1-1",
+     0.07,
+     11
+    ],
+    [
+     "0-2",
+     0.069,
+     9
+    ]
+   ]
+  },
+  {
+   "m": 1550173,
+   "why": "1-1 ressort nettement (8,5 %, cote 5,63) avec des xG presque identiques (1,79 contre 1,71) : le nul est le scénario le plus lisible.",
+   "scores": [
+    [
+     "1-1",
+     0.085,
+     5.63
+    ],
+    [
+     "1-2",
+     0.061,
+     9.22
+    ],
+    [
+     "2-1",
+     0.06,
+     10.06
     ]
    ]
   },
   {
    "m": 1550171,
-   "why": "Genoa – Juventus : 1-1 (9,1 %) et 0-1 (8,9 %) sont proches. Deux buts attendus pour Genoa, Juventus à 1,45, donc un score serré.",
+   "why": "Match serré avec 1-1 (9,1 %) et 0-1 (9 %) en tête. La Juve marque 1,5 et encaisse 1 par match, et a gagné 4 des 5 derniers duels.",
    "scores": [
     [
      "1-1",
@@ -505,34 +424,55 @@
     ],
     [
      "0-1",
-     0.089,
+     0.09,
      6
     ],
     [
      "0-2",
-     0.07,
+     0.071,
      7
     ]
    ]
   },
   {
-   "m": 1550174,
-   "why": "Sassuolo – Lazio : 1-1 à 9 % pour le modèle (cote 6,5), avec des buts attendus proches (1,22 contre 1,53) et un nul dans les confrontations récentes.",
+   "m": 1550169,
+   "why": "xG identiques (1,53 chacun) et 1-1 en tête (8,4 %, cote 7). Les deux équipes encaissent 2,3 par match, ce qui favorise un score où chacun marque.",
    "scores": [
     [
      "1-1",
-     0.09,
-     6.5
+     0.084,
+     7
+    ],
+    [
+     "2-1",
+     0.067,
+     8.29
     ],
     [
      "1-2",
-     0.07,
-     8.2
+     0.061,
+     10
+    ]
+   ]
+  },
+  {
+   "m": 1550172,
+   "why": "Monza a un xG supérieur (1,86 contre 1,26) mais le nul 1-1 (8 %) domine, devant 1-2 et 2-1. Moins lisible, avec des scores très dispersés.",
+   "scores": [
+    [
+     "1-1",
+     0.08,
+     7
     ],
     [
-     "0-1",
-     0.069,
-     9.05
+     "1-2",
+     0.063,
+     7.5
+    ],
+    [
+     "2-1",
+     0.06,
+     13
     ]
    ]
   },
@@ -558,23 +498,23 @@
    ]
   },
   {
-   "m": 1550173,
-   "why": "Parma – Udinese : 1-1 ressort à 8,4 % (cote 5,76), avec 1,79 contre 1,71 but attendu : deux équipes au niveau très proche.",
+   "m": 1550174,
+   "why": "Sassuolo – Lazio : 1-1 à 9 % pour le modèle (cote 6,5), avec des buts attendus proches (1,22 contre 1,53) et un nul dans les confrontations récentes.",
    "scores": [
     [
      "1-1",
-     0.084,
-     5.76
+     0.09,
+     6.5
     ],
     [
      "1-2",
-     0.061,
-     9.1
+     0.07,
+     8.2
     ],
     [
-     "2-1",
-     0.06,
-     10.06
+     "0-1",
+     0.069,
+     9.05
     ]
    ]
   },
@@ -598,90 +538,6 @@
      8
     ]
    ]
-  },
-  {
-   "m": 1552504,
-   "why": "0-1 est le score le plus probable du modèle (10 %). Reims marque 1,5 et encaisse 0,5, Boulogne ne marque que 0,8 par match.",
-   "scores": [
-    [
-     "0-1",
-     0.1,
-     7
-    ],
-    [
-     "1-1",
-     0.097,
-     6
-    ],
-    [
-     "0-0",
-     0.084,
-     8.1
-    ]
-   ]
-  },
-  {
-   "m": 1552508,
-   "why": "1-1 en tête (9,5 %). xG quasi identiques (1,11 contre 1,15) et les deux derniers duels ont fini sur ce score.",
-   "scores": [
-    [
-     "1-1",
-     0.095,
-     6.5
-    ],
-    [
-     "1-0",
-     0.078,
-     8.63
-    ],
-    [
-     "0-1",
-     0.076,
-     9.45
-    ]
-   ]
-  },
-  {
-   "m": 1552800,
-   "why": "1-1 en tête (7,5 %). xG proches (1,38 contre 1,23), score le plus probable du modèle sans domination nette.",
-   "scores": [
-    [
-     "1-1",
-     0.075,
-     11
-    ],
-    [
-     "2-1",
-     0.068,
-     8.4
-    ],
-    [
-     "1-0",
-     0.067,
-     10.8
-    ]
-   ]
-  },
-  {
-   "m": 1575524,
-   "why": "0-1 en tête (7,6 %). Benfica marque 3,8 par match, xG de 1,9 contre 1,34, et a gagné 4 des 5 derniers duels.",
-   "scores": [
-    [
-     "0-1",
-     0.076,
-     5.9
-    ],
-    [
-     "0-2",
-     0.074,
-     6
-    ],
-    [
-     "1-1",
-     0.072,
-     8.5
-    ]
-   ]
   }
  ],
  "results": {
@@ -699,33 +555,7 @@
    "status": "FT",
    "score": "1-3",
    "final": true
-  },
-  "1552504": {
-   "status": "FT",
-   "score": "1-1",
-   "final": true
-  },
-  "1552508": {
-   "status": "FT",
-   "score": "2-1",
-   "final": true
-  },
-  "1552800": {
-   "status": "FT",
-   "score": "2-0",
-   "final": true
-  },
-  "1570431": {
-   "status": "FT",
-   "score": "2-0",
-   "final": true
-  },
-  "1575524": {
-   "status": "FT",
-   "score": "1-2",
-   "final": true
   }
  },
- "source": "claude",
- "resultsAt": "2026-10-27T21:47:23.752Z"
+ "source": "claude"
 }
