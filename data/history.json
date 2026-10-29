@@ -1007,6 +1007,58 @@
    "day": "2026-10-28",
    "status": "lost",
    "score": "1-4"
+  },
+  {
+   "id": "2026-10-29-safe-1550170",
+   "fixture": 1550170,
+   "tier": "safe",
+   "key": "OU:U:4.5",
+   "pari": "Moins de 4,5 buts",
+   "match": "Frosinone – Lecce",
+   "cote": 1.33,
+   "ia": 0.76,
+   "kickoff": "2026-10-29T17:30:00.000Z",
+   "day": "2026-10-29",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-29-crazy-1550170",
+   "fixture": 1550170,
+   "tier": "crazy",
+   "key": "DC:AD",
+   "pari": "Lecce ou match nul",
+   "match": "Frosinone – Lecce",
+   "cote": 2.17,
+   "ia": 0.56,
+   "kickoff": "2026-10-29T17:30:00.000Z",
+   "day": "2026-10-29",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-29-rich-1550170",
+   "fixture": 1550170,
+   "tier": "rich",
+   "key": "OU:U:1.5",
+   "pari": "Moins de 1,5 buts",
+   "match": "Frosinone – Lecce",
+   "cote": 6.29,
+   "ia": 0.17,
+   "kickoff": "2026-10-29T17:30:00.000Z",
+   "day": "2026-10-29",
+   "status": "pending"
+  },
+  {
+   "id": "2026-10-29-var-1550169",
+   "fixture": 1550169,
+   "tier": "var",
+   "key": "CS:1-1",
+   "pari": "Score exact 1-1",
+   "match": "Fiorentina – Atalanta",
+   "cote": 6.75,
+   "ia": 0.085,
+   "kickoff": "2026-10-29T19:45:00.000Z",
+   "day": "2026-10-29",
+   "status": "pending"
   }
  ]
 }
