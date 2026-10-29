@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-29T06:30:29.878Z",
+ "generatedAt": "2026-10-29T12:22:24.841Z",
  "days": [
   {
    "key": "2026-10-28",
@@ -36,7 +36,36 @@
    "home": "Fiorentina",
    "away": "Atalanta",
    "homeLogo": "https://media.api-sports.io/football/teams/502.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/499.png"
+   "awayLogo": "https://media.api-sports.io/football/teams/499.png",
+   "info": {
+    "formH": "VNDDD",
+    "formA": "DDVDN",
+    "h2h": [
+     "Fiorentina 1-1 Atalanta",
+     "Atalanta 2-0 Fiorentina",
+     "Fiorentina 1-0 Atalanta",
+     "Atalanta 3-2 Fiorentina",
+     "Atalanta 2-3 Fiorentina"
+    ],
+    "advice": "No predictions available",
+    "gH": {
+     "f": 0.8,
+     "a": 2.3
+    },
+    "gA": {
+     "f": 1,
+     "a": 2.3
+    },
+    "xg": {
+     "h": 1.53,
+     "a": 1.53
+    },
+    "probs": {
+     "h": 0.389,
+     "d": 0.268,
+     "a": 0.343
+    }
+   }
   },
   "1550170": {
    "day": "2026-10-29",
@@ -47,7 +76,36 @@
    "home": "Frosinone",
    "away": "Lecce",
    "homeLogo": "https://media.api-sports.io/football/teams/512.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/867.png"
+   "awayLogo": "https://media.api-sports.io/football/teams/867.png",
+   "info": {
+    "formH": "NVDVN",
+    "formA": "VDDVD",
+    "h2h": [
+     "Frosinone 1-1 Lecce",
+     "Lecce 2-1 Frosinone",
+     "Lecce 1-0 Frosinone",
+     "Frosinone 0-0 Lecce",
+     "Frosinone 0-3 Lecce"
+    ],
+    "advice": "Double chance : draw or Lecce",
+    "gH": {
+     "f": 2.3,
+     "a": 1.3
+    },
+    "gA": {
+     "f": 1.3,
+     "a": 1
+    },
+    "xg": {
+     "h": 1.6,
+     "a": 1.26
+    },
+    "probs": {
+     "h": 0.432,
+     "d": 0.277,
+     "a": 0.291
+    }
+   }
   },
   "1550171": {
    "day": "2026-10-28",
@@ -102,7 +160,36 @@
    "home": "Grenoble",
    "away": "Dijon",
    "homeLogo": "https://media.api-sports.io/football/teams/101.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/89.png"
+   "awayLogo": "https://media.api-sports.io/football/teams/89.png",
+   "info": {
+    "formH": "VNDDD",
+    "formA": "VVVDD",
+    "h2h": [
+     "Dijon 1-0 Grenoble",
+     "Grenoble 0-0 Dijon",
+     "Dijon 1-0 Grenoble",
+     "Grenoble 1-2 Dijon",
+     "Dijon 1-1 Grenoble"
+    ],
+    "advice": "Double chance : draw or Dijon",
+    "gH": {
+     "f": 0.5,
+     "a": 1.3
+    },
+    "gA": {
+     "f": 1.4,
+     "a": 1.6
+    },
+    "xg": {
+     "h": 1.15,
+     "a": 1.3
+    },
+    "probs": {
+     "h": 0.269,
+     "d": 0.315,
+     "a": 0.416
+    }
+   }
   },
   "1552516": {
    "day": "2026-10-30",
@@ -113,7 +200,36 @@
    "home": "Laval",
    "away": "Boulogne",
    "homeLogo": "https://media.api-sports.io/football/teams/433.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/1299.png"
+   "awayLogo": "https://media.api-sports.io/football/teams/1299.png",
+   "info": {
+    "formH": "DNDND",
+    "formA": "NDNVN",
+    "h2h": [
+     "Laval 2-1 Boulogne",
+     "Boulogne 1-2 Laval",
+     "Laval 1-0 Boulogne",
+     "Boulogne 1-2 Laval",
+     "Boulogne 1-0 Laval"
+    ],
+    "advice": "Double chance : Laval or draw",
+    "gH": {
+     "f": 1.4,
+     "a": 2
+    },
+    "gA": {
+     "f": 0.6,
+     "a": 0.4
+    },
+    "xg": {
+     "h": 1.04,
+     "a": 1.26
+    },
+    "probs": {
+     "h": 0.358,
+     "d": 0.298,
+     "a": 0.344
+    }
+   }
   },
   "1552517": {
    "day": "2026-10-30",
@@ -124,7 +240,35 @@
    "home": "Metz",
    "away": "PAU",
    "homeLogo": "https://media.api-sports.io/football/teams/112.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/1297.png"
+   "awayLogo": "https://media.api-sports.io/football/teams/1297.png",
+   "info": {
+    "formH": "DNDVN",
+    "formA": "DVVVV",
+    "h2h": [
+     "PAU 2-1 Metz",
+     "Metz 0-0 PAU",
+     "PAU 1-1 Metz",
+     "Metz 1-0 PAU"
+    ],
+    "advice": "Double chance : draw or PAU",
+    "gH": {
+     "f": 2.4,
+     "a": 1.4
+    },
+    "gA": {
+     "f": 1.3,
+     "a": 1
+    },
+    "xg": {
+     "h": 1.64,
+     "a": 1.3
+    },
+    "probs": {
+     "h": 0.386,
+     "d": 0.292,
+     "a": 0.323
+    }
+   }
   },
   "1552518": {
    "day": "2026-10-30",
@@ -135,7 +279,36 @@
    "home": "Nantes",
    "away": "Clermont Foot",
    "homeLogo": "https://media.api-sports.io/football/teams/83.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/99.png"
+   "awayLogo": "https://media.api-sports.io/football/teams/99.png",
+   "info": {
+    "formH": "DVNDD",
+    "formA": "NNDND",
+    "h2h": [
+     "Nantes 1-2 Clermont Foot",
+     "Clermont Foot 0-1 Nantes",
+     "Clermont Foot 0-0 Nantes",
+     "Nantes 1-1 Clermont Foot",
+     "Clermont Foot 2-3 Nantes"
+    ],
+    "advice": "Double chance : Nantes or draw",
+    "gH": {
+     "f": 1,
+     "a": 1.8
+    },
+    "gA": {
+     "f": 1.5,
+     "a": 2
+    },
+    "xg": {
+     "h": 1.49,
+     "a": 1.53
+    },
+    "probs": {
+     "h": 0.522,
+     "d": 0.271,
+     "a": 0.207
+    }
+   }
   },
   "1552801": {
    "day": "2026-10-30",
@@ -146,7 +319,36 @@
    "home": "Le Havre",
    "away": "Paris Saint Germain",
    "homeLogo": "https://media.api-sports.io/football/teams/111.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/85.png"
+   "awayLogo": "https://media.api-sports.io/football/teams/85.png",
+   "info": {
+    "formH": "NDDDD",
+    "formA": "VVVVV",
+    "h2h": [
+     "Le Havre 0-1 Paris Saint Germain",
+     "Paris Saint Germain 3-0 Le Havre",
+     "Paris Saint Germain 2-1 Le Havre",
+     "Le Havre 1-4 Paris Saint Germain",
+     "Paris Saint Germain 3-3 Le Havre"
+    ],
+    "advice": "Winner : Paris Saint Germain",
+    "gH": {
+     "f": 0.5,
+     "a": 1.5
+    },
+    "gA": {
+     "f": 2,
+     "a": 1.2
+    },
+    "xg": {
+     "h": 1,
+     "a": 1.6
+    },
+    "probs": {
+     "h": 0.117,
+     "d": 0.243,
+     "a": 0.64
+    }
+   }
   },
   "1552802": {
    "day": "2026-10-30",
@@ -157,7 +359,36 @@
    "home": "Lille",
    "away": "Lens",
    "homeLogo": "https://media.api-sports.io/football/teams/79.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/116.png"
+   "awayLogo": "https://media.api-sports.io/football/teams/116.png",
+   "info": {
+    "formH": "VDVNN",
+    "formA": "NDVVV",
+    "h2h": [
+     "Lille 3-0 Lens",
+     "Lens 3-0 Lille",
+     "Lille 1-0 Lens",
+     "Lens 0-2 Lille",
+     "Lille 2-1 Lens"
+    ],
+    "advice": "Double chance : Lille or draw",
+    "gH": {
+     "f": 1.5,
+     "a": 0.8
+    },
+    "gA": {
+     "f": 1.8,
+     "a": 1.8
+    },
+    "xg": {
+     "h": 1.6,
+     "a": 1.26
+    },
+    "probs": {
+     "h": 0.414,
+     "d": 0.298,
+     "a": 0.288
+    }
+   }
   },
   "1558670": {
    "day": "2026-10-30",
@@ -168,7 +399,36 @@
    "home": "Zulte Waregem",
    "away": "Club Brugge KV",
    "homeLogo": "https://media.api-sports.io/football/teams/600.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/569.png"
+   "awayLogo": "https://media.api-sports.io/football/teams/569.png",
+   "info": {
+    "formH": "VDDDD",
+    "formA": "VVVVV",
+    "h2h": [
+     "Club Brugge KV 4-3 Zulte Waregem",
+     "Zulte Waregem 0-1 Club Brugge KV",
+     "Club Brugge KV 4-0 Zulte Waregem",
+     "Club Brugge KV 0-1 Zulte Waregem",
+     "Zulte Waregem 1-2 Club Brugge KV"
+    ],
+    "advice": "Winner : Club Brugge KV",
+    "gH": {
+     "f": 1.5,
+     "a": 1
+    },
+    "gA": {
+     "f": 2.3,
+     "a": 0.8
+    },
+    "xg": {
+     "h": 1.22,
+     "a": 1.53
+    },
+    "probs": {
+     "h": 0.179,
+     "d": 0.279,
+     "a": 0.542
+    }
+   }
   },
   "1570442": {
    "day": "2026-10-30",
@@ -179,7 +439,36 @@
    "home": "Villarreal",
    "away": "Espanyol",
    "homeLogo": "https://media.api-sports.io/football/teams/533.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/540.png"
+   "awayLogo": "https://media.api-sports.io/football/teams/540.png",
+   "info": {
+    "formH": "VVDNV",
+    "formA": "DDNDD",
+    "h2h": [
+     "Villarreal 4-1 Espanyol",
+     "Espanyol 0-2 Villarreal",
+     "Villarreal 1-0 Espanyol",
+     "Espanyol 1-2 Villarreal",
+     "Villarreal 4-2 Espanyol"
+    ],
+    "advice": "Double chance : Villarreal or draw",
+    "gH": {
+     "f": 1.5,
+     "a": 1.5
+    },
+    "gA": {
+     "f": 1.2,
+     "a": 1.4
+    },
+    "xg": {
+     "h": 1.45,
+     "a": 1.3
+    },
+    "probs": {
+     "h": 0.544,
+     "d": 0.261,
+     "a": 0.194
+    }
+   }
   },
   "1575211": {
    "day": "2026-10-30",
@@ -190,7 +479,33 @@
    "home": "SV Elversberg",
    "away": "FSV Mainz 05",
    "homeLogo": "https://media.api-sports.io/football/teams/1660.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/164.png"
+   "awayLogo": "https://media.api-sports.io/football/teams/164.png",
+   "info": {
+    "formH": "DNDVD",
+    "formA": "DVDVD",
+    "h2h": [
+     "SV Elversberg 0-1 FSV Mainz 05",
+     "SV Elversberg 2-2 FSV Mainz 05"
+    ],
+    "advice": "Combo Winner : FSV Mainz 05 and +1.5 goals",
+    "gH": {
+     "f": 2.7,
+     "a": 2.3
+    },
+    "gA": {
+     "f": 3.3,
+     "a": 1
+    },
+    "xg": {
+     "h": 1.75,
+     "a": 2.39
+    },
+    "probs": {
+     "h": 0.258,
+     "d": 0.272,
+     "a": 0.469
+    }
+   }
   },
   "1575531": {
    "day": "2026-10-30",
@@ -201,7 +516,36 @@
    "home": "Casa Pia",
    "away": "Sporting CP",
    "homeLogo": "https://media.api-sports.io/football/teams/4716.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/228.png"
+   "awayLogo": "https://media.api-sports.io/football/teams/228.png",
+   "info": {
+    "formH": "NDVDV",
+    "formA": "VNNVD",
+    "h2h": [
+     "Sporting CP 3-0 Casa Pia",
+     "Casa Pia 0-2 Sporting CP",
+     "Casa Pia 1-3 Sporting CP",
+     "Sporting CP 2-0 Casa Pia",
+     "Sporting CP 8-0 Casa Pia"
+    ],
+    "advice": "Winner : Sporting CP",
+    "gH": {
+     "f": 0.3,
+     "a": 3.3
+    },
+    "gA": {
+     "f": 2.5,
+     "a": 1
+    },
+    "xg": {
+     "h": 0.85,
+     "a": 2.46
+    },
+    "probs": {
+     "h": 0.1,
+     "d": 0.225,
+     "a": 0.675
+    }
+   }
   }
  },
  "picks": [
@@ -213,7 +557,17 @@
    "pari": "Moins de 4,5 buts",
    "cote": 1.4,
    "ia": 0.75,
-   "why": "Le Havre marque 0,5 but par match et le modèle attend 2,6 buts au total. Moins de 4,5 buts à 75 % contre 71 % pour le bookmaker."
+   "why": "Le Havre marque 0,5 but/match et le modèle attend 2,6 buts au total. Moins de 4,5 buts : proba modèle 75 % contre 71 % pour le bookmaker."
+  },
+  {
+   "id": "safe-1550170",
+   "t": "safe",
+   "m": 1550170,
+   "key": "OU:U:4.5",
+   "pari": "Moins de 4,5 buts",
+   "cote": 1.34,
+   "ia": 0.75,
+   "why": "Environ 2,9 buts attendus au total, et les confrontations récentes sont serrées (1-1, 0-0, 1-0). Léger avantage modèle (75,8 % contre 74,6 %)."
   },
   {
    "id": "safe-1552802",
@@ -221,9 +575,9 @@
    "m": 1552802,
    "key": "DC:HD",
    "pari": "Lille ou match nul",
-   "cote": 1.45,
+   "cote": 1.46,
    "ia": 0.71,
-   "why": "Lille a une forme correcte (VDVNN) et un avantage de buts attendus (1,6 contre 1,26). Le modèle est à 71 %, le bookmaker à 69 %."
+   "why": "Lille a une défense solide à domicile (0,8 but encaissé), des buts attendus supérieurs (1,6 contre 1,26) et 4 victoires en 5 face à Lens. Value : 71 % contre 69 %."
   },
   {
    "id": "safe-1575211",
@@ -233,17 +587,7 @@
    "pari": "FSV Mainz 05 ou match nul",
    "cote": 1.36,
    "ia": 0.74,
-   "why": "Mainz a l'avantage de buts attendus (2,39 contre 1,75) et marque 3,3 buts par match. Ne pas perdre est donné à 74 %, contre 73,5 % pour le bookmaker."
-  },
-  {
-   "id": "safe-1550170",
-   "t": "safe",
-   "m": 1550170,
-   "key": "OU:U:4.5",
-   "pari": "Moins de 4,5 buts",
-   "cote": 1.33,
-   "ia": 0.76,
-   "why": "Buts attendus de 2,86 au total et Lecce n'encaisse qu'un but par match. Moins de 4,5 buts à 76 %, un peu au-dessus du bookmaker (75 %)."
+   "why": "Mainz marque 3,3 buts/match, le modèle lui en attend 2,39 contre 1,75 pour Elversberg, et il a gagné 1 fois et fait 1 nul en 2 duels. Léger value."
   },
   {
    "id": "safe-1558670",
@@ -253,17 +597,17 @@
    "pari": "Moins de 4,5 buts",
    "cote": 1.29,
    "ia": 0.78,
-   "why": "Le modèle attend 2,75 buts et Bruges n'en encaisse que 0,8 par match. Moins de 4,5 buts à 78 %, contre 77,5 % pour le bookmaker."
+   "why": "Zulte encaisse 1 but/match et Bruges 0,8. Le modèle attend environ 2,75 buts, donc moins de 4,5 reste très probable (78 % contre 77,5 %)."
   },
   {
-   "id": "safe-1570442",
+   "id": "safe-1575531",
    "t": "safe",
-   "m": 1570442,
-   "key": "OU:U:4.5",
-   "pari": "Moins de 4,5 buts",
-   "cote": 1.26,
-   "ia": 0.79,
-   "why": "Le modèle attend 2,75 buts, loin de 4,5. Probabilité de 79 %, au niveau du bookmaker. Pari très sûr, mais sans réelle valeur."
+   "m": 1575531,
+   "key": "OU:O:1.5",
+   "pari": "Plus de 1,5 buts",
+   "cote": 1.17,
+   "ia": 0.8,
+   "why": "Sporting attend 2,46 buts et Casa Pia en encaisse 3,3 par match. Plus de 1,5 but est très sûr, même sans value."
   },
   {
    "id": "crazy-1550170",
@@ -271,29 +615,9 @@
    "m": 1550170,
    "key": "DC:AD",
    "pari": "Lecce ou match nul",
-   "cote": 2.17,
-   "ia": 0.56,
-   "why": "Lecce a perdu une seule fois lors des 5 derniers face-à-face. Le modèle donne 56 % contre 46 % au bookmaker, pour une cote de 2,17."
-  },
-  {
-   "id": "crazy-1552518",
-   "t": "crazy",
-   "m": 1552518,
-   "key": "DC:AD",
-   "pari": "Clermont Foot ou match nul",
-   "cote": 2.6,
-   "ia": 0.48,
-   "why": "Buts attendus quasi égaux (1,49 contre 1,53) et Clermont a battu Nantes lors d'un des derniers duels. Modèle à 48 %, bookmaker à 38,5 %."
-  },
-  {
-   "id": "crazy-1570442",
-   "t": "crazy",
-   "m": 1570442,
-   "key": "DC:AD",
-   "pari": "Espanyol ou match nul",
-   "cote": 2.8,
-   "ia": 0.46,
-   "why": "Les buts attendus restent proches (1,45 contre 1,3). Le modèle donne 46 % contre 36 % au bookmaker, mais la forme d'Espanyol est faible (DDNDD)."
+   "cote": 2.15,
+   "ia": 0.57,
+   "why": "Lecce encaisse 1 but/match et n'a pas perdu face à Frosinone sur les 5 derniers duels. Le modèle donne 56,8 % contre 46,5 % au bookmaker, belle value à 2,15."
   },
   {
    "id": "crazy-1552801",
@@ -303,7 +627,7 @@
    "pari": "Moins de 3,5 buts",
    "cote": 2,
    "ia": 0.58,
-   "why": "Le Havre ne marque que 0,5 but par match et le modèle attend 2,6 buts. Moins de 3,5 buts à 58 % contre 50 % pour le bookmaker, à la cote de 2."
+   "why": "Le Havre ne marque que 0,5 but/match, et 2,6 buts sont attendus au total. Moins de 3,5 buts : 58 % pour le modèle contre 50 % pour le bookmaker, à la cote de 2."
   },
   {
    "id": "crazy-1575211",
@@ -313,7 +637,27 @@
    "pari": "Plus de 3,5 buts",
    "cote": 2.19,
    "ia": 0.5,
-   "why": "Elversberg marque 2,7 buts par match et en encaisse 2,3. Mainz en marque 3,3. Le modèle attend 4,14 buts: 50 % contre 46 % pour le bookmaker."
+   "why": "Elversberg marque 2,7 buts/match, Mainz 3,3, et les deux encaissent. Le modèle attend 4,1 buts : value à 2,19, soit 49,9 % contre 45,8 %."
+  },
+  {
+   "id": "crazy-1552518",
+   "t": "crazy",
+   "m": 1552518,
+   "key": "DC:AD",
+   "pari": "Clermont Foot ou match nul",
+   "cote": 2.6,
+   "ia": 0.48,
+   "why": "Buts attendus quasi égaux (1,49 contre 1,53) et Clermont reste sur 5 matchs sans défaite en 5 h2h. Value importante à 2,6 : 47,8 % contre 38,5 %."
+  },
+  {
+   "id": "crazy-1570442",
+   "t": "crazy",
+   "m": 1570442,
+   "key": "DC:AD",
+   "pari": "Espanyol ou match nul",
+   "cote": 2.78,
+   "ia": 0.45,
+   "why": "Espanyol est en méforme (DDNDD) mais son xG est de 1,3 contre 1,45, donc l'écart reste faible. Value : 45,6 % contre 36 % à la cote de 2,78."
   },
   {
    "id": "crazy-1552802",
@@ -321,9 +665,9 @@
    "m": 1552802,
    "key": "1X2:H",
    "pari": "Lille gagne",
-   "cote": 2.53,
+   "cote": 2.55,
    "ia": 0.41,
-   "why": "Lille a trois victoires en 5 confrontations récentes et l'avantage de buts attendus (1,6 contre 1,26). Modèle à 41,5 %, bookmaker à 39,6 %."
+   "why": "Lille a une meilleure défense (0,8 but encaissé), un xG de 1,6 contre 1,26 et 4 succès sur 5 face à Lens. Value modérée à 2,55 (41,4 % contre 39,3 %)."
   },
   {
    "id": "rich-1552801",
@@ -331,9 +675,9 @@
    "m": 1552801,
    "key": "1X2:D",
    "pari": "Match nul",
-   "cote": 6.95,
-   "ia": 0.22,
-   "why": "Le modèle voit un nul à 24 % contre 14 % pour le bookmaker. Le Havre est limité (0,5 but marqué), mais le modèle attend peu de buts (1 contre 1,6)."
+   "cote": 7,
+   "ia": 0.2,
+   "why": "Le Havre ne marque que 0,5 but/match et le PSG a un xG de 1,6, mais l'écart reste mince. Le modèle donne 24,3 % contre 14,3 % au bookmaker à 7 : grosse value."
   },
   {
    "id": "rich-1552518",
@@ -343,17 +687,27 @@
    "pari": "Clermont Foot gagne",
    "cote": 6.53,
    "ia": 0.2,
-   "why": "Buts attendus quasi identiques (1,49 contre 1,53). Clermont marque 1,5 but par match. Modèle à 20,7 %, bookmaker à 15,3 %, pour une cote de 6,53."
+   "why": "Clermont a un xG légèrement supérieur (1,53 contre 1,49) et marque 1,5 but/match. Victoire à 6,53 : 20,7 % contre 15,3 % pour le bookmaker."
   },
   {
    "id": "rich-1570442",
    "t": "rich",
    "m": 1570442,
-   "key": "1X2:A",
-   "pari": "Espanyol gagne",
-   "cote": 6.5,
-   "ia": 0.19,
-   "why": "Espanyol marque 1,2 but par match face à un Villarreal qui en encaisse 1,5. Modèle à 19,4 %, bookmaker à 15,4 %, pour une cote de 6,5."
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "cote": 5,
+   "ia": 0.25,
+   "why": "Le xG est proche (1,45 contre 1,3) et le 1-1 est le score le plus probable. Le nul à 5 offre une value nette : 26,1 % contre 20 %."
+  },
+  {
+   "id": "rich-1550170",
+   "t": "rich",
+   "m": 1550170,
+   "key": "OU:U:1.5",
+   "pari": "Moins de 1,5 buts",
+   "cote": 6.39,
+   "ia": 0.17,
+   "why": "Lecce encaisse 1 but/match. Moins de 1,5 but est un pari de risque avec une cote de 6,39, mais le modèle le donne à 17,6 % contre 15,6 % pour le bookmaker."
   },
   {
    "id": "rich-1558670",
@@ -362,18 +716,68 @@
    "key": "OU:U:1.5",
    "pari": "Moins de 1,5 buts",
    "cote": 5.84,
-   "ia": 0.18,
-   "why": "Bruges n'encaisse que 0,8 but par match. Le modèle donne 19 % contre 17 % pour le bookmaker. Pari risqué, mais la cote de 5,84 reste plausible."
+   "ia": 0.19,
+   "why": "Bruges encaisse 0,8 but/match et Zulte 1. Le modèle donne 19,2 % contre 17,1 % pour moins de 1,5 but, à une cote de 5,84."
   },
   {
-   "id": "rich-1550170",
-   "t": "rich",
+   "id": "draw-1552514",
+   "t": "draw",
+   "m": 1552514,
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "cote": 3.25,
+   "ia": 0.31,
+   "why": "Équipes proches (xG 1,15 contre 1,3), faible attaque de Grenoble (0,5 but/match) et 1-1 en tête des scores (9,7 %). Les confrontations récentes sont très serrées."
+  },
+  {
+   "id": "draw-1552516",
+   "t": "draw",
+   "m": 1552516,
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "cote": 3.25,
+   "ia": 0.3,
+   "why": "Boulogne n'encaisse que 0,4 but/match et les deux xG sont faibles (1,04 et 1,26). Le 1-1 est le score le plus probable (9,8 %), et Boulogne a fait 3 nuls sur 5."
+  },
+  {
+   "id": "draw-1552802",
+   "t": "draw",
+   "m": 1552802,
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "cote": 3.56,
+   "ia": 0.3,
+   "why": "Lille et Lens ont des niveaux proches (xG 1,6 et 1,26), et le 1-1 est le score le plus probable à 8,8 %. Lens vient de faire 2 nuls (NDVVV)."
+  },
+  {
+   "id": "draw-1552517",
+   "t": "draw",
+   "m": 1552517,
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "cote": 3.58,
+   "ia": 0.29,
+   "why": "Metz et PAU ont des xG proches (1,64 contre 1,3). Les confrontations donnent 0-0 et 1-1 sur les 4 dernières, et le 1-1 est le score le plus probable (8,7 %)."
+  },
+  {
+   "id": "draw-1550170",
+   "t": "draw",
    "m": 1550170,
-   "key": "OU:U:1.5",
-   "pari": "Moins de 1,5 buts",
-   "cote": 6.29,
-   "ia": 0.17,
-   "why": "Lecce n'encaisse qu'un but par match en déplacement. Modèle à 17,8 % contre 15,9 % pour le bookmaker, à la cote de 6,29. Pari audacieux."
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "cote": 4.21,
+   "ia": 0.28,
+   "why": "Lecce et Frosinone ont des xG proches (1,6 contre 1,26), avec 1-1 et 0-0 dans les confrontations récentes, et le 1-1 est le score probable."
+  },
+  {
+   "id": "draw-1550169",
+   "t": "draw",
+   "m": 1550169,
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "cote": 3.7,
+   "ia": 0.27,
+   "why": "Xg identiques (1,53 partout), 1-1 en tête des scores probables (8,5 %) et nul lors d'un des derniers duels. Les deux équipes enchaînent beaucoup de nuls en forme récente."
   },
   {
    "id": "safe-1550167",
@@ -508,8 +912,29 @@
  ],
  "var": [
   {
+   "m": 1575531,
+   "why": "Sporting a un xG de 2,46 contre 0,85 pour Casa Pia, qui encaisse 3,3 buts/match. Le 0-2 est le score le plus probable (8,9 %), et les confrontations récentes vont dans ce sens.",
+   "scores": [
+    [
+     "0-2",
+     0.089,
+     6
+    ],
+    [
+     "0-1",
+     0.073,
+     7.22
+    ],
+    [
+     "0-3",
+     0.07,
+     7.95
+    ]
+   ]
+  },
+  {
    "m": 1552514,
-   "why": "Score 1-1: c'est le plus probable du modèle (9,7 %), avec des buts attendus proches (1,15 contre 1,3) et plusieurs nuls ou matchs serrés en confrontation.",
+   "why": "1-1 en tête à 9,7 %. Deux attaques modestes (xG 1,15 et 1,3) et des confrontations souvent serrées avec peu de buts.",
    "scores": [
     [
      "1-1",
@@ -530,7 +955,7 @@
   },
   {
    "m": 1552516,
-   "why": "Score 1-1: le plus probable du modèle (9,8 %), avec des buts attendus proches (1,04 contre 1,26) et peu de buts de Boulogne (0,6 par match).",
+   "why": "1-1 à 9,8 %, le meilleur score du lot. Xg faibles (1,04 contre 1,26) et défense de Boulogne très solide (0,4 but encaissé/match).",
    "scores": [
     [
      "1-1",
@@ -544,19 +969,19 @@
     ],
     [
      "1-0",
-     0.079,
-     7.27
+     0.078,
+     7.5
     ]
    ]
   },
   {
    "m": 1552802,
-   "why": "Score 1-1: le plus probable du modèle (8,7 %), avec des buts attendus de 1,6 et 1,26 et deux équipes qui marquent régulièrement (1,5 et 1,8 par match).",
+   "why": "1-1 est le score le plus probable (8,8 %) avec des niveaux proches (xG 1,6 contre 1,26) et une défense lilloise solide à domicile.",
    "scores": [
     [
      "1-1",
-     0.087,
-     6.75
+     0.088,
+     6.5
     ],
     [
      "2-1",
@@ -565,35 +990,14 @@
     ],
     [
      "1-0",
-     0.065,
-     9.57
-    ]
-   ]
-  },
-  {
-   "m": 1552517,
-   "why": "Score 1-1: le plus probable du modèle (8,7 %), avec des buts attendus de 1,64 et 1,3 et deux nuls parmi les 4 derniers duels.",
-   "scores": [
-    [
-     "1-1",
-     0.087,
-     6.5
-    ],
-    [
-     "2-1",
-     0.07,
-     8.3
-    ],
-    [
-     "1-0",
-     0.067,
-     8.35
+     0.064,
+     9.75
     ]
    ]
   },
   {
    "m": 1550169,
-   "why": "Score 1-1: le plus probable du modèle (8,5 %), avec des buts attendus identiques (1,53 partout) et un nul lors du dernier duel.",
+   "why": "Xg égaux (1,53 partout) donc 1-1 domine à 8,5 %. Les deux équipes encaissent 2,3 buts/match, mais le 1-1 a déjà eu lieu dans les confrontations récentes.",
    "scores": [
     [
      "1-1",
@@ -613,23 +1017,23 @@
    ]
   },
   {
-   "m": 1575531,
-   "why": "Score 0-2: le plus probable du modèle (8,7 %), avec Casa Pia à 0,3 but par match et un Sporting à 2,46 buts attendus. Le Sporting a gagné 3-0, 2-0 et 8-0.",
+   "m": 1552517,
+   "why": "1-1 à 8,7 %, avec des xG proches (1,64 contre 1,3). Les confrontations récentes sont serrées (0-0, 1-1, 1-0).",
    "scores": [
     [
-     "0-2",
+     "1-1",
      0.087,
-     6.43
+     6.5
     ],
     [
-     "0-1",
-     0.074,
-     7.22
+     "2-1",
+     0.07,
+     8.3
     ],
     [
-     "0-3",
-     0.071,
-     7.95
+     "1-0",
+     0.067,
+     8.35
     ]
    ]
   },
