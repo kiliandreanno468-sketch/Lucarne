@@ -17,14 +17,18 @@ export const LEAGUES = [
   { id: 144, name: 'Jupiler Pro League',  group: 'Autres' },
 ];
 
-// Nombre max de matchs analysés à chaque passage. Chaque match coûte
-// 2 requêtes API-Football (cotes + stats) : 24 matchs ≈ 52 requêtes,
-// sous la limite gratuite de 100 par jour. Avec le plan Pro, monte à 80+.
-export const MAX_FIXTURES = 24;
+// Nombre max de matchs analysés chaque matin. Chaque match coûte 2 requêtes
+// API-Football (cotes + stats). Avec les buteurs, les blessés et les scores de
+// la journée, 22 matchs gardent le total sous la limite gratuite de 100 par jour.
+// Avec le plan Pro, tu peux monter à 80 ou plus.
+export const MAX_FIXTURES = 22;
 
 // Pause entre deux requêtes : le plan gratuit limite à 10 requêtes par minute.
 // Avec le plan Pro, tu peux descendre à 300.
 export const REQUEST_DELAY_MS = 6500;
+
+// Les meilleurs buteurs de chaque championnat sont gardés en mémoire ce nombre de jours.
+export const SCORERS_REFRESH_DAYS = 4;
 
 export const TIMEZONE = 'Europe/Paris';
 
@@ -33,8 +37,10 @@ export const MODEL = 'claude-sonnet-5-5';
 
 // Règles de chaque mode : cotes acceptées, probabilité minimale, nombre de pronos.
 export const TIER_RULES = {
-  safe:  { minOdds: 1.15, maxOdds: 1.65, minProb: 0.68, max: 6 },
-  crazy: { minOdds: 1.80, maxOdds: 3.60, minProb: 0.28, max: 6 },
-  rich:  { minOdds: 5.00, maxOdds: 60,   minProb: 0.04, max: 6 },
-  var:   { max: 6 },
+  safe:   { minOdds: 1.15, maxOdds: 1.65, minProb: 0.68, max: 6 },
+  crazy:  { minOdds: 1.80, maxOdds: 3.60, minProb: 0.28, max: 6 },
+  rich:   { minOdds: 5.00, maxOdds: 60,   minProb: 0.04, max: 6 },
+  draw:   { minOdds: 2.60, maxOdds: 4.60, minProb: 0.20, max: 6 },
+  sniper: { minOdds: 1.40, maxOdds: 8,    minProb: 0.22, max: 6 },
+  var:    { max: 6 },
 };

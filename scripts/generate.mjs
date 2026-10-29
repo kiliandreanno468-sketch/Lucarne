@@ -2,7 +2,23 @@
 // probabilités, demande à Claude de choisir et d’expliquer les pronos,
 // puis écrit data/pronos.json et met à jour le bilan dans data/history.json.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { LEAGUES, MAX_FIXTURES, REQUEST_DELAY_MS, TIMEZONE, MODEL, TIER_RULES } from './config.mjs';
+import * as CONFIG from './config.mjs';
+
+const { LEAGUES } = CONFIG;
+const TIMEZONE = CONFIG.TIMEZONE ?? 'Europe/Paris';
+const MODEL = CONFIG.MODEL ?? 'claude-sonnet-5-5';
+const MAX_FIXTURES = CONFIG.MAX_FIXTURES ?? 22;
+const REQUEST_DELAY_MS = CONFIG.REQUEST_DELAY_MS ?? 6500;
+const SCORERS_REFRESH_DAYS = CONFIG.SCORERS_REFRESH_DAYS ?? 4;
+const TIER_RULES = {
+  safe:   { minOdds: 1.15, maxOdds: 1.65, minProb: 0.68, max: 6 },
+  crazy:  { minOdds: 1.80, maxOdds: 3.60, minProb: 0.28, max: 6 },
+  rich:   { minOdds: 5.00, maxOdds: 60,   minProb: 0.04, max: 6 },
+  draw:   { minOdds: 2.60, maxOdds: 4.60, minProb: 0.20, max: 6 },
+  sniper: { minOdds: 1.40, maxOdds: 8,    minProb: 0.22, max: 6 },
+  var:    { max: 6 },
+  ...CONFIG.TIER_RULES,
+};
 
 const API = 'https://v3.football.api-sports.io';
 const FOOT_KEY = process.env.APIFOOTBALL_KEY;
@@ -52,8 +68,8 @@ async function writeJson(name, value) {
 }
 
 /* ---------- Marchés ----------
-   Clés : 1X2:H|D|A, DC:HD|AD|HA, OU:O|U:ligne, BTTS:Y|N, CS:2-1 */
-function settle(key, h, a) {
+   Clés : 1X2:H|D|A, DC:HD|AD|HA, OU:O|U:ligne, BTTS:Y|N, CS:2-1, SC:idJoueur (buteur) */
+function settle(key, h, a, scorers) {
   const [type, x, y] = key.split(':');
   switch (type) {
     case '1X2': return x === 'H' ? h > a : x === 'D' ? h === a : a > h;
@@ -61,6 +77,7 @@ function settle(key, h, a) {
     case 'OU': return x === 'O' ? h + a > Number(y) : h + a < Number(y);
     case 'BTTS': return x === 'Y' ? (h > 0 && a > 0) : !(h > 0 && a > 0);
     case 'CS': { const [sh, sa] = x.split('-').map(Number); return sh === h && sa === a; }
+    case 'SC': return Array.isArray(scorers) ? scorers.includes(Number(x)) : null;
     default: return false;
   }
 }
@@ -102,6 +119,37 @@ function collectOdds(oddsResponse) {
   const odds = {};
   for (const k in found) odds[k] = median(found[k]);   // cote médiane des bookmakers
   return odds;
+}
+
+// Cotes « buteur à tout moment », rangées par nom de joueur normalisé.
+const norm = s => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim();
+function collectScorerOdds(oddsResponse) {
+  const found = new Map();
+  for (const book of oddsResponse?.[0]?.bookmakers ?? []) {
+    for (const bet of book.bets ?? []) {
+      const name = String(bet.name ?? '').toLowerCase();
+      if (!name.includes('anytime') || !name.includes('scorer')) continue;
+      for (const v of bet.values ?? []) {
+        const odd = num(v.odd), who = norm(v.value);
+        if (!(odd > 1) || !who) continue;
+        if (!found.has(who)) found.set(who, []);
+        found.get(who).push(odd);
+      }
+    }
+  }
+  return new Map([...found].map(([k, v]) => [k, median(v)]));
+}
+function findScorerOdd(map, pl) {
+  if (!map?.size) return null;
+  const tokens = norm(pl.last || pl.name).split(' ').filter(t => t.length >= 3);
+  const initial = norm(pl.first).charAt(0);
+  for (const [who, odd] of map) {
+    const words = who.split(' ');
+    if (!tokens.some(t => words.includes(t))) continue;
+    if (initial && words.length > 1 && who.charAt(0) !== initial) continue;
+    return odd;
+  }
+  return null;
 }
 
 /* ---------- Modèle de probabilités ---------- */
@@ -180,7 +228,7 @@ const FORM = { W: 'V', D: 'N', L: 'D' };
 const lastForm = s => (s || '').slice(-5).split('').map(c => FORM[c] || c).join('');
 const fr = n => (n == null ? '?' : String(round(n, 1)).replace('.', ','));
 
-function buildFixture(f, odds, pred) {
+function buildFixture(f, odds, pred, ctx = {}) {
   const league = LEAGUE_BY_ID.get(f.league.id);
   const home = f.teams.home.name, away = f.teams.away.name;
   const xg = expectedGoals(pred);
@@ -192,6 +240,8 @@ function buildFixture(f, odds, pred) {
     return { cid: `${f.fixture.id}|${key}`, fixture: f.fixture.id, key, pari: label(key, home, away), cote: round(cote, 2), p: round(p), book: round(1 / cote) };
   });
   const scores = candidates.filter(c => c.key.startsWith('CS:')).sort((a, b) => b.p - a.p).slice(0, 3).map(c => [c.key.slice(3), c.p, c.cote]);
+  const probOf = key => round(candidates.find(c => c.key === key)?.p ?? poissonProb(key, M), 3);
+  const sniper = scorerCandidates(f, xg, pred, ctx);
   const h2h = (pred?.h2h ?? [])
     .filter(x => x.goals?.home != null)
     .sort((a, b) => Date.parse(b.fixture.date) - Date.parse(a.fixture.date))
@@ -213,17 +263,49 @@ function buildFixture(f, odds, pred) {
     advice: pred?.predictions?.advice || '',
     h2h,
     candidates,
+    sniper,
     scores,
+    probs: { h: probOf('1X2:H'), d: probOf('1X2:D'), a: probOf('1X2:A') },
   };
+}
+
+// Buteurs : taux de buts par match du joueur, ajusté selon les buts attendus
+// de son équipe dans ce match (défense adverse comprise). Les blessés sont exclus.
+function scorerCandidates(f, xg, pred, ctx) {
+  const out = [];
+  const sides = [
+    { team: f.teams.home, lambda: xg.lh, avg: num(pred?.teams?.home?.league?.goals?.for?.average?.total) },
+    { team: f.teams.away, lambda: xg.la, avg: num(pred?.teams?.away?.league?.goals?.for?.average?.total) },
+  ];
+  for (const side of sides) {
+    const ratio = side.avg > 0 ? clamp(side.lambda / side.avg, 0.6, 1.6) : 1;
+    for (const pl of ctx.scorers?.get(side.team.id) ?? []) {
+      if (pl.apps < 3 || pl.goals < 2) continue;
+      if (ctx.injured?.has(`${f.fixture.id}-${pl.id}`)) continue;
+      const model = clamp(1 - Math.exp(-(pl.goals / pl.apps) * ratio), 0.02, 0.65);
+      const bookOdd = findScorerOdd(ctx.scorerOdds, pl);
+      const est = !bookOdd;
+      const p = est ? model : 0.5 * model + 0.5 * (0.93 / bookOdd);
+      out.push({
+        cid: `${f.fixture.id}|SC:${pl.id}`, fixture: f.fixture.id, key: `SC:${pl.id}`,
+        pari: `${pl.name} marque`, cote: round(est ? Math.max(1.2, 0.92 / model) : bookOdd, 2),
+        p: round(p), book: est ? null : round(1 / bookOdd), est,
+        player: { name: pl.name, team: side.team.name, goals: pl.goals, apps: pl.apps, pens: pl.pens },
+      });
+    }
+  }
+  return out;
 }
 
 function fallbackWhy(c, fx) {
   const type = c.key.split(':')[0];
+  if (type === 'SC') return `${c.player.name} a marqué ${c.player.goals} buts en ${c.player.apps} matchs cette saison.`;
+  if (c.key === '1X2:D') return `Le modèle estime le nul à ${Math.round(c.p * 100)} %, avec ${fr(fx.stats.lh + fx.stats.la)} buts attendus au total. Forme : ${fx.home} ${fx.formH || '?'}, ${fx.away} ${fx.formA || '?'}.`;
   if (type === 'OU' || type === 'BTTS' || type === 'CS') {
     return `${fx.home} marque ${fr(fx.stats.hFor)} et encaisse ${fr(fx.stats.hAg)} but par match à domicile, ${fx.away} ${fr(fx.stats.aFor)} et ${fr(fx.stats.aAg)} à l’extérieur.`;
   }
   if (fx.formH || fx.formA) return `Forme récente (V victoire, N nul, D défaite) : ${fx.home} ${fx.formH || '?'}, ${fx.away} ${fx.formA || '?'}.`;
-  return `Le modèle estime ce pari à ${Math.round(c.p * 100)} %, contre ${Math.round(c.book * 100)} % pour le bookmaker.`;
+  return `Le modèle estime ce pari à ${Math.round(c.p * 100)} %${c.book ? `, contre ${Math.round(c.book * 100)} % pour le bookmaker` : ''}.`;
 }
 
 /* ---------- Sélection par mode ---------- */
@@ -231,11 +313,19 @@ const SCORE = {
   safe: c => c.p + 0.5 * (c.p - c.book),
   crazy: c => (c.p - c.book) + 0.1 * c.p,
   rich: c => c.p * c.cote,
+  draw: c => c.p + 0.5 * (c.p - c.book),
+  sniper: c => c.p + (c.est ? 0 : 0.5 * (c.p - c.book)),
 };
 function pool(tier, all) {
   const r = TIER_RULES[tier];
   return all
-    .filter(c => c.cote >= r.minOdds && c.cote <= r.maxOdds && c.p >= r.minProb && (tier === 'rich' || !c.key.startsWith('CS:')))
+    .filter(c => {
+      if (c.cote < r.minOdds || c.cote > r.maxOdds || c.p < r.minProb) return false;
+      if (tier === 'draw') return c.key === '1X2:D';
+      if (tier === 'sniper') return c.key.startsWith('SC:');
+      if (c.key.startsWith('SC:')) return false;
+      return tier === 'rich' || !c.key.startsWith('CS:');
+    })
     .sort((a, b) => SCORE[tier](b) - SCORE[tier](a));
 }
 function fallbackPicks(tier, list) {
@@ -266,15 +356,17 @@ function picksFromClaude(tier, answer, list) {
 
 /* ---------- Claude ---------- */
 const SYSTEM = `Tu es l’analyste de Lucarne, un site de pronostics foot entre amis.
-Tu reçois des matchs avec leurs statistiques et, pour chaque mode (safe, crazy, rich), une liste de paris candidats avec leur cote, la probabilité de notre modèle (proba_modele) et celle du bookmaker (proba_bookmaker).
+Tu reçois des matchs avec leurs statistiques et, pour chaque mode (safe, crazy, rich, draw, sniper), une liste de paris candidats avec leur cote, la probabilité de notre modèle (proba_modele) et celle du bookmaker (proba_bookmaker).
 
 Ta mission :
 - Pour safe, crazy et rich, choisis jusqu’à 6 paris parmi les candidats de ce mode, au plus un par match et par mode. Privilégie les paris où proba_modele dépasse proba_bookmaker et où les stats vont dans le même sens. En safe, la sécurité passe avant la cote. En crazy, cherche le meilleur rapport entre risque et cote. En rich, vise les grosses cotes qui restent plausibles.
+- Pour draw, choisis jusqu’à 6 matchs (candidats « Match nul ») qui ont le plus de chances de finir à égalité : équipes de niveau proche, défenses solides, peu de buts attendus, nuls fréquents en forme récente ou en confrontations.
+- Pour sniper (buteurs), choisis jusqu’à 6 joueurs parmi les candidats, au plus un par match. Appuie-toi sur leurs buts cette saison, les buts attendus de leur équipe dans ce match et la défense adverse. Quand cote_estimee vaut true, le bookmaker ne propose pas de cote : ne parle pas de value.
 - Pour var, choisis jusqu’à 6 matchs parmi var_matchs, ceux où un score exact te paraît le plus lisible.
 - Pour chaque choix, donne ta probabilité (proba, entre 0 et 1, avec au plus 0,05 d’écart avec proba_modele) et une explication en français de 160 caractères maximum, appuyée uniquement sur les données fournies. N’invente jamais de blessure, de suspension, de transfert ou de statistique absente des données.
 
 Réponds uniquement avec un objet JSON, sans texte autour, au format :
-{"safe":[{"cid":"…","proba":0.8,"pourquoi":"…"}],"crazy":[…],"rich":[…],"var":[{"match":123,"pourquoi":"…"}]}`;
+{"safe":[{"cid":"…","proba":0.8,"pourquoi":"…"}],"crazy":[…],"rich":[…],"draw":[…],"sniper":[…],"var":[{"match":123,"pourquoi":"…"}]}`;
 
 async function askClaude(payload) {
   if (!CLAUDE_KEY) { console.warn('ANTHROPIC_API_KEY absente : sélection automatique sans Claude.'); return null; }
@@ -343,6 +435,27 @@ async function refreshResults(pronos, history) {
   }
   if (byId.size) pronos.resultsAt = new Date().toISOString();
 
+  // Buteurs : on récupère les buts d’un match une seule fois, quand il est terminé.
+  const needGoals = new Set();
+  for (const p of pronos.picks ?? []) {
+    const r = pronos.results[p.m];
+    if (p.key?.startsWith('SC:') && r?.status === 'FT' && !r.scorers) needGoals.add(Number(p.m));
+  }
+  for (const p of history.picks) {
+    if (p.status === 'pending' && p.key?.startsWith('SC:') && DONE.has(byId.get(p.fixture)?.fixture?.status?.short)) needGoals.add(p.fixture);
+  }
+  const goalsBy = new Map();
+  for (const id of needGoals) {
+    try {
+      const events = await football('/fixtures/events', { fixture: id, type: 'Goal' });
+      const scorers = events
+        .filter(e => String(e.type).toLowerCase() === 'goal' && !/own goal|missed penalty/i.test(e.detail || ''))
+        .map(e => e.player?.id).filter(Boolean);
+      goalsBy.set(id, scorers);
+      if (pronos.results[id]) pronos.results[id].scorers = scorers;
+    } catch (e) { console.warn('Buteurs du match indisponibles :', e.message); }
+  }
+
   for (const p of history.picks) {
     if (p.status !== 'pending') continue;
     const f = byId.get(p.fixture);
@@ -354,7 +467,10 @@ async function refreshResults(pronos, history) {
     const a = f.score?.fulltime?.away ?? f.goals?.away;
     if (h == null || a == null) continue;
     p.score = `${h}-${a}`;
-    p.status = settle(p.key, h, a) ? 'won' : 'lost';
+    const scorers = goalsBy.get(p.fixture) ?? pronos.results?.[p.fixture]?.scorers;
+    const ok = settle(p.key, h, a, scorers);
+    if (ok === null) continue;   // buteur : on attend la liste des buts
+    p.status = ok ? 'won' : 'lost';
   }
   console.log(`Résultats : ${finished} match(s) terminé(s) mis à jour.`);
 }
@@ -377,6 +493,57 @@ async function resultsOnly() {
   console.log(`Terminé : ${calls} requête(s) API-Football.`);
 }
 
+/* ---------- Buteurs et blessés ---------- */
+// Meilleurs buteurs de chaque compétition, gardés en cache quelques jours
+// (data/scorers.json) pour économiser les requêtes.
+async function loadScorers(fixtures) {
+  const cache = await readJson('scorers.json', { leagues: {} });
+  cache.leagues ||= {};
+  const wanted = new Map();
+  for (const f of fixtures) wanted.set(`${f.league.id}-${f.league.season}`, f.league);
+  const freshSince = Date.now() - SCORERS_REFRESH_DAYS * DAY_MS;
+  for (const [k, lg] of wanted) {
+    if (cache.leagues[k] && Date.parse(cache.leagues[k].at) > freshSince) continue;
+    try {
+      const response = await football('/players/topscorers', { league: lg.id, season: lg.season });
+      cache.leagues[k] = {
+        at: new Date().toISOString(),
+        players: response.map(r => {
+          const st = r.statistics?.[0] ?? {};
+          return {
+            id: r.player?.id, name: r.player?.name, first: r.player?.firstname || '', last: r.player?.lastname || '',
+            teamId: st.team?.id, team: st.team?.name,
+            goals: num(st.goals?.total) ?? 0, apps: num(st.games?.appearences) ?? 0, pens: num(st.penalty?.scored) ?? 0,
+          };
+        }).filter(pl => pl.id && pl.teamId),
+      };
+      console.log(`Buteurs mis à jour : ${LEAGUE_BY_ID.get(lg.id)?.name ?? lg.id}`);
+    } catch (e) { console.warn('Buteurs indisponibles :', e.message); }
+  }
+  for (const [k, v] of Object.entries(cache.leagues)) if (Date.parse(v.at) < Date.now() - 30 * DAY_MS) delete cache.leagues[k];
+  await writeJson('scorers.json', cache);
+  const byTeam = new Map();
+  for (const k of wanted.keys()) {
+    for (const pl of cache.leagues[k]?.players ?? []) {
+      if (!byTeam.has(pl.teamId)) byTeam.set(pl.teamId, []);
+      byTeam.get(pl.teamId).push(pl);
+    }
+  }
+  return byTeam;
+}
+
+// Joueurs blessés ou suspendus (une requête par jour analysé).
+async function loadInjuries(days) {
+  const out = new Set();
+  for (const d of days) {
+    try {
+      const response = await football('/injuries', { date: d, timezone: TIMEZONE });
+      for (const r of response) if (r.fixture?.id && r.player?.id) out.add(`${r.fixture.id}-${r.player.id}`);
+    } catch (e) { console.warn('Blessures indisponibles :', e.message); }
+  }
+  return out;
+}
+
 /* ---------- Programme principal ---------- */
 async function main() {
   if (!FOOT_KEY) throw new Error('Le secret APIFOOTBALL_KEY est manquant.');
@@ -397,17 +564,20 @@ async function main() {
   fixtures.sort((a, b) => LEAGUE_BY_ID.get(a.league.id).rank - LEAGUE_BY_ID.get(b.league.id).rank || a.fixture.timestamp - b.fixture.timestamp);
   fixtures = fixtures.slice(0, MAX_FIXTURES);
   console.log(`${fixtures.length} matchs à analyser.`);
+  const scorersByTeam = await loadScorers(fixtures);
+  const injured = await loadInjuries(days);
 
   const analysed = [], errors = [];
   for (const f of fixtures) {
     const name = `${f.teams.home.name} – ${f.teams.away.name}`;
     try {
-      const odds = collectOdds(await football('/odds', { fixture: f.fixture.id }));
+      const oddsResponse = await football('/odds', { fixture: f.fixture.id });
+      const odds = collectOdds(oddsResponse);
       if (!odds['1X2:H'] && !odds['OU:O:2.5']) { console.log(`Pas de cotes pour ${name}, match ignoré.`); continue; }
       let pred = null;
       try { pred = (await football('/predictions', { fixture: f.fixture.id }))[0] ?? null; }
       catch (e) { errors.push(e.message); }
-      analysed.push(buildFixture(f, odds, pred));
+      analysed.push(buildFixture(f, odds, pred, { scorers: scorersByTeam, injured, scorerOdds: collectScorerOdds(oddsResponse) }));
       console.log(`Analysé : ${name}`);
     } catch (e) {
       errors.push(e.message);
@@ -417,8 +587,9 @@ async function main() {
   if (!analysed.length && errors.length) throw new Error(`Aucun match analysé. Première erreur : ${errors[0]}`);
 
   const byId = new Map(analysed.map(fx => [fx.id, fx]));
-  const all = analysed.flatMap(fx => fx.candidates);
-  const pools = { safe: pool('safe', all), crazy: pool('crazy', all), rich: pool('rich', all) };
+  const all = analysed.flatMap(fx => [...fx.candidates, ...fx.sniper]);
+  const TIERS = ['safe', 'crazy', 'rich', 'draw', 'sniper'];
+  const pools = Object.fromEntries(TIERS.map(t => [t, pool(t, all)]));
   const varFixtures = analysed.filter(fx => fx.scores.length >= 2);
 
   let answer = null;
@@ -440,22 +611,22 @@ async function main() {
       })),
       candidats: Object.fromEntries(Object.entries(pools).map(([t, list]) => [t, list.slice(0, 30).map(c => ({
         cid: c.cid, match_id: c.fixture, pari: c.pari, cote: c.cote, proba_modele: c.p, proba_bookmaker: c.book,
+        ...(c.player ? { joueur: c.player.name, equipe: c.player.team, buts_saison: c.player.goals, matchs_joues: c.player.apps, penalties_marques: c.player.pens, cote_estimee: c.est } : {}),
       }))])),
       var_matchs: varFixtures.map(fx => fx.id),
     });
   }
   const top = t => pools[t].slice(0, 30);
-  const chosen = {
-    safe: answer ? picksFromClaude('safe', answer.safe, top('safe')) : fallbackPicks('safe', pools.safe),
-    crazy: answer ? picksFromClaude('crazy', answer.crazy, top('crazy')) : fallbackPicks('crazy', pools.crazy),
-    rich: answer ? picksFromClaude('rich', answer.rich, top('rich')) : fallbackPicks('rich', pools.rich),
-  };
+  const chosen = Object.fromEntries(TIERS.map(t => [t, answer ? picksFromClaude(t, answer[t], top(t)) : fallbackPicks(t, pools[t])]));
 
   const picks = [];
   for (const [t, list] of Object.entries(chosen)) {
     for (const c of list) {
       const fx = byId.get(c.fixture);
-      picks.push({ id: `${t}-${c.fixture}`, t, m: c.fixture, key: c.key, pari: c.pari, cote: c.cote, ia: c.ia, why: c.why || fallbackWhy(c, fx) });
+      picks.push({
+        id: `${t}-${c.fixture}`, t, m: c.fixture, key: c.key, pari: c.pari, cote: c.cote, ia: c.ia, why: c.why || fallbackWhy(c, fx),
+        ...(c.player ? { sub: c.player.team } : {}), ...(c.est ? { est: true } : {}),
+      });
     }
   }
 
@@ -476,7 +647,15 @@ async function main() {
   const matches = {};
   for (const id of usedIds) {
     const fx = byId.get(id);
-    matches[id] = { day: fx.day, time: fx.time, kickoff: fx.kickoff, comp: fx.comp, group: fx.group, home: fx.home, away: fx.away, homeLogo: fx.homeLogo, awayLogo: fx.awayLogo };
+    matches[id] = {
+      day: fx.day, time: fx.time, kickoff: fx.kickoff, comp: fx.comp, group: fx.group,
+      home: fx.home, away: fx.away, homeLogo: fx.homeLogo, awayLogo: fx.awayLogo,
+      info: {   // pour la fiche match du site
+        formH: fx.formH, formA: fx.formA, h2h: fx.h2h, advice: fx.advice || '',
+        gH: { f: fx.stats.hFor, a: fx.stats.hAg }, gA: { f: fx.stats.aFor, a: fx.stats.aAg },
+        xg: { h: round(fx.stats.lh, 2), a: round(fx.stats.la, 2) }, probs: fx.probs,
+      },
+    };
   }
 
   const pronos = {
@@ -493,13 +672,13 @@ async function main() {
   // recalculés demain matin avec des cotes plus fraîches).
   const today = days[0];
   history.picks = history.picks.filter(p => !(p.status === 'pending' && p.day === today && Date.parse(p.kickoff) > Date.now()));
-  const record = (tier, fixture, key, pari, cote, ia) => {
+  const record = (tier, fixture, key, pari, cote, ia, est) => {
     const fx = byId.get(fixture);
     const id = `${today}-${tier}-${fixture}`;
     if (!fx || fx.day !== today || history.picks.some(h => h.id === id)) return;
-    history.picks.push({ id, fixture, tier, key, pari, match: `${fx.home} – ${fx.away}`, cote, ia, kickoff: fx.kickoff, day: today, status: 'pending' });
+    history.picks.push({ id, fixture, tier, key, pari, match: `${fx.home} – ${fx.away}`, cote, ia, kickoff: fx.kickoff, day: today, status: 'pending', ...(est ? { est: true } : {}) });
   };
-  picks.forEach(p => record(p.t, p.m, p.key, p.pari, p.cote, p.ia));
+  picks.forEach(p => record(p.t, p.m, p.key, p.pari, p.cote, p.ia, p.est));
   varList.forEach(v => record('var', v.m, 'CS:' + v.scores[0][0], 'Score exact ' + v.scores[0][0], v.scores[0][2], v.scores[0][1]));
 
   // On garde les pronos d’hier (onglet « Hier », avec leurs résultats) et, si
