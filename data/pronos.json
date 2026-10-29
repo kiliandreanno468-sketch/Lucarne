@@ -1149,6 +1149,12 @@
    "score": "2-4",
    "final": true
   },
+  "1550170": {
+   "status": "live",
+   "score": "0-0",
+   "at": "2026-10-29T17:58:20.199Z",
+   "final": false
+  },
   "1550171": {
    "status": "FT",
    "score": "2-0",
@@ -1170,5 +1176,6 @@
    "final": true
   }
  },
- "source": "claude"
+ "source": "claude",
+ "resultsAt": "2026-10-29T17:58:20.199Z"
 }
