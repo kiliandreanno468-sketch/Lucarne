@@ -1,32 +1,21 @@
 {
- "generatedAt": "2026-10-29T12:22:24.841Z",
+ "generatedAt": "2026-10-30T06:30:11.823Z",
  "days": [
   {
-   "key": "2026-10-28",
-   "label": "Mercredi 28 octobre",
-   "past": true
-  },
-  {
    "key": "2026-10-29",
-   "label": "Jeudi 29 octobre"
+   "label": "Jeudi 29 octobre",
+   "past": true
   },
   {
    "key": "2026-10-30",
    "label": "Vendredi 30 octobre"
+  },
+  {
+   "key": "2026-10-31",
+   "label": "Samedi 31 octobre"
   }
  ],
  "matches": {
-  "1550167": {
-   "day": "2026-10-28",
-   "time": "18h30",
-   "kickoff": "2026-10-28T17:30:00.000Z",
-   "comp": "Serie A",
-   "group": "Serie A",
-   "home": "AC Milan",
-   "away": "Bologna",
-   "homeLogo": "https://media.api-sports.io/football/teams/489.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/500.png"
-  },
   "1550169": {
    "day": "2026-10-29",
    "time": "20h45",
@@ -107,206 +96,123 @@
     }
    }
   },
-  "1550171": {
-   "day": "2026-10-28",
+  "1550177": {
+   "day": "2026-10-31",
    "time": "20h45",
-   "kickoff": "2026-10-28T19:45:00.000Z",
+   "kickoff": "2026-10-31T19:45:00.000Z",
    "comp": "Serie A",
    "group": "Serie A",
-   "home": "Genoa",
-   "away": "Juventus",
-   "homeLogo": "https://media.api-sports.io/football/teams/495.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/496.png"
-  },
-  "1550172": {
-   "day": "2026-10-28",
-   "time": "20h45",
-   "kickoff": "2026-10-28T19:45:00.000Z",
-   "comp": "Serie A",
-   "group": "Serie A",
-   "home": "Monza",
-   "away": "Napoli",
-   "homeLogo": "https://media.api-sports.io/football/teams/1579.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/492.png"
-  },
-  "1550173": {
-   "day": "2026-10-28",
-   "time": "18h30",
-   "kickoff": "2026-10-28T17:30:00.000Z",
-   "comp": "Serie A",
-   "group": "Serie A",
-   "home": "Parma",
-   "away": "Udinese",
-   "homeLogo": "https://media.api-sports.io/football/teams/523.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/494.png"
-  },
-  "1550176": {
-   "day": "2026-10-28",
-   "time": "18h30",
-   "kickoff": "2026-10-28T17:30:00.000Z",
-   "comp": "Serie A",
-   "group": "Serie A",
-   "home": "Venezia",
+   "home": "AC Milan",
    "away": "Inter",
-   "homeLogo": "https://media.api-sports.io/football/teams/517.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/505.png"
-  },
-  "1552514": {
-   "day": "2026-10-30",
-   "time": "20h00",
-   "kickoff": "2026-10-30T19:00:00.000Z",
-   "comp": "Ligue 2",
-   "group": "Autres",
-   "home": "Grenoble",
-   "away": "Dijon",
-   "homeLogo": "https://media.api-sports.io/football/teams/101.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/89.png",
+   "homeLogo": "https://media.api-sports.io/football/teams/489.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/505.png",
    "info": {
-    "formH": "VNDDD",
-    "formA": "VVVDD",
+    "formH": "VNVVD",
+    "formA": "NVVVV",
     "h2h": [
-     "Dijon 1-0 Grenoble",
-     "Grenoble 0-0 Dijon",
-     "Dijon 1-0 Grenoble",
-     "Grenoble 1-2 Dijon",
-     "Dijon 1-1 Grenoble"
+     "AC Milan 1-1 Inter",
+     "AC Milan 1-0 Inter",
+     "Inter 0-1 AC Milan",
+     "Inter 0-3 AC Milan",
+     "AC Milan 1-1 Inter"
     ],
-    "advice": "Double chance : draw or Dijon",
+    "advice": "Double chance : AC Milan or draw",
     "gH": {
-     "f": 0.5,
-     "a": 1.3
+     "f": 2.5,
+     "a": 1.5
     },
     "gA": {
-     "f": 1.4,
+     "f": 2,
+     "a": 0.8
+    },
+    "xg": {
+     "h": 1.6,
      "a": 1.6
     },
-    "xg": {
-     "h": 1.15,
-     "a": 1.3
-    },
     "probs": {
-     "h": 0.269,
-     "d": 0.315,
-     "a": 0.416
+     "h": 0.319,
+     "d": 0.268,
+     "a": 0.413
     }
    }
   },
-  "1552516": {
-   "day": "2026-10-30",
-   "time": "20h00",
-   "kickoff": "2026-10-30T19:00:00.000Z",
-   "comp": "Ligue 2",
-   "group": "Autres",
-   "home": "Laval",
-   "away": "Boulogne",
-   "homeLogo": "https://media.api-sports.io/football/teams/433.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/1299.png",
+  "1550179": {
+   "day": "2026-10-31",
+   "time": "15h00",
+   "kickoff": "2026-10-31T14:00:00.000Z",
+   "comp": "Serie A",
+   "group": "Serie A",
+   "home": "Bologna",
+   "away": "Monza",
+   "homeLogo": "https://media.api-sports.io/football/teams/500.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/1579.png",
    "info": {
-    "formH": "DNDND",
-    "formA": "NDNVN",
+    "formH": "NVDVV",
+    "formA": "VDVDD",
     "h2h": [
-     "Laval 2-1 Boulogne",
-     "Boulogne 1-2 Laval",
-     "Laval 1-0 Boulogne",
-     "Boulogne 1-2 Laval",
-     "Boulogne 1-0 Laval"
+     "Bologna 3-1 Monza",
+     "Bologna 4-0 Monza",
+     "Monza 1-2 Bologna",
+     "Bologna 0-0 Monza",
+     "Monza 0-0 Bologna"
     ],
-    "advice": "Double chance : Laval or draw",
-    "gH": {
-     "f": 1.4,
-     "a": 2
-    },
-    "gA": {
-     "f": 0.6,
-     "a": 0.4
-    },
-    "xg": {
-     "h": 1.04,
-     "a": 1.26
-    },
-    "probs": {
-     "h": 0.358,
-     "d": 0.298,
-     "a": 0.344
-    }
-   }
-  },
-  "1552517": {
-   "day": "2026-10-30",
-   "time": "20h00",
-   "kickoff": "2026-10-30T19:00:00.000Z",
-   "comp": "Ligue 2",
-   "group": "Autres",
-   "home": "Metz",
-   "away": "PAU",
-   "homeLogo": "https://media.api-sports.io/football/teams/112.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/1297.png",
-   "info": {
-    "formH": "DNDVN",
-    "formA": "DVVVV",
-    "h2h": [
-     "PAU 2-1 Metz",
-     "Metz 0-0 PAU",
-     "PAU 1-1 Metz",
-     "Metz 1-0 PAU"
-    ],
-    "advice": "Double chance : draw or PAU",
-    "gH": {
-     "f": 2.4,
-     "a": 1.4
-    },
-    "gA": {
-     "f": 1.3,
-     "a": 1
-    },
-    "xg": {
-     "h": 1.64,
-     "a": 1.3
-    },
-    "probs": {
-     "h": 0.386,
-     "d": 0.292,
-     "a": 0.323
-    }
-   }
-  },
-  "1552518": {
-   "day": "2026-10-30",
-   "time": "20h00",
-   "kickoff": "2026-10-30T19:00:00.000Z",
-   "comp": "Ligue 2",
-   "group": "Autres",
-   "home": "Nantes",
-   "away": "Clermont Foot",
-   "homeLogo": "https://media.api-sports.io/football/teams/83.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/99.png",
-   "info": {
-    "formH": "DVNDD",
-    "formA": "NNDND",
-    "h2h": [
-     "Nantes 1-2 Clermont Foot",
-     "Clermont Foot 0-1 Nantes",
-     "Clermont Foot 0-0 Nantes",
-     "Nantes 1-1 Clermont Foot",
-     "Clermont Foot 2-3 Nantes"
-    ],
-    "advice": "Double chance : Nantes or draw",
+    "advice": "Double chance : Bologna or draw",
     "gH": {
      "f": 1,
      "a": 1.8
     },
     "gA": {
-     "f": 1.5,
-     "a": 2
+     "f": 1.4,
+     "a": 2.8
     },
     "xg": {
-     "h": 1.49,
-     "a": 1.53
+     "h": 1.79,
+     "a": 1.49
     },
     "probs": {
-     "h": 0.522,
-     "d": 0.271,
-     "a": 0.207
+     "h": 0.504,
+     "d": 0.281,
+     "a": 0.214
+    }
+   }
+  },
+  "1550186": {
+   "day": "2026-10-31",
+   "time": "18h00",
+   "kickoff": "2026-10-31T17:00:00.000Z",
+   "comp": "Serie A",
+   "group": "Serie A",
+   "home": "Udinese",
+   "away": "AS Roma",
+   "homeLogo": "https://media.api-sports.io/football/teams/494.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/497.png",
+   "info": {
+    "formH": "DDDDN",
+    "formA": "NNVNV",
+    "h2h": [
+     "Udinese 1-0 AS Roma",
+     "AS Roma 2-0 Udinese",
+     "Udinese 1-2 AS Roma",
+     "AS Roma 3-0 Udinese",
+     "Udinese 1-2 AS Roma"
+    ],
+    "advice": "Winner : AS Roma",
+    "gH": {
+     "f": 0.4,
+     "a": 1.8
+    },
+    "gA": {
+     "f": 2.3,
+     "a": 0.8
+    },
+    "xg": {
+     "h": 0.81,
+     "a": 1.82
+    },
+    "probs": {
+     "h": 0.152,
+     "d": 0.265,
+     "a": 0.583
     }
    }
   },
@@ -344,9 +250,9 @@
      "a": 1.6
     },
     "probs": {
-     "h": 0.117,
-     "d": 0.243,
-     "a": 0.64
+     "h": 0.119,
+     "d": 0.249,
+     "a": 0.632
     }
    }
   },
@@ -384,49 +290,329 @@
      "a": 1.26
     },
     "probs": {
-     "h": 0.414,
-     "d": 0.298,
-     "a": 0.288
+     "h": 0.402,
+     "d": 0.3,
+     "a": 0.298
     }
    }
   },
-  "1558670": {
-   "day": "2026-10-30",
+  "1552803": {
+   "day": "2026-10-31",
    "time": "20h45",
-   "kickoff": "2026-10-30T19:45:00.000Z",
-   "comp": "Jupiler Pro League",
-   "group": "Autres",
-   "home": "Zulte Waregem",
-   "away": "Club Brugge KV",
-   "homeLogo": "https://media.api-sports.io/football/teams/600.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/569.png",
+   "kickoff": "2026-10-31T19:45:00.000Z",
+   "comp": "Ligue 1",
+   "group": "Ligue 1",
+   "home": "Lorient",
+   "away": "Stade Brestois 29",
+   "homeLogo": "https://media.api-sports.io/football/teams/97.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/106.png",
    "info": {
-    "formH": "VDDDD",
-    "formA": "VVVVV",
+    "formH": "NDVVN",
+    "formA": "DDVND",
     "h2h": [
-     "Club Brugge KV 4-3 Zulte Waregem",
-     "Zulte Waregem 0-1 Club Brugge KV",
-     "Club Brugge KV 4-0 Zulte Waregem",
-     "Club Brugge KV 0-1 Zulte Waregem",
-     "Zulte Waregem 1-2 Club Brugge KV"
+     "Stade Brestois 29 2-0 Lorient",
+     "Lorient 3-3 Stade Brestois 29",
+     "Lorient 1-1 Stade Brestois 29",
+     "Lorient 0-1 Stade Brestois 29",
+     "Stade Brestois 29 4-0 Lorient"
     ],
-    "advice": "Winner : Club Brugge KV",
+    "advice": "Double chance : draw or Stade Brestois 29",
     "gH": {
-     "f": 1.5,
+     "f": 1.3,
      "a": 1
     },
     "gA": {
-     "f": 2.3,
+     "f": 1.5,
+     "a": 1.5
+    },
+    "xg": {
+     "h": 1.41,
+     "a": 1.23
+    },
+    "probs": {
+     "h": 0.336,
+     "d": 0.312,
+     "a": 0.351
+    }
+   }
+  },
+  "1557447": {
+   "day": "2026-10-31",
+   "time": "21h00",
+   "kickoff": "2026-10-31T20:00:00.000Z",
+   "comp": "Premier League",
+   "group": "Premier League",
+   "home": "Aston Villa",
+   "away": "Fulham",
+   "homeLogo": "https://media.api-sports.io/football/teams/66.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/36.png",
+   "info": {
+    "formH": "DVNVV",
+    "formA": "NNDVV",
+    "h2h": [
+     "Fulham 1-0 Aston Villa",
+     "Aston Villa 3-1 Fulham",
+     "Aston Villa 1-0 Fulham",
+     "Fulham 1-3 Aston Villa",
+     "Fulham 1-2 Aston Villa"
+    ],
+    "advice": "Combo Double chance : Aston Villa or draw and -3.5 goals",
+    "gH": {
+     "f": 1.3,
+     "a": 1.5
+    },
+    "gA": {
+     "f": 0.5,
      "a": 0.8
     },
     "xg": {
-     "h": 1.22,
+     "h": 1.15,
+     "a": 1.04
+    },
+    "probs": {
+     "h": 0.448,
+     "d": 0.306,
+     "a": 0.246
+    }
+   }
+  },
+  "1557448": {
+   "day": "2026-10-31",
+   "time": "16h00",
+   "kickoff": "2026-10-31T15:00:00.000Z",
+   "comp": "Premier League",
+   "group": "Premier League",
+   "home": "Bournemouth",
+   "away": "Leeds",
+   "homeLogo": "https://media.api-sports.io/football/teams/35.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/63.png",
+   "info": {
+    "formH": "NDDVV",
+    "formA": "VNDNN",
+    "h2h": [
+     "Bournemouth 2-2 Leeds",
+     "Leeds 2-2 Bournemouth",
+     "Bournemouth 4-1 Leeds",
+     "Leeds 4-3 Bournemouth",
+     "Leeds 1-0 Bournemouth"
+    ],
+    "advice": "Double chance : draw or Leeds",
+    "gH": {
+     "f": 1.3,
+     "a": 1
+    },
+    "gA": {
+     "f": 0.8,
+     "a": 0.8
+    },
+    "xg": {
+     "h": 1.15,
+     "a": 0.96
+    },
+    "probs": {
+     "h": 0.364,
+     "d": 0.319,
+     "a": 0.317
+    }
+   }
+  },
+  "1557451": {
+   "day": "2026-10-31",
+   "time": "16h00",
+   "kickoff": "2026-10-31T15:00:00.000Z",
+   "comp": "Premier League",
+   "group": "Premier League",
+   "home": "Coventry",
+   "away": "Sunderland",
+   "homeLogo": "https://media.api-sports.io/football/teams/1346.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/746.png",
+   "info": {
+    "formH": "DVVDD",
+    "formA": "DDDDN",
+    "h2h": [
+     "Sunderland 1-1 Coventry",
+     "Coventry 1-2 Sunderland",
+     "Coventry 3-0 Sunderland",
+     "Sunderland 2-2 Coventry",
+     "Sunderland 0-3 Coventry"
+    ],
+    "advice": "Double chance : Coventry or draw",
+    "gH": {
+     "f": 1,
+     "a": 2
+    },
+    "gA": {
+     "f": 1.3,
+     "a": 2.5
+    },
+    "xg": {
+     "h": 1.68,
      "a": 1.53
     },
     "probs": {
-     "h": 0.179,
-     "d": 0.279,
-     "a": 0.542
+     "h": 0.369,
+     "d": 0.3,
+     "a": 0.33
+    }
+   }
+  },
+  "1557454": {
+   "day": "2026-10-31",
+   "time": "16h00",
+   "kickoff": "2026-10-31T15:00:00.000Z",
+   "comp": "Premier League",
+   "group": "Premier League",
+   "home": "Manchester City",
+   "away": "Brighton",
+   "homeLogo": "https://media.api-sports.io/football/teams/50.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/51.png",
+   "info": {
+    "formH": "VVVVD",
+    "formA": "VVVVD",
+    "h2h": [
+     "Manchester City 2-2 Brighton",
+     "Manchester City 1-1 Brighton",
+     "Brighton 2-1 Manchester City",
+     "Manchester City 2-2 Brighton",
+     "Brighton 2-1 Manchester City"
+    ],
+    "advice": "Combo Double chance : draw or Brighton and +1.5 goals",
+    "gH": {
+     "f": 2.8,
+     "a": 1.5
+    },
+    "gA": {
+     "f": 2.5,
+     "a": 1.5
+    },
+    "xg": {
+     "h": 1.98,
+     "a": 1.79
+    },
+    "probs": {
+     "h": 0.441,
+     "d": 0.261,
+     "a": 0.298
+    }
+   }
+  },
+  "1570434": {
+   "day": "2026-10-31",
+   "time": "21h00",
+   "kickoff": "2026-10-31T20:00:00.000Z",
+   "comp": "Liga",
+   "group": "Liga",
+   "home": "Barcelona",
+   "away": "Alaves",
+   "homeLogo": "https://media.api-sports.io/football/teams/529.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/542.png",
+   "info": {
+    "formH": "VVVVD",
+    "formA": "DNDDN",
+    "h2h": [
+     "Alaves 1-0 Barcelona",
+     "Barcelona 3-1 Alaves",
+     "Barcelona 1-0 Alaves",
+     "Alaves 0-3 Barcelona",
+     "Alaves 1-3 Barcelona"
+    ],
+    "advice": "Winner : Barcelona",
+    "gH": {
+     "f": 3.6,
+     "a": 1.2
+    },
+    "gA": {
+     "f": 0.8,
+     "a": 1.3
+    },
+    "xg": {
+     "h": 2.2,
+     "a": 1.04
+    },
+    "probs": {
+     "h": 0.713,
+     "d": 0.194,
+     "a": 0.093
+    }
+   }
+  },
+  "1570439": {
+   "day": "2026-10-31",
+   "time": "14h00",
+   "kickoff": "2026-10-31T13:00:00.000Z",
+   "comp": "Liga",
+   "group": "Liga",
+   "home": "Levante",
+   "away": "Atletico Madrid",
+   "homeLogo": "https://media.api-sports.io/football/teams/539.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/530.png",
+   "info": {
+    "formH": "DNNVD",
+    "formA": "VVVVV",
+    "h2h": [
+     "Levante 0-0 Atletico Madrid",
+     "Atletico Madrid 3-1 Levante",
+     "Levante 0-2 Atletico Madrid",
+     "Atletico Madrid 0-1 Levante",
+     "Levante 2-2 Atletico Madrid"
+    ],
+    "advice": "Combo Double chance : draw or Atletico Madrid and +1.5 goals",
+    "gH": {
+     "f": 3.3,
+     "a": 2.5
+    },
+    "gA": {
+     "f": 1.8,
+     "a": 1
+    },
+    "xg": {
+     "h": 1.98,
+     "a": 1.9
+    },
+    "probs": {
+     "h": 0.233,
+     "d": 0.258,
+     "a": 0.509
+    }
+   }
+  },
+  "1570441": {
+   "day": "2026-10-31",
+   "time": "16h15",
+   "kickoff": "2026-10-31T15:15:00.000Z",
+   "comp": "Liga",
+   "group": "Liga",
+   "home": "Rayo Vallecano",
+   "away": "Celta Vigo",
+   "homeLogo": "https://media.api-sports.io/football/teams/728.png",
+   "awayLogo": "https://media.api-sports.io/football/teams/538.png",
+   "info": {
+    "formH": "DVNND",
+    "formA": "NVNVN",
+    "h2h": [
+     "Celta Vigo 3-0 Rayo Vallecano",
+     "Rayo Vallecano 1-1 Celta Vigo",
+     "Celta Vigo 1-2 Rayo Vallecano",
+     "Rayo Vallecano 2-1 Celta Vigo",
+     "Celta Vigo 0-0 Rayo Vallecano"
+    ],
+    "advice": "Combo Double chance : draw or Celta Vigo and -3.5 goals",
+    "gH": {
+     "f": 1.5,
+     "a": 1.8
+    },
+    "gA": {
+     "f": 0.3,
+     "a": 0.3
+    },
+    "xg": {
+     "h": 1.04,
+     "a": 1.08
+    },
+    "probs": {
+     "h": 0.319,
+     "d": 0.325,
+     "a": 0.356
     }
    }
   },
@@ -464,9 +650,9 @@
      "a": 1.3
     },
     "probs": {
-     "h": 0.544,
-     "d": 0.261,
-     "a": 0.194
+     "h": 0.55,
+     "d": 0.26,
+     "a": 0.19
     }
    }
   },
@@ -501,54 +687,44 @@
      "a": 2.39
     },
     "probs": {
-     "h": 0.258,
-     "d": 0.272,
-     "a": 0.469
-    }
-   }
-  },
-  "1575531": {
-   "day": "2026-10-30",
-   "time": "21h15",
-   "kickoff": "2026-10-30T20:15:00.000Z",
-   "comp": "Liga Portugal",
-   "group": "Autres",
-   "home": "Casa Pia",
-   "away": "Sporting CP",
-   "homeLogo": "https://media.api-sports.io/football/teams/4716.png",
-   "awayLogo": "https://media.api-sports.io/football/teams/228.png",
-   "info": {
-    "formH": "NDVDV",
-    "formA": "VNNVD",
-    "h2h": [
-     "Sporting CP 3-0 Casa Pia",
-     "Casa Pia 0-2 Sporting CP",
-     "Casa Pia 1-3 Sporting CP",
-     "Sporting CP 2-0 Casa Pia",
-     "Sporting CP 8-0 Casa Pia"
-    ],
-    "advice": "Winner : Sporting CP",
-    "gH": {
-     "f": 0.3,
-     "a": 3.3
-    },
-    "gA": {
-     "f": 2.5,
-     "a": 1
-    },
-    "xg": {
-     "h": 0.85,
-     "a": 2.46
-    },
-    "probs": {
-     "h": 0.1,
-     "d": 0.225,
-     "a": 0.675
+     "h": 0.259,
+     "d": 0.273,
+     "a": 0.468
     }
    }
   }
  },
  "picks": [
+  {
+   "id": "safe-1557447",
+   "t": "safe",
+   "m": 1557447,
+   "key": "OU:U:4.5",
+   "pari": "Moins de 4,5 buts",
+   "cote": 1.15,
+   "ia": 0.85,
+   "why": "Moins de 4,5 buts : 2,19 buts attendus seulement, Fulham ne marque que 0,5 par match. Très peu de risque, même si la cote est basse."
+  },
+  {
+   "id": "safe-1550186",
+   "t": "safe",
+   "m": 1550186,
+   "key": "DC:AD",
+   "pari": "AS Roma ou match nul",
+   "cote": 1.15,
+   "ia": 0.85,
+   "why": "Roma ou nul : Roma marque 2,3 buts par match et en encaisse 0,8. Udinese ne marque que 0,4 par match et reste sur 4 défaites et 1 nul."
+  },
+  {
+   "id": "safe-1570439",
+   "t": "safe",
+   "m": 1570439,
+   "key": "OU:O:1.5",
+   "pari": "Plus de 1,5 buts",
+   "cote": 1.15,
+   "ia": 0.85,
+   "why": "Plus de 1,5 but : Levante marque 3,3 buts par match, et le modèle attend 3,88 buts au total. Seuil très bas."
+  },
   {
    "id": "safe-1552801",
    "t": "safe",
@@ -556,28 +732,18 @@
    "key": "OU:U:4.5",
    "pari": "Moins de 4,5 buts",
    "cote": 1.4,
-   "ia": 0.75,
-   "why": "Le Havre marque 0,5 but/match et le modèle attend 2,6 buts au total. Moins de 4,5 buts : proba modèle 75 % contre 71 % pour le bookmaker."
+   "ia": 0.76,
+   "why": "Moins de 4,5 buts : Le Havre ne marque que 0,5 par match et le modèle attend 2,6 buts. Notre modèle est au-dessus du bookmaker (0,758 contre 0,714)."
   },
   {
-   "id": "safe-1550170",
+   "id": "safe-1557448",
    "t": "safe",
-   "m": 1550170,
-   "key": "OU:U:4.5",
-   "pari": "Moins de 4,5 buts",
-   "cote": 1.34,
+   "m": 1557448,
+   "key": "OU:U:3.5",
+   "pari": "Moins de 3,5 buts",
+   "cote": 1.36,
    "ia": 0.75,
-   "why": "Environ 2,9 buts attendus au total, et les confrontations récentes sont serrées (1-1, 0-0, 1-0). Léger avantage modèle (75,8 % contre 74,6 %)."
-  },
-  {
-   "id": "safe-1552802",
-   "t": "safe",
-   "m": 1552802,
-   "key": "DC:HD",
-   "pari": "Lille ou match nul",
-   "cote": 1.46,
-   "ia": 0.71,
-   "why": "Lille a une défense solide à domicile (0,8 but encaissé), des buts attendus supérieurs (1,6 contre 1,26) et 4 victoires en 5 face à Lens. Value : 71 % contre 69 %."
+   "why": "Moins de 3,5 buts : défenses à 0,8 but encaissé par match de chaque côté, seulement 2,11 buts attendus. Le modèle devance le bookmaker."
   },
   {
    "id": "safe-1575211",
@@ -587,47 +753,17 @@
    "pari": "FSV Mainz 05 ou match nul",
    "cote": 1.36,
    "ia": 0.74,
-   "why": "Mainz marque 3,3 buts/match, le modèle lui en attend 2,39 contre 1,75 pour Elversberg, et il a gagné 1 fois et fait 1 nul en 2 duels. Léger value."
+   "why": "Mainz ou nul : Mainz marque 3,3 buts par match et le modèle lui donne l'avantage (2,39 buts attendus contre 1,75). Le modèle est légèrement au-dessus du bookmaker."
   },
   {
-   "id": "safe-1558670",
-   "t": "safe",
-   "m": 1558670,
-   "key": "OU:U:4.5",
-   "pari": "Moins de 4,5 buts",
-   "cote": 1.29,
-   "ia": 0.78,
-   "why": "Zulte encaisse 1 but/match et Bruges 0,8. Le modèle attend environ 2,75 buts, donc moins de 4,5 reste très probable (78 % contre 77,5 %)."
-  },
-  {
-   "id": "safe-1575531",
-   "t": "safe",
-   "m": 1575531,
-   "key": "OU:O:1.5",
-   "pari": "Plus de 1,5 buts",
-   "cote": 1.17,
-   "ia": 0.8,
-   "why": "Sporting attend 2,46 buts et Casa Pia en encaisse 3,3 par match. Plus de 1,5 but est très sûr, même sans value."
-  },
-  {
-   "id": "crazy-1550170",
+   "id": "crazy-1557454",
    "t": "crazy",
-   "m": 1550170,
+   "m": 1557454,
    "key": "DC:AD",
-   "pari": "Lecce ou match nul",
-   "cote": 2.15,
-   "ia": 0.57,
-   "why": "Lecce encaisse 1 but/match et n'a pas perdu face à Frosinone sur les 5 derniers duels. Le modèle donne 56,8 % contre 46,5 % au bookmaker, belle value à 2,15."
-  },
-  {
-   "id": "crazy-1552801",
-   "t": "crazy",
-   "m": 1552801,
-   "key": "OU:U:3.5",
-   "pari": "Moins de 3,5 buts",
-   "cote": 2,
-   "ia": 0.58,
-   "why": "Le Havre ne marque que 0,5 but/match, et 2,6 buts sont attendus au total. Moins de 3,5 buts : 58 % pour le modèle contre 50 % pour le bookmaker, à la cote de 2."
+   "pari": "Brighton ou match nul",
+   "cote": 2.25,
+   "ia": 0.56,
+   "why": "Brighton ou nul à 2,25 : Brighton est en grande forme (VVVVD) et n'a pas perdu face à City dans 3 des 5 dernières confrontations. Le modèle est bien au-dessus du bookmaker."
   },
   {
    "id": "crazy-1575211",
@@ -635,39 +771,59 @@
    "m": 1575211,
    "key": "OU:O:3.5",
    "pari": "Plus de 3,5 buts",
-   "cote": 2.19,
+   "cote": 2.18,
    "ia": 0.5,
-   "why": "Elversberg marque 2,7 buts/match, Mainz 3,3, et les deux encaissent. Le modèle attend 4,1 buts : value à 2,19, soit 49,9 % contre 45,8 %."
+   "why": "Plus de 3,5 buts à 2,18 : 4,14 buts attendus, Mainz marque 3,3 par match et Elversberg en encaisse 2,3. Value (0,501 contre 0,459)."
   },
   {
-   "id": "crazy-1552518",
+   "id": "crazy-1570439",
    "t": "crazy",
-   "m": 1552518,
+   "m": 1570439,
+   "key": "OU:O:3.5",
+   "pari": "Plus de 3,5 buts",
+   "cote": 2.36,
+   "ia": 0.46,
+   "why": "Plus de 3,5 buts à 2,36 : Levante marque 3,3 et encaisse 2,5 par match, et le modèle attend 3,88 buts. Value par rapport au bookmaker."
+  },
+  {
+   "id": "crazy-1552801",
+   "t": "crazy",
+   "m": 1552801,
+   "key": "OU:U:3.5",
+   "pari": "Moins de 3,5 buts",
+   "cote": 1.91,
+   "ia": 0.59,
+   "why": "Moins de 3,5 buts à 1,91 : Le Havre ne marque que 0,5 par match et le modèle attend 2,6 buts. Bon rapport risque/cote, value de 7 points."
+  },
+  {
+   "id": "crazy-1557447",
+   "t": "crazy",
+   "m": 1557447,
+   "key": "OU:U:2.5",
+   "pari": "Moins de 2,5 buts",
+   "cote": 2.2,
+   "ia": 0.51,
+   "why": "Moins de 2,5 buts à 2,20 : seulement 2,19 buts attendus, Fulham marque 0,5 par match. Le modèle est au-dessus du bookmaker."
+  },
+  {
+   "id": "crazy-1550177",
+   "t": "crazy",
+   "m": 1550177,
+   "key": "DC:HD",
+   "pari": "AC Milan ou match nul",
+   "cote": 1.81,
+   "ia": 0.59,
+   "why": "Milan ou nul à 1,81 : buts attendus identiques (1,6 partout) et Milan a battu ou tenu Inter dans les 5 dernières confrontations. Value modérée."
+  },
+  {
+   "id": "rich-1570434",
+   "t": "rich",
+   "m": 1570434,
    "key": "DC:AD",
-   "pari": "Clermont Foot ou match nul",
-   "cote": 2.6,
-   "ia": 0.48,
-   "why": "Buts attendus quasi égaux (1,49 contre 1,53) et Clermont reste sur 5 matchs sans défaite en 5 h2h. Value importante à 2,6 : 47,8 % contre 38,5 %."
-  },
-  {
-   "id": "crazy-1570442",
-   "t": "crazy",
-   "m": 1570442,
-   "key": "DC:AD",
-   "pari": "Espanyol ou match nul",
-   "cote": 2.78,
-   "ia": 0.45,
-   "why": "Espanyol est en méforme (DDNDD) mais son xG est de 1,3 contre 1,45, donc l'écart reste faible. Value : 45,6 % contre 36 % à la cote de 2,78."
-  },
-  {
-   "id": "crazy-1552802",
-   "t": "crazy",
-   "m": 1552802,
-   "key": "1X2:H",
-   "pari": "Lille gagne",
-   "cote": 2.55,
-   "ia": 0.41,
-   "why": "Lille a une meilleure défense (0,8 but encaissé), un xG de 1,6 contre 1,26 et 4 succès sur 5 face à Lens. Value modérée à 2,55 (41,4 % contre 39,3 %)."
+   "pari": "Alaves ou match nul",
+   "cote": 7.05,
+   "ia": 0.29,
+   "why": "Alaves ou nul à 7,05 : le modèle y voit deux fois plus de chances que le bookmaker. Barça est favori, mais Alaves l'a battu 1-0 dans une des 5 dernières confrontations."
   },
   {
    "id": "rich-1552801",
@@ -675,19 +831,19 @@
    "m": 1552801,
    "key": "1X2:D",
    "pari": "Match nul",
-   "cote": 7,
-   "ia": 0.2,
-   "why": "Le Havre ne marque que 0,5 but/match et le PSG a un xG de 1,6, mais l'écart reste mince. Le modèle donne 24,3 % contre 14,3 % au bookmaker à 7 : grosse value."
+   "cote": 6.4,
+   "ia": 0.25,
+   "why": "Nul à 6,40 : seulement 2,6 buts attendus. Le Havre ne marque que 0,5 par match, mais ne perd pas souvent (NDDDD). Value nette (0,249 contre 0,156)."
   },
   {
-   "id": "rich-1552518",
+   "id": "rich-1557451",
    "t": "rich",
-   "m": 1552518,
-   "key": "1X2:A",
-   "pari": "Clermont Foot gagne",
-   "cote": 6.53,
-   "ia": 0.2,
-   "why": "Clermont a un xG légèrement supérieur (1,53 contre 1,49) et marque 1,5 but/match. Victoire à 6,53 : 20,7 % contre 15,3 % pour le bookmaker."
+   "m": 1557451,
+   "key": "OU:O:4.5",
+   "pari": "Plus de 4,5 buts",
+   "cote": 6.35,
+   "ia": 0.18,
+   "why": "Plus de 4,5 buts à 6,35 : 3,21 buts attendus, Coventry encaisse 2 par match et Sunderland 2,5. Value légère."
   },
   {
    "id": "rich-1570442",
@@ -695,49 +851,69 @@
    "m": 1570442,
    "key": "1X2:D",
    "pari": "Match nul",
-   "cote": 5,
-   "ia": 0.25,
-   "why": "Le xG est proche (1,45 contre 1,3) et le 1-1 est le score le plus probable. Le nul à 5 offre une value nette : 26,1 % contre 20 %."
+   "cote": 5.08,
+   "ia": 0.26,
+   "why": "Nul à 5,08 : niveaux proches (1,45 contre 1,3 but attendu) et Espanyol a souvent partagé les points (DDNDD). Value (0,26 contre 0,197)."
   },
   {
-   "id": "rich-1550170",
+   "id": "rich-1570439",
    "t": "rich",
-   "m": 1550170,
-   "key": "OU:U:1.5",
-   "pari": "Moins de 1,5 buts",
-   "cote": 6.39,
-   "ia": 0.17,
-   "why": "Lecce encaisse 1 but/match. Moins de 1,5 but est un pari de risque avec une cote de 6,39, mais le modèle le donne à 17,6 % contre 15,6 % pour le bookmaker."
+   "m": 1570439,
+   "key": "1X2:H",
+   "pari": "Levante gagne",
+   "cote": 5.25,
+   "ia": 0.23,
+   "why": "Levante gagne à 5,25 : Levante marque 3,3 buts par match et le modèle attend 1,98 but contre 1,9. Value sur Atletico, même si Atletico est en forme (VVVVV)."
   },
   {
-   "id": "rich-1558670",
+   "id": "rich-1550179",
    "t": "rich",
-   "m": 1558670,
-   "key": "OU:U:1.5",
-   "pari": "Moins de 1,5 buts",
-   "cote": 5.84,
-   "ia": 0.19,
-   "why": "Bruges encaisse 0,8 but/match et Zulte 1. Le modèle donne 19,2 % contre 17,1 % pour moins de 1,5 but, à une cote de 5,84."
+   "m": 1550179,
+   "key": "OU:O:4.5",
+   "pari": "Plus de 4,5 buts",
+   "cote": 5.5,
+   "ia": 0.2,
+   "why": "Plus de 4,5 buts à 5,50 : Monza encaisse 2,8 par match, et le modèle attend 3,28 buts. Plausible avec 0,196 contre 0,182."
   },
   {
-   "id": "draw-1552514",
+   "id": "draw-1570441",
    "t": "draw",
-   "m": 1552514,
+   "m": 1570441,
    "key": "1X2:D",
    "pari": "Match nul",
-   "cote": 3.25,
-   "ia": 0.31,
-   "why": "Équipes proches (xG 1,15 contre 1,3), faible attaque de Grenoble (0,5 but/match) et 1-1 en tête des scores (9,7 %). Les confrontations récentes sont très serrées."
+   "cote": 3.28,
+   "ia": 0.32,
+   "why": "Rayo-Celta : 1,04 contre 1,08 but attendu, Celta ne marque et n'encaisse que 0,3 par match, et le 1-1 est le score le plus probable. Aucun nul n'est plus probable."
   },
   {
-   "id": "draw-1552516",
+   "id": "draw-1557448",
    "t": "draw",
-   "m": 1552516,
+   "m": 1557448,
    "key": "1X2:D",
    "pari": "Match nul",
-   "cote": 3.25,
+   "cote": 3.4,
+   "ia": 0.32,
+   "why": "Bournemouth-Leeds : 1,15 contre 0,96 but attendu, défenses à 1 et 0,8 but encaissé par match. Deux nuls 2-2 en confrontations, le 1-1 est le score le plus probable."
+  },
+  {
+   "id": "draw-1557447",
+   "t": "draw",
+   "m": 1557447,
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "cote": 3.73,
    "ia": 0.3,
-   "why": "Boulogne n'encaisse que 0,4 but/match et les deux xG sont faibles (1,04 et 1,26). Le 1-1 est le score le plus probable (9,8 %), et Boulogne a fait 3 nuls sur 5."
+   "why": "Aston Villa-Fulham : 1,15 contre 1,04 but attendu, très peu de buts en perspective. Le 1-1 est le score le plus probable (9,3 %)."
+  },
+  {
+   "id": "draw-1552803",
+   "t": "draw",
+   "m": 1552803,
+   "key": "1X2:D",
+   "pari": "Match nul",
+   "cote": 3.3,
+   "ia": 0.31,
+   "why": "Lorient-Brest : niveaux proches (1,41 contre 1,23 but attendu), deux nuls (3-3 et 1-1) dans les 5 dernières confrontations. Le 1-1 est le score le plus probable."
   },
   {
    "id": "draw-1552802",
@@ -745,29 +921,19 @@
    "m": 1552802,
    "key": "1X2:D",
    "pari": "Match nul",
-   "cote": 3.56,
+   "cote": 3.49,
    "ia": 0.3,
-   "why": "Lille et Lens ont des niveaux proches (xG 1,6 et 1,26), et le 1-1 est le score le plus probable à 8,8 %. Lens vient de faire 2 nuls (NDVVV)."
+   "why": "Lille-Lens : les deux équipes restent sur des nuls récents (VDVNN et NDVVN). 1,6 contre 1,26 but attendu, 1-1 en tête des scores probables à 9,1 %."
   },
   {
-   "id": "draw-1552517",
+   "id": "draw-1550177",
    "t": "draw",
-   "m": 1552517,
+   "m": 1550177,
    "key": "1X2:D",
    "pari": "Match nul",
-   "cote": 3.58,
-   "ia": 0.29,
-   "why": "Metz et PAU ont des xG proches (1,64 contre 1,3). Les confrontations donnent 0-0 et 1-1 sur les 4 dernières, et le 1-1 est le score le plus probable (8,7 %)."
-  },
-  {
-   "id": "draw-1550170",
-   "t": "draw",
-   "m": 1550170,
-   "key": "1X2:D",
-   "pari": "Match nul",
-   "cote": 4.21,
-   "ia": 0.28,
-   "why": "Lecce et Frosinone ont des xG proches (1,6 contre 1,26), avec 1-1 et 0-0 dans les confrontations récentes, et le 1-1 est le score probable."
+   "cote": 3.73,
+   "ia": 0.27,
+   "why": "Milan-Inter : 1,6 but attendu partout, deux 1-1 dans les 5 dernières confrontations. Le niveau est très proche et Inter n'a perdu qu'un match récent."
   },
   {
    "id": "draw-1550169",
@@ -780,218 +946,170 @@
    "why": "Xg identiques (1,53 partout), 1-1 en tête des scores probables (8,5 %) et nul lors d'un des derniers duels. Les deux équipes enchaînent beaucoup de nuls en forme récente."
   },
   {
-   "id": "safe-1550167",
+   "id": "safe-1550170",
    "t": "safe",
-   "m": 1550167,
-   "key": "DC:HD",
-   "pari": "AC Milan ou match nul",
-   "cote": 1.18,
-   "ia": 0.81,
-   "why": "Milan marque 2,7 et n'encaisse que 0,7 par match, forme NVNVV. Modèle 82 %, un peu sous le book mais le choix le plus sûr du match."
-  },
-  {
-   "id": "crazy-1550167",
-   "t": "crazy",
-   "m": 1550167,
-   "key": "DC:AD",
-   "pari": "Bologna ou match nul",
-   "cote": 2.15,
-   "ia": 0.47,
-   "why": "Modèle et book à 46,5 %, cote 2,15. Bologna a gagné 2 des 5 derniers duels et n'encaisse que 0,8 par match, mais le Milan est favori."
-  },
-  {
-   "id": "crazy-1550171",
-   "t": "crazy",
-   "m": 1550171,
-   "key": "DC:HD",
-   "pari": "Genoa ou match nul",
-   "cote": 2.14,
-   "ia": 0.49,
-   "why": "Modèle 49 % contre 46,7 % au book, cote 2,14. Match serré (xG 1,11 contre 1,45), la Juve ne l'emporte que de peu dans les derniers duels."
-  },
-  {
-   "id": "rich-1550171",
-   "t": "rich",
-   "m": 1550171,
-   "key": "1X2:H",
-   "pari": "Genoa gagne",
-   "cote": 5.4,
-   "ia": 0.2,
-   "why": "Modèle 19,6 % contre 18,5 % au book, cote 5,4. Genoa marque 1 par match et la Juve n'a pas trop de marge (xG 1,45 contre 1,11) : outsider plausible."
-  },
-  {
-   "id": "safe-1550172",
-   "t": "safe",
-   "m": 1550172,
-   "key": "OU:O:1.5",
-   "pari": "Plus de 1,5 buts",
-   "cote": 1.2,
-   "ia": 0.79,
-   "why": "Monza marque 2,7 par match, buts attendus 1,86 + 1,26. Modèle à 80 % : deux buts ou plus sont très probables malgré un book un peu plus haut."
-  },
-  {
-   "id": "crazy-1550172",
-   "t": "crazy",
-   "m": 1550172,
-   "key": "DC:HD",
-   "pari": "Monza ou match nul",
-   "cote": 2.06,
-   "ia": 0.56,
-   "why": "Modèle 55,9 % contre 48,5 % au book, cote 2,06. Monza marque 2,7 par match et a un xG supérieur (1,86 contre 1,26) : le nul suffit."
-  },
-  {
-   "id": "rich-1550172",
-   "t": "rich",
-   "m": 1550172,
-   "key": "CS:2-0",
-   "pari": "Score exact 2-0",
-   "cote": 23,
-   "ia": 0.04,
-   "why": "Modèle et book alignés autour de 4,2 %, cote 23. Monza marque 2,7 par match et son xG est de 1,86, mais Napoli encaisse 1,3."
-  },
-  {
-   "id": "safe-1550173",
-   "t": "safe",
-   "m": 1550173,
-   "key": "OU:O:1.5",
-   "pari": "Plus de 1,5 buts",
-   "cote": 1.39,
-   "ia": 0.76,
-   "why": "Modèle 75,8 % contre 71,9 % au book. Buts attendus 1,79 + 1,71, Udinese marque 2,3 et encaisse 3 par match : au moins 2 buts est très plausible."
-  },
-  {
-   "id": "crazy-1550173",
-   "t": "crazy",
-   "m": 1550173,
-   "key": "OU:O:2.5",
-   "pari": "Plus de 2,5 buts",
-   "cote": 2.22,
-   "ia": 0.53,
-   "why": "Modèle 53 % contre 45 % au book. Buts attendus 3,5 au total, Udinese encaisse 3 par match, et les derniers duels ont donné 2-3 et 2-2."
-  },
-  {
-   "id": "rich-1550173",
-   "t": "rich",
-   "m": 1550173,
-   "key": "OU:O:4.5",
-   "pari": "Plus de 4,5 buts",
-   "cote": 7.95,
-   "ia": 0.18,
-   "why": "Modèle 18 % contre 12,6 % au book, cote 7,95. Buts attendus 3,5, Udinese encaisse 3 par match : pari à gros risque mais cohérent."
-  },
-  {
-   "id": "safe-1550176",
-   "t": "safe",
-   "m": 1550176,
+   "m": 1550170,
    "key": "OU:U:4.5",
    "pari": "Moins de 4,5 buts",
-   "cote": 1.4,
-   "ia": 0.74,
-   "why": "Modèle 74,4 % contre 71,4 % au book. Venezia marque 0,8 par match, Inter 2 : un match à 5 buts ou plus reste peu probable."
+   "cote": 1.34,
+   "ia": 0.75,
+   "why": "Environ 2,9 buts attendus au total, et les confrontations récentes sont serrées (1-1, 0-0, 1-0). Léger avantage modèle (75,8 % contre 74,6 %)."
   },
   {
-   "id": "crazy-1550176",
+   "id": "crazy-1550170",
    "t": "crazy",
-   "m": 1550176,
-   "key": "OU:U:3.5",
-   "pari": "Moins de 3,5 buts",
-   "cote": 1.92,
+   "m": 1550170,
+   "key": "DC:AD",
+   "pari": "Lecce ou match nul",
+   "cote": 2.15,
    "ia": 0.57,
-   "why": "Modèle 57 % contre 52 % au book. Venezia marque 0,8 par match, buts attendus de 2,83 au total : moins de 4 buts reste le scénario central."
+   "why": "Lecce encaisse 1 but/match et n'a pas perdu face à Frosinone sur les 5 derniers duels. Le modèle donne 56,8 % contre 46,5 % au bookmaker, belle value à 2,15."
   },
   {
-   "id": "rich-1550176",
+   "id": "rich-1550170",
    "t": "rich",
-   "m": 1550176,
+   "m": 1550170,
+   "key": "OU:U:1.5",
+   "pari": "Moins de 1,5 buts",
+   "cote": 6.39,
+   "ia": 0.17,
+   "why": "Lecce encaisse 1 but/match. Moins de 1,5 but est un pari de risque avec une cote de 6,39, mais le modèle le donne à 17,6 % contre 15,6 % pour le bookmaker."
+  },
+  {
+   "id": "draw-1550170",
+   "t": "draw",
+   "m": 1550170,
    "key": "1X2:D",
    "pari": "Match nul",
-   "cote": 5.65,
-   "ia": 0.25,
-   "why": "Modèle 25,4 % contre 17,7 % au book, cote 5,65. Venezia résiste à domicile selon xG (1,04), l'Inter est en forme mais marque moins de 2 buts attendus."
+   "cote": 4.21,
+   "ia": 0.28,
+   "why": "Lecce et Frosinone ont des xG proches (1,6 contre 1,26), avec 1-1 et 0-0 dans les confrontations récentes, et le 1-1 est le score probable."
   }
  ],
  "var": [
   {
-   "m": 1575531,
-   "why": "Sporting a un xG de 2,46 contre 0,85 pour Casa Pia, qui encaisse 3,3 buts/match. Le 0-2 est le score le plus probable (8,9 %), et les confrontations récentes vont dans ce sens.",
-   "scores": [
-    [
-     "0-2",
-     0.089,
-     6
-    ],
-    [
-     "0-1",
-     0.073,
-     7.22
-    ],
-    [
-     "0-3",
-     0.07,
-     7.95
-    ]
-   ]
-  },
-  {
-   "m": 1552514,
-   "why": "1-1 en tête à 9,7 %. Deux attaques modestes (xG 1,15 et 1,3) et des confrontations souvent serrées avec peu de buts.",
+   "m": 1570441,
+   "why": "Score 1-1 : 1,04 contre 1,08 but attendu, Celta ne marque et n'encaisse que 0,3 par match. Score le plus probable du modèle (9,9 %), cote de 6.",
    "scores": [
     [
      "1-1",
-     0.097,
+     0.099,
      6
     ],
     [
-     "0-1",
-     0.081,
-     7.5
+     "1-0",
+     0.089,
+     7
     ],
     [
-     "1-0",
-     0.07,
-     9
+     "0-1",
+     0.084,
+     8.5
     ]
    ]
   },
   {
-   "m": 1552516,
-   "why": "1-1 à 9,8 %, le meilleur score du lot. Xg faibles (1,04 contre 1,26) et défense de Boulogne très solide (0,4 but encaissé/match).",
+   "m": 1557448,
+   "why": "Score 1-1 : 1,15 contre 0,96 but attendu, défenses à 0,8 et 1 but encaissé par match. Le 1-1 est le premier choix du modèle (9,8 %), cote de 6,03.",
    "scores": [
     [
      "1-1",
      0.098,
-     6
-    ],
-    [
-     "0-1",
-     0.082,
-     8.5
+     6.03
     ],
     [
      "1-0",
-     0.078,
-     7.5
+     0.09,
+     7.9
+    ],
+    [
+     "0-0",
+     0.075,
+     10
+    ]
+   ]
+  },
+  {
+   "m": 1552803,
+   "why": "Score 1-1 : équipes proches (1,41 contre 1,23 but attendu), avec 3-3 et 1-1 dans les confrontations. Score le plus probable (9,4 %), cote de 6.",
+   "scores": [
+    [
+     "1-1",
+     0.094,
+     6
+    ],
+    [
+     "1-0",
+     0.076,
+     7.6
+    ],
+    [
+     "0-1",
+     0.067,
+     8.5
+    ]
+   ]
+  },
+  {
+   "m": 1557447,
+   "why": "Score 1-1 : 1,15 contre 1,04 but attendu, peu de buts attendus. Le 1-1 est le premier choix du modèle (9,3 %), cote de 7.",
+   "scores": [
+    [
+     "1-1",
+     0.093,
+     7
+    ],
+    [
+     "1-0",
+     0.084,
+     8.5
+    ],
+    [
+     "0-1",
+     0.069,
+     12.25
     ]
    ]
   },
   {
    "m": 1552802,
-   "why": "1-1 est le score le plus probable (8,8 %) avec des niveaux proches (xG 1,6 contre 1,26) et une défense lilloise solide à domicile.",
+   "why": "Score 1-1 : Lille et Lens sont proches (1,6 contre 1,26 but attendu), et les deux équipes viennent de faire des nuls. Score le plus probable (9,1 %), cote de 6.",
    "scores": [
     [
      "1-1",
-     0.088,
-     6.5
+     0.091,
+     6
     ],
     [
      "2-1",
      0.067,
-     8.93
+     9
     ],
     [
      "1-0",
-     0.064,
-     9.75
+     0.065,
+     9.4
+    ]
+   ]
+  },
+  {
+   "m": 1550186,
+   "why": "Score 0-1 : Udinese ne marque que 0,4 par match (0,81 but attendu) et Roma en marque 2,3 (1,82). Le 0-1 est le score le plus probable (8,6 %), cote de 8.",
+   "scores": [
+    [
+     "0-1",
+     0.086,
+     8
+    ],
+    [
+     "0-2",
+     0.082,
+     8
+    ],
+    [
+     "1-1",
+     0.077,
+     8
     ]
    ]
   },
@@ -1015,140 +1133,9 @@
      9.64
     ]
    ]
-  },
-  {
-   "m": 1552517,
-   "why": "1-1 à 8,7 %, avec des xG proches (1,64 contre 1,3). Les confrontations récentes sont serrées (0-0, 1-1, 1-0).",
-   "scores": [
-    [
-     "1-1",
-     0.087,
-     6.5
-    ],
-    [
-     "2-1",
-     0.07,
-     8.3
-    ],
-    [
-     "1-0",
-     0.067,
-     8.35
-    ]
-   ]
-  },
-  {
-   "m": 1550167,
-   "why": "1-0 est le score le plus probable (9 %). Milan marque 2,7 et encaisse 0,7, xG 1,68 contre 0,93, avec 3 victoires sur les 5 derniers duels.",
-   "scores": [
-    [
-     "1-0",
-     0.09,
-     7
-    ],
-    [
-     "1-1",
-     0.086,
-     7
-    ],
-    [
-     "2-0",
-     0.076,
-     8
-    ]
-   ]
-  },
-  {
-   "m": 1550171,
-   "why": "Match serré avec 1-1 (9,1 %) et 0-1 (9 %) en tête. La Juve marque 1,5 et encaisse 1 par match, et a gagné 4 des 5 derniers duels.",
-   "scores": [
-    [
-     "1-1",
-     0.091,
-     6.5
-    ],
-    [
-     "0-1",
-     0.09,
-     6
-    ],
-    [
-     "0-2",
-     0.071,
-     7
-    ]
-   ]
-  },
-  {
-   "m": 1550172,
-   "why": "Monza a un xG supérieur (1,86 contre 1,26) mais le nul 1-1 (8 %) domine, devant 1-2 et 2-1. Moins lisible, avec des scores très dispersés.",
-   "scores": [
-    [
-     "1-1",
-     0.08,
-     7
-    ],
-    [
-     "1-2",
-     0.063,
-     7.5
-    ],
-    [
-     "2-1",
-     0.06,
-     13
-    ]
-   ]
-  },
-  {
-   "m": 1550173,
-   "why": "1-1 ressort nettement (8,5 %, cote 5,63) avec des xG presque identiques (1,79 contre 1,71) : le nul est le scénario le plus lisible.",
-   "scores": [
-    [
-     "1-1",
-     0.085,
-     5.63
-    ],
-    [
-     "1-2",
-     0.061,
-     9.22
-    ],
-    [
-     "2-1",
-     0.06,
-     10.06
-    ]
-   ]
-  },
-  {
-   "m": 1550176,
-   "why": "Inter favorite (xG 1,79 contre 1,04), 5 victoires sur 5 face à Venezia. 1-2 (7,4 %) et 0-2 (6,9 %) sont les scores les plus lisibles.",
-   "scores": [
-    [
-     "1-2",
-     0.074,
-     8.2
-    ],
-    [
-     "1-1",
-     0.07,
-     11
-    ],
-    [
-     "0-2",
-     0.069,
-     9
-    ]
-   ]
   }
  ],
  "results": {
-  "1550167": {
-   "status": "FT",
-   "score": "2-4",
-   "final": true
-  },
   "1550169": {
    "status": "FT",
    "score": "2-2",
@@ -1158,28 +1145,7 @@
    "status": "FT",
    "score": "5-1",
    "final": true
-  },
-  "1550171": {
-   "status": "FT",
-   "score": "2-0",
-   "final": true
-  },
-  "1550172": {
-   "status": "FT",
-   "score": "1-4",
-   "final": true
-  },
-  "1550173": {
-   "status": "FT",
-   "score": "0-0",
-   "final": true
-  },
-  "1550176": {
-   "status": "FT",
-   "score": "0-2",
-   "final": true
   }
  },
- "source": "claude",
- "resultsAt": "2026-10-29T21:53:56.919Z"
+ "source": "claude"
 }
