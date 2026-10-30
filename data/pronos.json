@@ -1147,12 +1147,17 @@
    "final": true
   },
   "1552801": {
+   "status": "FT",
+   "score": "1-5",
+   "final": true
+  },
+  "1575211": {
    "status": "live",
-   "score": "1-2",
-   "at": "2026-10-30T18:57:56.404Z",
+   "score": "1-0",
+   "at": "2026-10-30T19:54:56.130Z",
    "final": false
   }
  },
  "source": "claude",
- "resultsAt": "2026-10-30T18:57:56.404Z"
+ "resultsAt": "2026-10-30T19:54:56.130Z"
 }
