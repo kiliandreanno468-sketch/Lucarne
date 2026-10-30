@@ -1151,13 +1151,25 @@
    "score": "1-5",
    "final": true
   },
+  "1552802": {
+   "status": "live",
+   "score": "0-0",
+   "at": "2026-10-30T20:53:33.154Z",
+   "final": false
+  },
+  "1570442": {
+   "status": "live",
+   "score": "0-0",
+   "at": "2026-10-30T20:53:33.154Z",
+   "final": false
+  },
   "1575211": {
    "status": "live",
-   "score": "1-0",
-   "at": "2026-10-30T19:54:56.130Z",
+   "score": "3-0",
+   "at": "2026-10-30T20:53:33.154Z",
    "final": false
   }
  },
  "source": "claude",
- "resultsAt": "2026-10-30T19:54:56.130Z"
+ "resultsAt": "2026-10-30T20:53:33.154Z"
 }
