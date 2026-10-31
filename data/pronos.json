@@ -1283,27 +1283,29 @@
    "final": true
   },
   "1557448": {
-   "status": "live",
-   "score": "1-0",
-   "at": "2026-10-31T16:48:38.395Z",
-   "final": false
+   "status": "FT",
+   "score": "2-0",
+   "final": true
   },
   "1557449": {
-   "status": "live",
+   "status": "FT",
    "score": "2-0",
-   "at": "2026-10-31T16:48:38.395Z",
-   "final": false
+   "final": true
   },
   "1557451": {
-   "status": "live",
+   "status": "FT",
    "score": "3-1",
-   "at": "2026-10-31T16:48:38.395Z",
-   "final": false
+   "final": true
   },
   "1557454": {
-   "status": "live",
+   "status": "FT",
    "score": "0-1",
-   "at": "2026-10-31T16:48:38.395Z",
+   "final": true
+  },
+  "1570435": {
+   "status": "live",
+   "score": "0-0",
+   "at": "2026-10-31T17:44:16.947Z",
    "final": false
   },
   "1570439": {
@@ -1312,10 +1314,9 @@
    "final": true
   },
   "1570441": {
-   "status": "live",
-   "score": "2-0",
-   "at": "2026-10-31T16:48:38.395Z",
-   "final": false
+   "status": "FT",
+   "score": "3-0",
+   "final": true
   },
   "1570442": {
    "status": "FT",
@@ -1329,5 +1330,5 @@
   }
  },
  "source": "claude",
- "resultsAt": "2026-10-31T16:48:38.395Z"
+ "resultsAt": "2026-10-31T17:44:16.947Z"
 }
